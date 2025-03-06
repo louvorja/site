@@ -243,5 +243,10 @@ export default {
   components: {
     Carousel,
   },
+  computed: {
+    lang() {
+      return this.$i18n.locale;
+    },
+  },
 };
 </script>

@@ -23,7 +23,16 @@
                 </div>
                 <div class="col-lg-6">
                   <div class="hr-img">
-                    <img src="@/assets/img/hero-bg.png" alt="" />
+                    <img
+                      v-if="lang === 'pt'"
+                      src="@/assets/imgs/001-pt.png"
+                      alt=""
+                    />
+                    <img
+                      v-else-if="lang === 'es'"
+                      src="@/assets/imgs/001-es.png"
+                      alt=""
+                    />
                   </div>
                 </div>
               </div>
@@ -59,6 +68,11 @@ export default {
       wrapAround: true,
     },
   }),
+  computed: {
+    lang() {
+      return this.$i18n.locale;
+    },
+  },
 };
 </script>
 

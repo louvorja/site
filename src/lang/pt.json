@@ -2,5 +2,8 @@
     "logo": {
         "text-normal": "LOUVOR",
         "text-highlight": "JA"
+    },
+    "menu": {
+        "home": "Início"
     }
 }

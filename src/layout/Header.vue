@@ -11,7 +11,9 @@
       </div>
     </router-link>
     <ul class="main-menu">
-      <li><router-link to="/">Home</router-link></li>
+      <li>
+        <router-link to="/">{{ $t("menu.home") }}</router-link>
+      </li>
       <li><router-link to="/about">About</router-link></li>
       <li>
         <a href="#">Pages</a>

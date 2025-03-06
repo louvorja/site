@@ -2,5 +2,8 @@
     "logo": {
         "text-normal": "LOOR",
         "text-highlight": "JA"
+    },
+    "menu": {
+        "home": "Inicio"
     }
 }
