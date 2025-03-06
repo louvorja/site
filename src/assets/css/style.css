@@ -428,10 +428,15 @@ How section
 	margin-bottom: 25px;
 }
 
-.how-item .hi-icon img {
+.how-item .hi-icon img,
+.how-item .hi-icon i {
 	position: absolute;
 	right: -8px;
 	bottom: 0;
+}
+
+.how-item .hi-icon i {
+	font-size: 40px;
 }
 
 .how-item h4 {
@@ -453,11 +458,14 @@ Concept section
 .concept-item {
 	text-align: center;
 	padding-top: 35px;
+	height: 100%;
 }
 
 .concept-item img {
 	border-radius: 40px;
 	margin-bottom: 15px;
+	object-fit: cover;
+	height: calc(100% - 30px);
 }
 
 /* --------------------

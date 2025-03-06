@@ -5,35 +5,65 @@
       <div class="row">
         <div class="col-xl-6 col-lg-7 order-lg-2">
           <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-2">
+              <div class="footer-widget"></div>
+            </div>
+            <div class="col-sm-5">
               <div class="footer-widget">
-                <h2>About us</h2>
+                <h2>{{ $t("footer.links.title") }}</h2>
                 <ul>
-                  <li><a href="">Our Story</a></li>
-                  <li><a href="">Sol Music Blog</a></li>
-                  <li><a href="">History</a></li>
+                  <li>
+                    <router-link :to="{ name: 'help' }">
+                      {{ $t("footer.links.list.help") }}
+                    </router-link>
+                  </li>
+                  <li>
+                    <router-link :to="{ name: 'faq' }">
+                      {{ $t("footer.links.list.faq") }}
+                    </router-link>
+                  </li>
+                  <li>
+                    <router-link :to="{ name: 'drive' }">
+                      {{ $t("footer.links.list.drive") }}
+                    </router-link>
+                  </li>
+                  <li>
+                    <router-link :to="{ name: 'dev' }">
+                      {{ $t("footer.links.list.dev") }}
+                    </router-link>
+                  </li>
                 </ul>
               </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-5">
               <div class="footer-widget">
-                <h2>Products</h2>
+                <h2>{{ $t("footer.partners.title") }}</h2>
                 <ul>
-                  <li><a href="">Music</a></li>
-                  <li><a href="">Subscription</a></li>
-                  <li><a href="">Custom Music</a></li>
-                  <li><a href="">Footage</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="footer-widget">
-                <h2>Playlists</h2>
-                <ul>
-                  <li><a href="">Newsletter</a></li>
-                  <li><a href="">Careers</a></li>
-                  <li><a href="">Press</a></li>
-                  <li><a href="">Contact</a></li>
+                  <li>
+                    <a href="https://ligaosom.com.br/" target="_blank">
+                      {{ $t("footer.partners.list.ligaosom") }}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://iasdbaixoguandu.com.br/" target="_blank">
+                      {{ $t("footer.partners.list.iasdbaixogandu") }}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://seveninformatica.net.br/" target="_blank">
+                      {{ $t("footer.partners.list.seveninformatica") }}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://300gideao.com.br/" target="_blank">
+                      {{ $t("footer.partners.list.300degideao") }}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://mda.wiki.br/" target="_blank">
+                      {{ $t("footer.partners.list.mdawiki") }}
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -43,17 +73,20 @@
           <img src="./assets/img/logo.png" alt="" />
           <div class="copyright">
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy; All rights reserved | This template is made with
-            <i class="fa fa-heart-o" aria-hidden="true"></i> by
-            <a href="https://colorlib.com" target="_blank">Colorlib</a>
+            Software LouvorJA
+            <br /><b>Versão do Programa:</b> {{ version }}
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
           </div>
           <div class="social-links">
-            <a href=""><i class="fa fa-instagram"></i></a>
-            <a href=""><i class="fa fa-pinterest"></i></a>
-            <a href=""><i class="fa fa-facebook"></i></a>
-            <a href=""><i class="fa fa-twitter"></i></a>
-            <a href=""><i class="fa fa-youtube"></i></a>
+            <router-link :to="{ name: 'facebook' }">
+              <i class="fa fa-facebook"></i>
+            </router-link>
+            <router-link :to="{ name: 'whatsapp' }">
+              <i class="fa fa-whatsapp"></i>
+            </router-link>
+            <router-link :to="{ name: 'telegram' }">
+              <i class="fa fa-telegram"></i>
+            </router-link>
           </div>
         </div>
       </div>
@@ -63,7 +96,40 @@
 </template>
 
 <script>
+import Api from "@/services/Api";
+
 export default {
   name: "FooterLayout",
+  data() {
+    return {
+      params: {},
+      version: null,
+    };
+  },
+  computed: {
+    lang() {
+      return this.$i18n.locale;
+    },
+  },
+  watch: {
+    lang() {
+      this.setVersion();
+    },
+  },
+  methods: {
+    setVersion: function () {
+      const field = this.lang + "_version";
+      this.version = this.params[field] ?? "";
+    },
+  },
+  async mounted() {
+    const self = this;
+    await Api.get("params", {}, function (resp, data) {
+      if (resp) {
+        self.params = data;
+        self.setVersion();
+      }
+    });
+  },
 };
 </script>

@@ -4,6 +4,88 @@
         "text-highlight": "JA"
     },
     "menu": {
-        "home": "Inicio"
+        "home": "Inicio",
+        "about": "El Programa",
+        "download": "Descargar",
+        "contact": "Contacto",
+        "donation": "Donación"
+    },
+    "footer": {
+        "partners": {
+            "title": "Associados",
+            "list": {
+                "ligaosom": "Blog Liga o Sonido",
+                "iasdbaixogandu": "IASD Baixo Gandu",
+                "seveninformatica": "Seven Informática",
+                "300degideao": "300 de Gedeón",
+                "mdawiki": "MDA Wiki"
+            }
+        },
+        "links": {
+            "title": "Enlaces",
+            "list": {
+                "help": "Ayuda",
+                "faq": "Preguntas Frecuentes",
+                "drive": "Drive",
+                "dev": "Colaborar como Desarrollador"
+            }
+        }
+    },
+    "carousel": {
+        "slide1": {
+            "title": [
+                "Canciones",
+                "para proyección."
+            ],
+            "text": "Proyecta canciones para tu iglesia, evento o grupo pequeño. Utiliza las canciones del programa, o crea tus propias canciones.",
+            "button1": "Descargar Ahora",
+            "button2": "Acceder sin descargar"
+        },
+        "slide2": {
+            "title": [
+                "Escucha",
+                "directamente de internet."
+            ],
+            "text": "¿No quieres descargar el programa? Si tienes una buena conexión a internet, puedes disfrutar de la versión web, sin necesidad de descargar nada.",
+            "button1": "Acceder Ahora"
+        },
+        "slide3": {
+            "title": [
+                "Totalmente",
+                "Gratis."
+            ],
+            "text": "El uso del programa es totalmente gratuito. Pero siéntete libre de enviar una donación para ayudar con los costos de operación.",
+            "button1": "Hacer una Donación"
+        }
+    },
+    "home": {
+        "card1": {
+            "title": "Cientos de canciones para tus cultos",
+            "text": "Más de mil canciones para proyectar y cantar. La mayoría cuenta con playbacks. El operador tiene total control sobre los slides. ¿No quieres proyectar? No hay problema. Es posible ejecutar solo el audio de la canción. El programa aún cuenta con proyección en 3 pantallas: Pantalla del público, pantalla del operador y pantalla de retorno.",
+            "button": "Saber más"
+        },
+        "card2": {
+            "title": "Recursos",
+            "col1": {
+                "title": "Biblia",
+                "text": "Varias versiones de la biblia. Encuentra de forma fácil y rápida el pasaje bíblico y proyecta. Fondo, colores y letras totalmente personalizables. Proyecta versos aislados o alternados."
+            },
+            "col2": {
+                "title": "Liturgia",
+                "text": "Arma de manera fácil y práctica la programación del culto. Define los archivos que se ejecutarán en cada momento, y deja mensajes para los operadores sobre la programación."
+            },
+            "col3": {
+                "title": "Y mucho más...",
+                "text": "El programa aún cuenta con una gama de recursos, como sorteador, cronómetro de culto, reloj, y además, editor de diapositivas, ¡para crear tus propias diapositivas!"
+            }
+        },
+        "card3": {
+            "title": "Usos principales",
+            "text": "El programa puede ser utilizado en diversos lugares y ocasiones, como iglesias, grupos pequeños, campamentos, cultos al atardecer, eventos sociales, entre otros.\nProyecta las canciones, realiza sorteos, muestra el cronómetro, organiza tu programación, crea diapositivas y disfruta de todo lo que el programa tiene para ofrecer!",
+            "photo1": "Iglesias",
+            "photo2": "Eventos",
+            "photo3": "Grupos Pequeños",
+            "photo4": "Campamentos"
+        }
     }
 }

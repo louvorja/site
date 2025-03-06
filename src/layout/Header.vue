@@ -12,21 +12,28 @@
     </router-link>
     <ul class="main-menu">
       <li>
-        <router-link to="/">{{ $t("menu.home") }}</router-link>
+        <router-link :to="{ name: 'home' }">{{ $t("menu.home") }}</router-link>
       </li>
-      <li><router-link to="/about">About</router-link></li>
       <li>
-        <a href="#">Pages</a>
-        <ul class="sub-menu">
-          <li><a href="category.html">Category</a></li>
-          <li><a href="playlist.html">Playlist</a></li>
-          <li><a href="artist.html">Artist</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+        <router-link :to="{ name: 'about' }">
+          {{ $t("menu.about") }}
+        </router-link>
       </li>
-      <li><a href="blog.html">News</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li>
+        <router-link :to="{ name: 'download' }">
+          {{ $t("menu.download") }}
+        </router-link>
+      </li>
+      <li>
+        <router-link :to="{ name: 'contact' }">
+          {{ $t("menu.contact") }}
+        </router-link>
+      </li>
+      <li>
+        <router-link :to="{ name: 'donation' }">
+          {{ $t("menu.donation") }}
+        </router-link>
+      </li>
       <li>
         <a href="#">
           <img
@@ -40,7 +47,7 @@
             src="@/assets/flags/es.svg"
           />
         </a>
-        <ul class="sub-menu">
+        <ul class="sub-menu" style="width: 60px">
           <li>
             <a href="#" @click="changeLocale('pt')">
               <img style="height: 21px" src="@/assets/flags/br.svg" />

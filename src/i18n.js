@@ -11,16 +11,14 @@ const loadLocaleMessages = async () => {
   return messages;
 };
 
-export const createI18nInstance = async () => {
-  const messages = await loadLocaleMessages();
+const messages = await loadLocaleMessages();
 
-  return createI18n({
-    legacy: false, // Usando a API Composition
-    locale: "pt", // Idioma padrão
-    fallbackLocale: "pt", // Idioma de fallback
-    messages, // Carregar as mensagens
-  });
-};
+export const i18n = createI18n({
+  legacy: false,
+  locale: "pt",
+  fallbackLocale: "pt",
+  globalInjection: true,
+  messages,
+});
 
-// export default i18n;
-export default createI18nInstance;
+export default i18n;

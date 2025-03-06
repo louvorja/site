@@ -1,7 +1,7 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
-import { createI18nInstance } from "./i18n";
+import { i18n } from "./i18n";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap";
@@ -16,8 +16,5 @@ import "slicknav/dist/jquery.slicknav.min.js";
 
 const app = createApp(App);
 app.use(router);
-
-createI18nInstance().then((i18n) => {
-  app.use(i18n);
-  app.mount("#app");
-});
+app.use(i18n);
+app.mount("#app");

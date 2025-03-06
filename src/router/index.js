@@ -5,12 +5,67 @@ import About from "@/views/About.vue";
 const routes = [
   {
     path: "/",
-    name: "Home",
+    name: "home",
     component: Home,
   },
   {
-    path: "/about",
-    name: "About",
+    path: "/programa",
+    name: "about",
+    component: About,
+  },
+  {
+    path: "/download",
+    name: "download",
+    component: About,
+  },
+  {
+    path: "/contact",
+    name: "contact",
+    component: About,
+  },
+  {
+    path: "/donation",
+    name: "donation",
+    component: About,
+  },
+  {
+    path: "/app",
+    name: "app",
+    component: About,
+  },
+  {
+    path: "/help",
+    name: "help",
+    component: About,
+  },
+  {
+    path: "/faq",
+    name: "faq",
+    component: About,
+  },
+  {
+    path: "/drive",
+    name: "drive",
+    component: About,
+  },
+  {
+    path: "/dev",
+    name: "dev",
+    component: About,
+  },
+  {
+    path: "/facebook",
+    name: "facebook",
+    component: About,
+  },
+  {
+    path: "/whatsapp",
+    name: "whatsapp",
+    component: About,
+  },
+  {
+    path: "/telegram",
+    name: "telegram",
     component: About,
   },
 ];

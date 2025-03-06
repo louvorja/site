@@ -4,6 +4,88 @@
         "text-highlight": "JA"
     },
     "menu": {
-        "home": "Início"
+        "home": "Início",
+        "about": "O Programa",
+        "download": "Download",
+        "contact": "Contato",
+        "donation": "Doação"
+    },
+    "footer": {
+        "partners": {
+            "title": "Parceiros",
+            "list": {
+                "ligaosom": "Blog Liga o Som",
+                "iasdbaixogandu": "IASD Baixo Gandu",
+                "seveninformatica": "Seven Informática",
+                "300degideao": "300 de Gideão",
+                "mdawiki": "MDA Wiki"
+            }
+        },
+        "links": {
+            "title": "Links",
+            "list": {
+                "help": "Ajuda",
+                "faq": "Perguntas Frequentes",
+                "drive": "Drive",
+                "dev": "Colaborar como Desenvolvedor"
+            }
+        }
+    },
+    "carousel": {
+        "slide1": {
+            "title": [
+                "Músicas",
+                "para projeção."
+            ],
+            "text": "Projete músicas para sua igreja, evento ou pequeno grupo. Utilize as músicas do programa, ou crie suas próprias músicas.",
+            "button1": "Baixe Agora",
+            "button2": "Acesse sem baixar"
+        },
+        "slide2": {
+            "title": [
+                "Ouça",
+                "diretamente da internet."
+            ],
+            "text": "Não quer baixar o programa? Caso você tenha uma boa conexão com a internet, pode desfrutar da versão web, sem precisar baixar nada.",
+            "button1": "Acesse Agora"
+        },
+        "slide3": {
+            "title": [
+                "Totalmente",
+                "Grátis."
+            ],
+            "text": "A utilização do programa é totalmente grátis. Mas sinta-se a vontade para enviar uma doação para ajudar nos custos de operação.",
+            "button1": "Faça uma Doação"
+        }
+    },
+    "home": {
+        "card1": {
+            "title": "Centenas de músicas para seus cultos",
+            "text": "Mais de mil músicas para projetar e cantar. A maioria conta com playbacks. O operador tem total controle sobre os slides. Não quer projetar? Não tem problema. É possível executar somente o áudio da música. O programa ainda conta com projeção em 3 telas: Tela do público, tela do operador e tela de retorno.",
+            "button": "Saiba mais"
+        },
+        "card2": {
+            "title": "Recursos",
+            "col1": {
+                "title": "Bíblia",
+                "text": "Várias versões da bíblia. Encontre de forma fácil e rápida a passagem bíblica e projete. Fundo, cores e letras totalmente customizáveis. Projete versos isolados ou alternados."
+            },
+            "col2": {
+                "title": "Liturgia",
+                "text": " Monte de maneira fácil e prática a programação do culto. Defina os arquivos que serão executados em cada momento, e deixe recados para os operadores sobre a programação."
+            },
+            "col3": {
+                "title": "E muito mais...",
+                "text": "O programa ainda conta com uma gama de recursos, como sorteador, cronômetro de culto, relógio, e ainda, editor de slides, para criar seus próprios slides!"
+            }
+        },
+        "card3": {
+            "title": "Principais usos",
+            "text": "O programa pode ser utilizado em diversos lugares e ocasiões, como igrejas, pequenos grupos, acampamentos, cultos de pôr-do-sol, sociais, entre outros.\nProjete as músicas, faça sorteios, exiba cronômetro, monte sua programação, crie slides e desfrute de tudo o que o programa tem a oferecer!",
+            "photo1": "Igrejas",
+            "photo2": "Eventos",
+            "photo3": "Pequenos Grupos",
+            "photo4": "Acampamentos"
+        }
     }
 }

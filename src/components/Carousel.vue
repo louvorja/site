@@ -3,22 +3,23 @@
   <section class="hero-section">
     <div class="hero-slider">
       <Carousel v-bind="carouselConfig">
-        <Slide v-for="slide in 10" :key="slide">
+        <Slide v-for="slide in 3" :key="slide">
           <div class="hs-item">
             <div class="container">
-              <div class="row">
+              <div v-if="slide == 1" class="row">
                 <div class="col-lg-6">
                   <div class="hs-text">
                     <h2>
-                      <span>Music {{ slide }}</span> for everyone.
+                      <span>{{ $t("carousel.slide1.title[0]") }}</span>
+                      {{ $t("carousel.slide1.title[1]") }}
                     </h2>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Quis ipsum suspendisse ultrices gravida.
-                    </p>
-                    <a href="#" class="site-btn">Download Now</a>
-                    <a href="#" class="site-btn sb-c2">Start free trial</a>
+                    <p>{{ $t("carousel.slide1.text") }}</p>
+                    <router-link :to="{ name: 'download' }" class="site-btn">
+                      {{ $t("carousel.slide1.button1") }}
+                    </router-link>
+                    <router-link :to="{ name: 'app' }" class="site-btn sb-c2">
+                      {{ $t("carousel.slide1.button2") }}
+                    </router-link>
                   </div>
                 </div>
                 <div class="col-lg-6">
@@ -33,6 +34,48 @@
                       src="@/assets/imgs/001-es.png"
                       alt=""
                     />
+                  </div>
+                </div>
+              </div>
+              <div v-else-if="slide == 2" class="row">
+                <div class="col-lg-6">
+                  <div class="hs-text">
+                    <h2>
+                      <span>{{ $t("carousel.slide2.title[0]") }}</span>
+                      {{ $t("carousel.slide2.title[1]") }}
+                    </h2>
+                    <p>{{ $t("carousel.slide2.text") }}</p>
+                    <router-link :to="{ name: 'app' }" class="site-btn">
+                      {{ $t("carousel.slide2.button1") }}
+                    </router-link>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="hr-img">
+                    <img
+                      v-if="lang === 'pt'"
+                      src="@/assets/imgs/002-pt.png"
+                      alt=""
+                    />
+                    <img
+                      v-else-if="lang === 'es'"
+                      src="@/assets/imgs/002-es.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div v-else class="row">
+                <div class="col-lg-12">
+                  <div class="hs-text">
+                    <h2>
+                      {{ $t("carousel.slide3.title[0]") }}
+                      <span>{{ $t("carousel.slide3.title[1]") }}</span>
+                    </h2>
+                    <p>{{ $t("carousel.slide3.text") }}</p>
+                    <router-link :to="{ name: 'donation' }" class="site-btn">
+                      {{ $t("carousel.slide3.button1") }}
+                    </router-link>
                   </div>
                 </div>
               </div>
