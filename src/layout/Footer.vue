@@ -70,13 +70,19 @@
           </div>
         </div>
         <div class="col-xl-6 col-lg-5 order-lg-1">
-          <img src="./assets/img/logo.png" alt="" />
+          <router-link to="/" class="site-logo p-0 m-0">
+            <div class="d-flex align-items-center">
+              <img src="@/assets/imgs/logo.svg" alt="" />
+              <div class="text-logo">
+                {{ $t("logo.text-normal") }}
+                <span>JA</span>
+              </div>
+            </div>
+          </router-link>
           <div class="copyright">
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Software LouvorJA
-            <br /><b>Versão do Programa:</b>
+            {{ $t("footer.texts[0]") }}
+            <br /><b>{{ $t("footer.texts[1]") }}:</b>
             {{ version ?? "< carregando... >" }}
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
           </div>
           <div class="social-links">
             <router-link :to="{ name: 'facebook' }">

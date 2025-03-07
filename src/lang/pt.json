@@ -11,6 +11,10 @@
         "donation": "Doação"
     },
     "footer": {
+        "texts": [
+            "Software LouvorJA",
+            "Versão do Programa"
+        ],
         "partners": {
             "title": "Parceiros",
             "list": {

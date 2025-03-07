@@ -11,6 +11,10 @@
         "donation": "Donación"
     },
     "footer": {
+        "texts": [
+            "Software LoorJA",
+            "Versión del Programa"
+        ],
         "partners": {
             "title": "Associados",
             "list": {
