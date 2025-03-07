@@ -87,5 +87,35 @@
             "photo3": "Pequenos Grupos",
             "photo4": "Acampamentos"
         }
+    },
+    "about": {
+        "card1": {
+            "title": "Músicas",
+            "text": "O programa possui músicas do Hinário Adventista, CDs jovens e CDs diversos. A maioria das músicas possui playback. O programa possui também, diversas opções de projeção das músicas, como: cantado, playback e sem áudio, e projeção em 3 telas: operador, retorno e público."
+        },
+        "card2": {
+            "title": "Bíblia",
+            "text": "O programa possui a bíblia em várias versões, para ser projetada para o público, podendo projetar um verso isolado, ou vários versos, em sequência ou intercalados. A bíblia é totalmente customizável, podendo alterar cores, fonte e imagem de fundo. Há também, a possibilidade de buscar versos bíblicos, através da aba \"Busca Bíblica\"."
+        },
+        "card3": {
+            "title": "Vídeos On-line",
+            "text": "O programa dispõe de alguns álbuns de músicas diretamente do Youtube, onde basta clicar para que o vídeo seja executado diretamente para o público. Há também a possibilidade de salvar o link dos vídeos on-line, ou executar diretamente do programa, bastando apenas colar a URL do Youtube, para que seja executado dentro do programa."
+        },
+        "card4": {
+            "title": "Organização dos Cultos",
+            "text": "O programa possui diversas ferramentas para organização dos cultos, como: \"Liturgia\", para organizar e montar a programação dos cultos; \"Itens Agendados\", para cadastrar conteúdos recorrentes específicos para cada dia, e \"Cronômetro de Culto\", para projetar o tempo decorrido e o tempo restante do culto, podendo configurar a duração do culto, ou o horário de término."
+        },
+        "card5": {
+            "title": "Transmissão",
+            "text": "Ferramenta para transmitir as letras das músicas para o navegador, onde é possível incorporar o link da transmissão em programas de streaming, como OBS e VMix, por exemplo. É possível também, transmitir a letra em dispositivos que estejam conectados na mesma rede, como celulares e monitores de retorno."
+        },
+        "card6": {
+            "title": "Editor de Músicas",
+            "text": "Ferramenta para criação de músicas, no mesmo formato do programa. Crie músicas facilmente com esta ferramenta. Configure as imagens, cores, letra e áudio, e grave os intervalos. Depois, basta exportar e estará pronto para ser executado. As músicas criadas podem ser colocadas no programa através do menu \"Coletâneas Personalizadas\""
+        },
+        "card7": {
+            "title": "Utilitários",
+            "text": "Ferramentas diversas de auxílio nas programações, como: sorteador, Cronômetro, temporizador, relógio e painel de anúncios."
+        }
     }
 }

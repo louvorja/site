@@ -87,5 +87,35 @@
             "photo3": "Grupos Pequeños",
             "photo4": "Campamentos"
         }
+    },
+    "about": {
+        "card1": {
+            "title": "Canciones",
+            "text": "El programa cuenta con canciones del Himnario Adventista, CDs jóvenes y CDs diversos. La mayoría de las canciones tienen playback. El programa también tiene varias opciones de proyección de las canciones, como: cantado, playback y sin audio, y proyección en 3 pantallas: operador, retorno y público."
+        },
+        "card2": {
+            "title": "Biblia",
+            "text": "El programa cuenta con la biblia en varias versiones, para ser proyectada para el público, pudiendo proyectar un verso aislado, o varios versos, en secuencia o intercalados. La biblia es totalmente personalizable, pudiendo alterar colores, fuente e imagen de fondo. También hay la posibilidad de buscar versos bíblicos, a través de la pestaña \"Búsqueda Bíblica\"."
+        },
+        "card3": {
+            "title": "Videos En Línea",
+            "text": "El programa dispone de algunos álbumes de canciones directamente de Youtube, donde basta con hacer clic para que el video sea ejecutado directamente para el público. También existe la posibilidad de guardar el enlace de los videos en línea, o ejecutarlo directamente desde el programa, bastando solo pegar la URL de Youtube, para que se ejecute dentro del programa."
+        },
+        "card4": {
+            "title": "Organización de los Cultos",
+            "text": "El programa cuenta con varias herramientas para la organización de los cultos, como: \"Liturgia\", para organizar y montar la programación de los cultos; \"Elementos Programados\", para registrar contenidos recurrentes específicos para cada día, y \"Cronómetro de Culto\", para proyectar el tiempo transcurrido y el tiempo restante del culto, pudiendo configurar la duración del culto, o el horario de finalización."
+        },
+        "card5": {
+            "title": "Transmisión",
+            "text": "Herramienta para transmitir las letras de las canciones al navegador, donde es posible incorporar el enlace de la transmisión en programas de streaming, como OBS y VMix, por ejemplo. También es posible transmitir la letra en dispositivos que estén conectados en la misma red, como celulares y monitores de retorno."
+        },
+        "card6": {
+            "title": "Editor de Canciones",
+            "text": "Herramienta para la creación de canciones, en el mismo formato del programa. Crea canciones fácilmente con esta herramienta. Configura las imágenes, colores, letra y audio, y graba los intervalos. Luego, basta con exportar y estará listo para ser ejecutado. Las canciones creadas se pueden colocar en el programa a través del menú \"Colecciones Personalizadas\""
+        },
+        "card7": {
+            "title": "Utilidades",
+            "text": "Diversas herramientas de ayuda en las programaciones, como: sorteador, Cronómetro, temporizador, reloj y panel de anuncios."
+        }
     }
 }

@@ -19,10 +19,7 @@
     </div>
   </section>
 
-  <section
-    class="how-section spad set-bg"
-    data-setbg="./assets/img/how-to-bg.jpg"
-  >
+  <section class="how-section spad set-bg">
     <div class="container text-white">
       <div class="section-title">
         <h2>{{ $t("home.card2.title") }}</h2>

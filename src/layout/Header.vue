@@ -1,5 +1,4 @@
 <template>
-  <!-- Header section -->
   <header class="header-section clearfix">
     <router-link to="/" class="site-logo">
       <div class="d-flex align-items-center">
@@ -62,7 +61,6 @@
       </li>
     </ul>
   </header>
-  <!-- Header section end -->
 </template>
 
 <script>

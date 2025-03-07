@@ -74,7 +74,8 @@
           <div class="copyright">
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             Software LouvorJA
-            <br /><b>Versão do Programa:</b> {{ version }}
+            <br /><b>Versão do Programa:</b>
+            {{ version ?? "< carregando... >" }}
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
           </div>
           <div class="social-links">
