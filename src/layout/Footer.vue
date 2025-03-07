@@ -82,7 +82,7 @@
           <div class="copyright">
             {{ $t("footer.texts[0]") }}
             <br /><b>{{ $t("footer.texts[1]") }}:</b>
-            {{ version ?? "< carregando... >" }}
+            {{ version ?? "..." }}
           </div>
           <div class="social-links">
             <router-link :to="{ name: 'facebook' }">
