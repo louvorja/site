@@ -1,5 +1,4 @@
 <template>
-  <!-- Footer section -->
   <footer class="footer-section">
     <div class="container">
       <div class="row">
@@ -12,6 +11,11 @@
               <div class="footer-widget">
                 <h2>{{ $t("footer.links.title") }}</h2>
                 <ul>
+                  <li>
+                    <router-link :to="{ name: 'app' }">
+                      {{ $t("footer.links.list.app") }}
+                    </router-link>
+                  </li>
                   <li>
                     <router-link :to="{ name: 'help' }">
                       {{ $t("footer.links.list.help") }}
@@ -99,7 +103,6 @@
       </div>
     </div>
   </footer>
-  <!-- Footer section end -->
 </template>
 
 <script>

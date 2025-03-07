@@ -28,6 +28,7 @@
         "links": {
             "title": "Links",
             "list": {
+                "app": "Versão Web",
                 "help": "Ajuda",
                 "faq": "Perguntas Frequentes",
                 "drive": "Drive",
