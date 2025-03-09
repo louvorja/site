@@ -130,5 +130,15 @@
             "es": "Español",
             "app": "Versão Web"
         }
+    },
+    "contact": {
+        "title": "Contato",
+        "text": [
+            "Caso precise de suporte, pode entrar em nossos grupos do",
+            "ou",
+            "Ou, envie um e-mail para:"
+        ],
+        "whatsapp": "WhatsApp",
+        "telegram": "Telegram"
     }
 }

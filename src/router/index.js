@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import Home from "@/views/Home.vue";
 import About from "@/views/About.vue";
 import Download from "@/views/Download.vue";
+import Contact from "@/views/Contact.vue";
 
 const routes = [
   {
@@ -22,7 +23,7 @@ const routes = [
   {
     path: "/contact",
     name: "contact",
-    component: About,
+    component: Contact,
   },
   {
     path: "/donation",
