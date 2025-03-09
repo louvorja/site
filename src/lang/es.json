@@ -122,5 +122,13 @@
             "title": "Utilidades",
             "text": "Diversas herramientas de ayuda en las programaciones, como: sorteador, Cronómetro, temporizador, reloj y panel de anuncios."
         }
+    },
+    "download": {
+        "title": "Download",
+        "button": {
+            "pt": "Português",
+            "es": "Español",
+            "app": "Versión Web"
+        }
     }
 }

@@ -122,5 +122,13 @@
             "title": "Utilitários",
             "text": "Ferramentas diversas de auxílio nas programações, como: sorteador, Cronômetro, temporizador, relógio e painel de anúncios."
         }
+    },
+    "download": {
+        "title": "Download",
+        "button": {
+            "pt": "Português",
+            "es": "Español",
+            "app": "Versão Web"
+        }
     }
 }
