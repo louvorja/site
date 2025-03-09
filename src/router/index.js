@@ -3,6 +3,7 @@ import Home from "@/views/Home.vue";
 import About from "@/views/About.vue";
 import Download from "@/views/Download.vue";
 import Contact from "@/views/Contact.vue";
+import Donation from "@/views/Donation.vue";
 
 const routes = [
   {
@@ -28,12 +29,7 @@ const routes = [
   {
     path: "/donation",
     name: "donation",
-    component: About,
-  },
-  {
-    path: "/app",
-    name: "app",
-    component: About,
+    component: Donation,
   },
   {
     path: "/app",

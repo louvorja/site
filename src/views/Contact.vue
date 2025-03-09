@@ -21,9 +21,9 @@
             </p>
             <ul>
               <li>
-                <a href="mailto:contato@louvorja.com.br"
-                  >contato@louvorja.com.br</a
-                >
+                <a href="mailto:contato@louvorja.com.br">
+                  contato@louvorja.com.br
+                </a>
               </li>
             </ul>
           </div>
