@@ -1,0 +1,117 @@
+{
+    "general": {
+        "teclas-atalho": {
+            "title": "Teclas de Atajo"
+        },
+        "transmitir": {
+            "title": "Transmitir contenido para streaming"
+        }
+    },
+    "hymnal": {
+        "hinario-busca": {
+            "title": "Búsqueda de Himnos"
+        },
+        "reproduzir-hinos-sequencia": {
+            "title": "¿Cómo reproducir himnos del himnario en secuencia?"
+        },
+        "exportar-musicas": {
+            "title": "Exportando Canciones"
+        },
+        "localizar-musicas": {
+            "title": "Localizar Canciones"
+        },
+        "letras": {
+            "title": "Obteniendo la letra de los himnos / canciones"
+        },
+        "relacao-de-hinos-dos-hinarios-1996-e-2022": {
+            "title": "Relación de Himnos de los Himnarios 1996 y 2022"
+        },
+        "hinario-reproducao": {
+            "title": "Reproducción de Himnos"
+        }
+    },
+    "collections": {
+        "coletaneas-online": {
+            "title": "Colecciones En Línea"
+        },
+        "coletaneas-personalizadas": {
+            "title": "Colecciones Personalizadas"
+        },
+        "exportar-musicas": {
+            "title": "Exportando Canciones"
+        },
+        "localizar-musicas": {
+            "title": "Localizar Canciones"
+        },
+        "letras": {
+            "title": "Obteniendo la letra de los himnos / canciones"
+        },
+        "playlist": {
+            "title": "Lista de Reproducción de las Colecciones"
+        }
+    },
+    "bible": {
+        "busca-biblica": {
+            "title": "Buscando Pasajes Bíblicos"
+        },
+        "exibir-varios-versos": {
+            "title": "¿Cómo exhibir más de un verso bíblico en la pantalla?"
+        },
+        "passagem-biblica": {
+            "title": "Exhibiendo Pasajes Bíblicos"
+        },
+        "formatacao": {
+            "title": "Formato de contenido"
+        },
+        "projetando-tela": {
+            "title": "Proyectando en Otro Monitor"
+        }
+    },
+    "utilities": {
+        "como-colocar-provai-e-vede": {
+            "title": "¿Cómo colocar los videos del Provai e Vede en el programa?"
+        },
+        "formatacao": {
+            "title": "Formato de contenido"
+        },
+        "itens-agendados": {
+            "title": "Ítems Programados"
+        },
+        "liturgia": {
+            "title": "Liturgia"
+        },
+        "projetando-tela": {
+            "title": "Proyectando en Otro Monitor"
+        }
+    },
+    "slide_editor": {
+        "editor-de-slides": {
+            "title": "Editor de Diapositivas"
+        },
+        "gravando-tempos": {
+            "title": "Grabando Intervalos"
+        }
+    },
+    "transmission": {
+        "estilos-css": {
+            "title": "Estilos CSS para Letra en la Transmisión"
+        }
+    },
+    "faq": {
+        "como-colocar-provai-e-vede": {
+            "title": "¿Cómo colocar los videos del Provai e Vede en el programa?"
+        },
+        "exibir-varios-versos": {
+            "title": "¿Cómo exhibir más de un verso bíblico en la pantalla?"
+        },
+        "css-streaming": {
+            "title": "¿Cómo formatear la letra transmitida por el programa en OBS o VMIX?"
+        },
+        "reproduzir-hinos-sequencia": {
+            "title": "¿Cómo reproducir himnos del himnario en secuencia?"
+        },
+        "como-transmitir-streaming": {
+            "title": "¿Cómo transmitir la letra de la canción / biblia en OBS o VMIX?"
+        }
+    }
+}

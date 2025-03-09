@@ -1,0 +1,149 @@
+{
+    "general": {
+        "title": "Geral",
+        "icon": "fa fa-cubes",
+        "items": {
+            "teclas-atalho": {
+                "title": "Teclas de Atalho"
+            },
+            "transmitir": {
+                "title": "Transmitir conteúdo pra streaming"
+            }
+        }
+    },
+    "hymnal": {
+        "title": "Hinário",
+        "icon": "fa fa-music",
+        "items": {
+            "hinario-busca": {
+                "title": "Busca de Hinos"
+            },
+            "reproduzir-hinos-sequencia": {
+                "title": "Como reproduzir hinos do hinário em sequencia?"
+            },
+            "exportar-musicas": {
+                "title": "Exportando Músicas"
+            },
+            "localizar-musicas": {
+                "title": "Localizar Músicas"
+            },
+            "letras": {
+                "title": "Obtendo a letra dos hinos / músicas"
+            },
+            "relacao-de-hinos-dos-hinarios-1996-e-2022": {
+                "title": "Relação de Hinos dos Hinários 1996 e 2022"
+            },
+            "hinario-reproducao": {
+                "title": "Reprodução de Hinos"
+            }
+        }
+    },
+    "collections": {
+        "title": "Coletâneas",
+        "icon": "fa fa-music",
+        "items": {
+            "coletaneas-online": {
+                "title": "Coletâneas On-line"
+            },
+            "coletaneas-personalizadas": {
+                "title": "Coletâneas Personalizadas"
+            },
+            "exportar-musicas": {
+                "title": "Exportando Músicas"
+            },
+            "localizar-musicas": {
+                "title": "Localizar Músicas"
+            },
+            "letras": {
+                "title": "Obtendo a letra dos hinos / músicas"
+            },
+            "playlist": {
+                "title": "Playlist das Coletâneas"
+            }
+        }
+    },
+    "bible": {
+        "title": "Bíblia",
+        "icon": "fa fa-book",
+        "items": {
+            "busca-biblica": {
+                "title": "Buscando Passagens Bíblicas"
+            },
+            "exibir-varios-versos": {
+                "title": "Como exibir mais de um verso bíblico na tela?"
+            },
+            "passagem-biblica": {
+                "title": "Exibindo Passagens Bíblicas"
+            },
+            "formatacao": {
+                "title": "Formatação de conteúdo"
+            },
+            "projetando-tela": {
+                "title": "Projetando em Outro Monitor"
+            }
+        }
+    },
+    "utilities": {
+        "title": "Utilitários",
+        "icon": "fa fa-puzzle-piece",
+        "items": {
+            "como-colocar-provai-e-vede": {
+                "title": "Como colocar os vídeos do Provai e Vede no programa?"
+            },
+            "formatacao": {
+                "title": "Formatação de conteúdo"
+            },
+            "itens-agendados": {
+                "title": "Itens Agendados"
+            },
+            "liturgia": {
+                "title": "Liturgia"
+            },
+            "projetando-tela": {
+                "title": "Projetando em Outro Monitor"
+            }
+        }
+    },
+    "slide_editor": {
+        "title": "Editor de Slides",
+        "icon": "fa fa-play",
+        "items": {
+            "editor-de-slides": {
+                "title": "Editor de Slides"
+            },
+            "gravando-tempos": {
+                "title": "Gravando intervalos"
+            }
+        }
+    },
+    "transmission": {
+        "title": "Transmissão",
+        "icon": "fa fa-television",
+        "items": {
+            "estilos-css": {
+                "title": "Estilos CSS para Letra na Transmissão"
+            }
+        }
+    },
+    "faq": {
+        "title": "Perguntas Frequentes",
+        "icon": "fa fa-list",
+        "items": {
+            "como-colocar-provai-e-vede": {
+                "title": "Como colocar os vídeos do Provai e Vede no programa?"
+            },
+            "exibir-varios-versos": {
+                "title": "Como exibir mais de um verso bíblico na tela?"
+            },
+            "css-streaming": {
+                "title": "Como formatar a letra transmitida pelo programa no OBS ou VMIX?"
+            },
+            "reproduzir-hinos-sequencia": {
+                "title": "Como reproduzir hinos do hinário em sequencia?"
+            },
+            "como-transmitir-streaming": {
+                "title": "Como transmitir a letra da música / bíblia no OBS ou VMIX?"
+            }
+        }
+    }
+}

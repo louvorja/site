@@ -17,9 +17,13 @@
                     <router-link :to="{ name: 'download' }" class="site-btn">
                       {{ $t("carousel.slide1.button1") }}
                     </router-link>
-                    <router-link :to="{ name: 'app' }" class="site-btn sb-c2">
+                    <a
+                      href="https://app.louvorja.com.br/"
+                      target="_blank"
+                      class="site-btn sb-c2"
+                    >
                       {{ $t("carousel.slide1.button2") }}
-                    </router-link>
+                    </a>
                   </div>
                 </div>
                 <div class="col-lg-6">
@@ -45,9 +49,13 @@
                       {{ $t("carousel.slide2.title[1]") }}
                     </h2>
                     <p>{{ $t("carousel.slide2.text") }}</p>
-                    <router-link :to="{ name: 'app' }" class="site-btn">
+                    <a
+                      href="https://app.louvorja.com.br/"
+                      target="_blank"
+                      class="site-btn"
+                    >
                       {{ $t("carousel.slide2.button1") }}
-                    </router-link>
+                    </a>
                   </div>
                 </div>
                 <div class="col-lg-6">

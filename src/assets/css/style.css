@@ -766,6 +766,11 @@ Contact page
 	font-weight: 500;
 }
 
+ul.list-links li {
+	font-size: 14px;
+	color: #0a183d;
+}
+
 .contact-from input,
 .contact-from textarea {
 	width: 100%;

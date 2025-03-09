@@ -141,8 +141,19 @@
         "whatsapp": "WhatsApp",
         "telegram": "Telegram"
     },
+    "dev": {
+        "title": "Desarrollador",
+        "text": "Para colaborar, ingrese al grupo de desarrolladores:",
+        "link": "Acceder al grupo"
+    },
     "donation": {
         "title": "Donación",
         "text": "El software LouvorJA es gratuito. Todo el servicio de desarrollo es voluntario. Sin embargo, hay costos para mantenerlo funcionando. Si desea hacer una contribución, puede hacerlo a través de los siguientes medios:"
+    },
+    "help": {
+        "title": "Ayuda del Programa"
+    },
+    "faq": {
+        "title": "Preguntas Frecuentes"
     }
 }

@@ -27,9 +27,12 @@
                     </router-link>
                   </li>
                   <li>
-                    <router-link :to="{ name: 'drive' }">
+                    <a
+                      :href="$router.resolve({ name: 'drive' }).href"
+                      target="_blank"
+                    >
                       {{ $t("footer.links.list.drive") }}
-                    </router-link>
+                    </a>
                   </li>
                   <li>
                     <router-link :to="{ name: 'dev' }">
@@ -89,15 +92,24 @@
             {{ version ?? "..." }}
           </div>
           <div class="social-links">
-            <router-link :to="{ name: 'facebook' }">
+            <a
+              :href="$router.resolve({ name: 'facebook' }).href"
+              target="_blank"
+            >
               <i class="fa fa-facebook"></i>
-            </router-link>
-            <router-link :to="{ name: 'whatsapp' }">
+            </a>
+            <a
+              :href="$router.resolve({ name: 'whatsapp' }).href"
+              target="_blank"
+            >
               <i class="fa fa-whatsapp"></i>
-            </router-link>
-            <router-link :to="{ name: 'telegram' }">
+            </a>
+            <a
+              :href="$router.resolve({ name: 'telegram' }).href"
+              target="_blank"
+            >
               <i class="fa fa-telegram"></i>
-            </router-link>
+            </a>
           </div>
         </div>
       </div>

@@ -9,13 +9,19 @@
             </div>
             <p>
               {{ $t("contact.text[0]") }}
-              <router-link :to="{ name: 'whatsapp' }">
+              <a
+                :href="$router.resolve({ name: 'whatsapp' }).href"
+                target="_blank"
+              >
                 {{ $t("contact.whatsapp") }}
-              </router-link>
+              </a>
               {{ $t("contact.text[1]") }}
-              <router-link :to="{ name: 'telegram' }">
+              <a
+                :href="$router.resolve({ name: 'telegram' }).href"
+                target="_blank"
+              >
                 {{ $t("contact.telegram") }}
-              </router-link>
+              </a>
               <br />
               {{ $t("contact.text[2]") }}
             </p>
