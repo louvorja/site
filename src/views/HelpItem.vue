@@ -27,8 +27,8 @@
           </div>
         </div>
         <div class="col-lg-4 mb-5">
-          <div class="how-item">
-            <h5 class="m-3">{{ $t("help.related") }}</h5>
+          <div class="how-item m-3">
+            <h5 class="my-3">{{ $t("help.related") }}</h5>
             <ul>
               <template v-for="(item, url) in help[category].items" :key="url">
                 <li v-if="url != slug">
