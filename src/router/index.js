@@ -32,11 +32,6 @@ const routes = [
     component: Donation,
   },
   {
-    path: "/app",
-    name: "app",
-    component: About,
-  },
-  {
     path: "/help",
     name: "help",
     component: About,

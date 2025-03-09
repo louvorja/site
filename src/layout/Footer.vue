@@ -12,9 +12,9 @@
                 <h2>{{ $t("footer.links.title") }}</h2>
                 <ul>
                   <li>
-                    <router-link :to="{ name: 'app' }">
+                    <a href="https://app.louvorja.com.br/" target="_blank">
                       {{ $t("footer.links.list.app") }}
-                    </router-link>
+                    </a>
                   </li>
                   <li>
                     <router-link :to="{ name: 'help' }">
