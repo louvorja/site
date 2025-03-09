@@ -13,8 +13,6 @@ import "bootstrap";
 import "./assets/css/font-awesome.min.css";
 import "./assets/css/style.css";
 
-//import "slicknav/dist/slicknav.min.css";
-//import "slicknav/dist/jquery.slicknav.min.js";
 import "./assets/css/slicknav.css";
 import "./assets/js/jquery.slicknav.js";
 
