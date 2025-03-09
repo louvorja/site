@@ -151,7 +151,8 @@
         "text": "El software LouvorJA es gratuito. Todo el servicio de desarrollo es voluntario. Sin embargo, hay costos para mantenerlo funcionando. Si desea hacer una contribución, puede hacerlo a través de los siguientes medios:"
     },
     "help": {
-        "title": "Ayuda del Programa"
+        "title": "Ayuda del Programa",
+        "related": "Temas Relacionados"
     },
     "faq": {
         "title": "Preguntas Frecuentes"

@@ -66,11 +66,6 @@
 <script>
 export default {
   name: "HeaderLayout",
-  methods: {
-    changeLocale(lang) {
-      this.$i18n.locale = lang;
-    },
-  },
   computed: {
     flag() {
       const flags = {
@@ -78,6 +73,11 @@ export default {
         es: "es",
       };
       return flags[this.$i18n.locale] || "br";
+    },
+  },
+  methods: {
+    changeLocale(lang) {
+      this.$i18n.locale = lang;
     },
   },
   mounted() {

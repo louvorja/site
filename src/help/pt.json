@@ -4,10 +4,82 @@
         "icon": "fa fa-cubes",
         "items": {
             "teclas-atalho": {
-                "title": "Teclas de Atalho"
+                "title": "Teclas de Atalho",
+                "text": [
+                    {
+                        "type": "title",
+                        "value": "Geral"
+                    },
+                    {
+                        "type": "list",
+                        "value": [
+                            "<b>ESC</b> - Fecha a tela do segundo monitor / Fecha a música / Fecha a janela ativa",
+                            "<b>CTRL + W</b> - Fecha a aba atual",
+                            "<b>CTRL + F</b> - Abre a busca de músicas",
+                            "<b>F1</b> - Abre a tela de ajuda",
+                            "<b>F5</b> / <b>F9</b> - Projeta a janela atual (quando disponível o recurso) / Projeta a música do Editor de Slides"
+                        ]
+                    },
+                    {
+                        "type": "title",
+                        "value": "Bíblia / Busca Bíblica"
+                    },
+                    {
+                        "type": "list",
+                        "value": [
+                            "<b>Seta Esquerda</b> / <b>Seta Cima</b> / <b>PgUp</b> - Vai para o verso anterior",
+                            "<b>Seta Direita</b> / <b>Seta Baixo</b> / <b>PgDn</b> - Vai para o próximo verso"
+                        ]
+                    },
+                    {
+                        "type": "title",
+                        "value": "Projeção de Música"
+                    },
+                    {
+                        "type": "list",
+                        "value": [
+                            "<b>Seta Esquerda</b> / <b>Seta Cima</b> / <b>PgUp</b> - Vai para o slide anterior",
+                            "<b>Seta Direita</b> / <b>Seta Baixo</b> / <b>PgDn</b> - Vai para o próximo slide",
+                            "<b>Home</b> - Vai para o primeiro slide",
+                            "<b>End</b> - Vai para o último slide",
+                            "<b>Pause</b> / <b>Play</b> / <b>CTRL + P</b> / <b>Barra de Espaço</b> - Pausa a música, ou continua, caso já esteja pausada"
+                        ]
+                    },
+                    {
+                        "type": "title",
+                        "value": "Editor de Slides"
+                    },
+                    {
+                        "type": "list",
+                        "value": [
+                            "<b>Seta Esquerda</b> / <b>Seta Cima</b> / <b>PgUp</b> - Vai para o slide anterior",
+                            "<b>Seta Direita</b> / <b>Seta Baixo</b> / <b>PgDn</b> - Vai para o próximo slide",
+                            "<b>Home</b> - Vai para o primeiro slide",
+                            "<b>End</b> - Vai para o último slide",
+                            "<b>Pause</b> / <b>Play</b> / <b>CTRL + P</b> / <b>Barra de Espaço</b> - Pausa a música, ou continua, caso já esteja pausada",
+                            "<b>CTRL + Seta Direita</b> / <b>CTRL + Seta Baixo</b> - Grava o tempo e avança o slide",
+                            "<b>CTRL + Seta Esquerda</b> / <b>CTRL + Seta Cima</b> - Grava retroativo",
+                            "<b>F5</b> / <b>F9</b> - Projeta a música"
+                        ]
+                    }
+                ]
             },
             "transmitir": {
-                "title": "Transmitir conteúdo pra streaming"
+                "title": "Transmitir conteúdo pra streaming",
+                "text": [
+                    {
+                        "type": "text",
+                        "value": "O programa permite a transmissão de conteúdos para serviços de streaming, como OBS e VMIX, via navegador."
+                    },
+                    {
+                        "type": "text",
+                        "value": "Para ativar este recurso, acesse o botão de Menu (no canto superior esquerdo), e vá até a opção \"Transmitir\". Defina o IP e Porta (ou clique em \"Usar IP da rede\", para usar o IP de rede). Em seguida, clique em \"Iniciar Servidor\". Em caso de erro, tente mudar a porta."
+                    },
+                    {
+                        "type": "text",
+                        "value": "Após iniciado, as letras serão transmitidas via navegador, através do endereço mostrado nesta tela. Copie este endereço, e cole no programa de streaming (inserindo um objeto Navegador)"
+                    }
+                ]
             }
         }
     },
