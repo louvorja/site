@@ -1,5 +1,5 @@
 <template>
-  <section class="intro-section spad set-bg">
+  <section v-if="helpItem" class="intro-section spad set-bg">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
@@ -68,14 +68,20 @@
       </div>
     </div>
   </section>
+  <NotFoundComponent v-else />
 </template>
 
 <script>
+import NotFoundComponent from "@/components/NotFound.vue";
+
 import helpPt from "../help/pt.json";
 import helpEs from "../help/es.json";
 
 export default {
   name: "HelpPage",
+  components: {
+    NotFoundComponent,
+  },
   computed: {
     lang() {
       return this.$i18n.locale;

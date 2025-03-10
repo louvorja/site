@@ -158,5 +158,8 @@
     },
     "faq": {
         "title": "Perguntas Frequentes"
+    },
+    "notfound": {
+        "title": "Página não encontrada!"
     }
 }

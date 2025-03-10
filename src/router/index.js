@@ -8,6 +8,7 @@ import Dev from "@/views/Dev.vue";
 import Help from "@/views/Help.vue";
 import HelpItem from "@/views/HelpItem.vue";
 import FAQ from "@/views/FAQ.vue";
+import NotFound from "@/views/NotFound.vue";
 
 const routes = [
   {
@@ -95,6 +96,11 @@ const routes = [
       window.location.href = import.meta.env.VITE_FACEBOOK_URL;
       next(false);
     },
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "not-found",
+    component: NotFound,
   },
 ];
 
