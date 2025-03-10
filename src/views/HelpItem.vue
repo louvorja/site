@@ -8,7 +8,7 @@
           </div>
         </div>
         <div class="col-lg-8 mb-5">
-          <div class="how-item">
+          <div class="how-item mx-5">
             <template v-for="(item, key) in helpItem.text" :key="key">
               <h4 v-if="item.type == 'title'" class="m-0 p-0">
                 {{ item.value }}
@@ -20,8 +20,16 @@
                   v-html="item_list"
                 />
               </ul>
-              <p v-else>
-                {{ item.value }}
+              <p v-else class="m-0">
+                <span v-html="item.value" />
+                <router-link
+                  v-if="item.link"
+                  class="ms-1"
+                  :to="{ name: 'help-item', params: { slug: item.link } }"
+                >
+                  <i class="fa fa-share"></i>
+                  {{ $t("help.link_more") }}
+                </router-link>
               </p>
             </template>
           </div>
@@ -30,15 +38,26 @@
           <div class="how-item m-3">
             <h5 class="my-3">{{ $t("help.related") }}</h5>
             <ul>
-              <template v-for="(item, url) in help[category].items" :key="url">
-                <li v-if="url != slug">
-                  <router-link
-                    :to="{ name: 'help-item', params: { slug: url } }"
-                  >
-                    {{ item.title }}
-                  </router-link>
-                </li>
+              <template v-for="category in categories" :key="category">
+                <template
+                  v-for="(item, url) in help[category].items"
+                  :key="url"
+                >
+                  <li v-if="url != slug">
+                    <router-link
+                      :to="{ name: 'help-item', params: { slug: url } }"
+                    >
+                      {{ item.title }}
+                    </router-link>
+                  </li>
+                </template>
               </template>
+              <li class="mt-3">
+                <router-link :to="{ name: 'help' }">
+                  <i class="fa fa-reply-all"></i> &nbsp;
+                  {{ $t("help.link_back") }}
+                </router-link>
+              </li>
             </ul>
           </div>
         </div>
@@ -58,7 +77,20 @@ export default {
       return this.$i18n.locale;
     },
     help() {
-      return this.lang === "pt" ? helpPt : helpEs;
+      let help = this.lang === "pt" ? helpPt : helpEs;
+
+      let all = {};
+      Object.keys(help).map((c) => {
+        Object.keys(help[c].items).map((i) => {
+          if (help[c].items[i] == "#") {
+            help[c].items[i] = all[i];
+          } else {
+            all[i] = help[c].items[i];
+          }
+        });
+      });
+
+      return help;
     },
     helpItem() {
       let item = null;
@@ -71,25 +103,26 @@ export default {
 
       return item;
     },
-    category() {
-      let item = null;
+    categories() {
+      let items = [];
       Object.keys(this.help).map((c) => {
         if (this.help[c].items[this.slug]) {
-          item = c;
-          return;
+          items.push(c);
         }
       });
 
-      return item;
+      return items;
     },
     slug() {
       return this.$route.params.slug;
     },
   },
-  /* methods: {
-    helpItem() {
-      this.$i18n.locale = lang;
-    },
-  },*/
 };
 </script>
+
+<style scoped>
+ul li {
+  color: #6a7080;
+}
+</style>
+>

@@ -88,25 +88,124 @@
         "icon": "fa fa-music",
         "items": {
             "hinario-busca": {
-                "title": "Busca de Hinos"
+                "title": "Busca de Hinos",
+                "text": [
+                    {
+                        "type": "text",
+                        "value": "Na aba \"Hinário\", utilize o campo de busca pode ser usado de duas maneiras:"
+                    },
+                    {
+                        "type": "list",
+                        "value": [
+                            "<b>Número do Hino:</b> Ao ser colocado um número, é exibido o hino correspondente ao número digitado. Pressione a tecla \"ENTER\" para executar o hino, ou dê um duplo-clique sobre ele.",
+                            "<b>Palavra:</b> Também pode ser colocar o nome ou parte do nome do hino neste campo. Ao colocar uma palavra neste campo, são listados todos os hinos que contenham essa palavra. Ex.: Ao digitar \"Jesus\", são mostrados os hinos \"Nasce Jesus\", \"Saudai o Nome de Jesus\", \"Jesus é Melhor\", \"O Amor de Jesus\", etc..."
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "value": "Para buscar um hino pela letra, utilize a opção \"Localizar Músicas\", dentro do menu \"Coletâneas\".",
+                        "link": "localizar-musicas"
+                    },
+                    {
+                        "type": "text",
+                        "value": "Abaixo do campo de busca, existem algumas opções que definem a forma como o hino será aberto:"
+                    },
+                    {
+                        "type": "list",
+                        "value": [
+                            "<b>Slide Cantado:</b> Abre os slides do hino com áudio cantado.",
+                            "<b>Slide Playback:</b> Abre os slides do hino com áudio playback.",
+                            "<b>Slide Sem Áudio:</b> Abre os slides do hino sem áudio. Neste modo, os tempos ficam desativados, devendo o operador mudar de slide manualmente."
+                        ]
+                    }
+                ]
             },
             "reproduzir-hinos-sequencia": {
-                "title": "Como reproduzir hinos do hinário em sequencia?"
+                "title": "Como reproduzir hinos do hinário em sequencia?",
+                "text": [
+                    {
+                        "type": "text",
+                        "value": "Na aba \"Hinário\", selecione um hino, e em seguida, pressione o botão \"Em Sequência\". Isso fará com que o hino atual seja executado, e ao término do hino, o próximo hino será executado em seguida."
+                    },
+                    {
+                        "type": "text",
+                        "value": "<b>Ex.:</b> O hino 51 foi executado. Ao término do mesmo, será executado o hino 52, depois 53, e assim sucessivamente."
+                    }
+                ]
             },
             "exportar-musicas": {
-                "title": "Exportando Músicas"
+                "title": "Exportando Músicas",
+                "text": [
+                    {
+                        "type": "text",
+                        "value": "Pressione o botão \"Exportar Música\" parar exportar a música atual no formato do programa (slja). Este arquivo pode ser modificado posteriormente na tela \"Editor de Slides\".",
+                        "link": "editor-de-slides"
+                    }
+                ]
             },
             "localizar-musicas": {
-                "title": "Localizar Músicas"
+                "title": "Localizar Músicas",
+                "text": [
+                    {
+                        "type": "text",
+                        "value": "Na tela \"Localizar Músias\", coloque o nome da música a ser buscada. A música será buscada de acordo com os filtros escolhidos."
+                    },
+                    {
+                        "type": "text",
+                        "value": "<b>Dica:</b> Utilize asterisco (<b>*</b>) para representar qualquer letra ou palavra entre os termos. Por exemplo: Ao buscar por \"<b>Jesus * Melhor</b>\", o programa traz as músicas \"<b><u>Jesus</u> é <u>Melhor</u></b>\" e \"<b><u>Jesus</u> meu <u>Melhor</u> Amigo</b>\"."
+                    },
+                    {
+                        "type": "text",
+                        "value": "Caso queria buscar por músicas que iniciem em uma determinada letra, basta clicar nas aba correspondente à letra da música."
+                    },
+                    {
+                        "type": "text",
+                        "value": "Na lista de música, possui alguns ícones de identificação. Um ícone do Youtube indica que é uma coletânea do Youtube, ou seja, o programa irá se conectar à internet para executar a música. O ícone azul com as letras \"PB\" indica que a música possui playback."
+                    }
+                ]
             },
             "letras": {
-                "title": "Obtendo a letra dos hinos / músicas"
+                "title": "Obtendo a letra dos hinos / músicas",
+                "text": [
+                    {
+                        "type": "text",
+                        "value": "Pressione o botão \"Letra\" para abrir a janela de letras das músicas."
+                    },
+                    {
+                        "type": "text",
+                        "value": "Na janela de letra da música, é possível ver as informações do(s) álbum(ns) onde a música está localizada dentro do programa, a letra, e um campo de busca rápida dentro da letra. Ao utilizar este campo de busca, a palavra digitada automaticamente é destacada em vermelho na letra."
+                    }
+                ]
             },
             "relacao-de-hinos-dos-hinarios-1996-e-2022": {
-                "title": "Relação de Hinos dos Hinários 1996 e 2022"
+                "title": "Relação de Hinos dos Hinários 1996 e 2022",
+                "text": [
+                    {
+                        "type": "text",
+                        "value": "EM BREVE"
+                    }
+                ]
             },
             "hinario-reproducao": {
-                "title": "Reprodução de Hinos"
+                "title": "Reprodução de Hinos",
+                "text": [
+                    {
+                        "type": "text",
+                        "value": "No menu, é possível visualizar diversas formas pela qual um hino pode ser aberto:"
+                    },
+                    {
+                        "type": "list",
+                        "value": [
+                            "<b>Letra:</b> Abre uma janela com a letra da música.",
+                            "<b>Slide - Cantado:</b> Abre os slides do hino com áudio cantado.",
+                            "<b>Slide - Playback:</b> Abre os slides do hino com áudio playback.",
+                            "<b>Slide - Sem Áudio:</b> Abre os slides do hino sem áudio. Neste modo, os tempos ficam desativados, devendo o operador mudar de slide manualmente.",
+                            "<b>Slide - Em Sequência:</b> Abre o hino atual, e ao término, executa os próximos hinos em sequência, automaticamente.",
+                            "<b>Arquivo de Áudio - Cantado:</b> Abre o arquivo mp3 da música cantada.",
+                            "<b>Arquivo de Áudio - Playback:</b> Abre o arquivo mp3 do playback da música."
+                        ]
+                    }
+                ]
             }
         }
     },
@@ -120,15 +219,9 @@
             "coletaneas-personalizadas": {
                 "title": "Coletâneas Personalizadas"
             },
-            "exportar-musicas": {
-                "title": "Exportando Músicas"
-            },
-            "localizar-musicas": {
-                "title": "Localizar Músicas"
-            },
-            "letras": {
-                "title": "Obtendo a letra dos hinos / músicas"
-            },
+            "exportar-musicas": "#",
+            "localizar-musicas": "#",
+            "letras": "#",
             "playlist": {
                 "title": "Playlist das Coletâneas"
             }
@@ -201,18 +294,12 @@
         "title": "Perguntas Frequentes",
         "icon": "fa fa-list",
         "items": {
-            "como-colocar-provai-e-vede": {
-                "title": "Como colocar os vídeos do Provai e Vede no programa?"
-            },
-            "exibir-varios-versos": {
-                "title": "Como exibir mais de um verso bíblico na tela?"
-            },
+            "como-colocar-provai-e-vede": "#",
+            "exibir-varios-versos": "#",
             "css-streaming": {
                 "title": "Como formatar a letra transmitida pelo programa no OBS ou VMIX?"
             },
-            "reproduzir-hinos-sequencia": {
-                "title": "Como reproduzir hinos do hinário em sequencia?"
-            },
+            "reproduzir-hinos-sequencia": "#",
             "como-transmitir-streaming": {
                 "title": "Como transmitir a letra da música / bíblia no OBS ou VMIX?"
             }

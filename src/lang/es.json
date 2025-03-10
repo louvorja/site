@@ -152,7 +152,9 @@
     },
     "help": {
         "title": "Ayuda del Programa",
-        "related": "Temas Relacionados"
+        "related": "Temas Relacionados",
+        "link_back": "Todos los elementos",
+        "link_more": "Saber más"
     },
     "faq": {
         "title": "Preguntas Frecuentes"

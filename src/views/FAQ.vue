@@ -35,7 +35,20 @@ export default {
       return this.$i18n.locale;
     },
     help() {
-      return this.lang === "pt" ? helpPt : helpEs;
+      let help = this.lang === "pt" ? helpPt : helpEs;
+
+      let all = {};
+      Object.keys(help).map((c) => {
+        Object.keys(help[c].items).map((i) => {
+          if (help[c].items[i] == "#") {
+            help[c].items[i] = all[i];
+          } else {
+            all[i] = help[c].items[i];
+          }
+        });
+      });
+
+      return help;
     },
   },
 };
