@@ -1,308 +1,477 @@
 {
-    "general": {
-        "title": "Geral",
-        "icon": "fa fa-cubes",
-        "items": {
-            "teclas-atalho": {
-                "title": "Teclas de Atalho",
-                "text": [
-                    {
-                        "type": "title",
-                        "value": "Geral"
-                    },
-                    {
-                        "type": "list",
-                        "value": [
-                            "<b>ESC</b> - Fecha a tela do segundo monitor / Fecha a música / Fecha a janela ativa",
-                            "<b>CTRL + W</b> - Fecha a aba atual",
-                            "<b>CTRL + F</b> - Abre a busca de músicas",
-                            "<b>F1</b> - Abre a tela de ajuda",
-                            "<b>F5</b> / <b>F9</b> - Projeta a janela atual (quando disponível o recurso) / Projeta a música do Editor de Slides"
-                        ]
-                    },
-                    {
-                        "type": "title",
-                        "value": "Bíblia / Busca Bíblica"
-                    },
-                    {
-                        "type": "list",
-                        "value": [
-                            "<b>Seta Esquerda</b> / <b>Seta Cima</b> / <b>PgUp</b> - Vai para o verso anterior",
-                            "<b>Seta Direita</b> / <b>Seta Baixo</b> / <b>PgDn</b> - Vai para o próximo verso"
-                        ]
-                    },
-                    {
-                        "type": "title",
-                        "value": "Projeção de Música"
-                    },
-                    {
-                        "type": "list",
-                        "value": [
-                            "<b>Seta Esquerda</b> / <b>Seta Cima</b> / <b>PgUp</b> - Vai para o slide anterior",
-                            "<b>Seta Direita</b> / <b>Seta Baixo</b> / <b>PgDn</b> - Vai para o próximo slide",
-                            "<b>Home</b> - Vai para o primeiro slide",
-                            "<b>End</b> - Vai para o último slide",
-                            "<b>Pause</b> / <b>Play</b> / <b>CTRL + P</b> / <b>Barra de Espaço</b> - Pausa a música, ou continua, caso já esteja pausada"
-                        ]
-                    },
-                    {
-                        "type": "title",
-                        "value": "Editor de Slides"
-                    },
-                    {
-                        "type": "list",
-                        "value": [
-                            "<b>Seta Esquerda</b> / <b>Seta Cima</b> / <b>PgUp</b> - Vai para o slide anterior",
-                            "<b>Seta Direita</b> / <b>Seta Baixo</b> / <b>PgDn</b> - Vai para o próximo slide",
-                            "<b>Home</b> - Vai para o primeiro slide",
-                            "<b>End</b> - Vai para o último slide",
-                            "<b>Pause</b> / <b>Play</b> / <b>CTRL + P</b> / <b>Barra de Espaço</b> - Pausa a música, ou continua, caso já esteja pausada",
-                            "<b>CTRL + Seta Direita</b> / <b>CTRL + Seta Baixo</b> - Grava o tempo e avança o slide",
-                            "<b>CTRL + Seta Esquerda</b> / <b>CTRL + Seta Cima</b> - Grava retroativo",
-                            "<b>F5</b> / <b>F9</b> - Projeta a música"
-                        ]
-                    }
-                ]
-            },
-            "transmitir": {
-                "title": "Transmitir conteúdo pra streaming",
-                "text": [
-                    {
-                        "type": "text",
-                        "value": "O programa permite a transmissão de conteúdos para serviços de streaming, como OBS e VMIX, via navegador."
-                    },
-                    {
-                        "type": "text",
-                        "value": "Para ativar este recurso, acesse o botão de Menu (no canto superior esquerdo), e vá até a opção \"Transmitir\". Defina o IP e Porta (ou clique em \"Usar IP da rede\", para usar o IP de rede). Em seguida, clique em \"Iniciar Servidor\". Em caso de erro, tente mudar a porta."
-                    },
-                    {
-                        "type": "text",
-                        "value": "Após iniciado, as letras serão transmitidas via navegador, através do endereço mostrado nesta tela. Copie este endereço, e cole no programa de streaming (inserindo um objeto Navegador)"
-                    }
-                ]
-            }
+    "items": {
+        "teclas-atalho": {
+            "title": "Teclas de Atalho",
+            "text": [
+                {
+                    "type": "title",
+                    "value": "Geral"
+                },
+                {
+                    "type": "list",
+                    "value": [
+                        "<b>ESC</b> - Fecha a tela do segundo monitor / Fecha a música / Fecha a janela ativa",
+                        "<b>CTRL + W</b> - Fecha a aba atual",
+                        "<b>CTRL + F</b> - Abre a busca de músicas",
+                        "<b>F1</b> - Abre a tela de ajuda",
+                        "<b>F5</b> / <b>F9</b> - Projeta a janela atual (quando disponível o recurso) / Projeta a música do Editor de Slides"
+                    ]
+                },
+                {
+                    "type": "title",
+                    "value": "Bíblia / Busca Bíblica"
+                },
+                {
+                    "type": "list",
+                    "value": [
+                        "<b>Seta Esquerda</b> / <b>Seta Cima</b> / <b>PgUp</b> - Vai para o verso anterior",
+                        "<b>Seta Direita</b> / <b>Seta Baixo</b> / <b>PgDn</b> - Vai para o próximo verso"
+                    ]
+                },
+                {
+                    "type": "title",
+                    "value": "Projeção de Música"
+                },
+                {
+                    "type": "list",
+                    "value": [
+                        "<b>Seta Esquerda</b> / <b>Seta Cima</b> / <b>PgUp</b> - Vai para o slide anterior",
+                        "<b>Seta Direita</b> / <b>Seta Baixo</b> / <b>PgDn</b> - Vai para o próximo slide",
+                        "<b>Home</b> - Vai para o primeiro slide",
+                        "<b>End</b> - Vai para o último slide",
+                        "<b>Pause</b> / <b>Play</b> / <b>CTRL + P</b> / <b>Barra de Espaço</b> - Pausa a música, ou continua, caso já esteja pausada"
+                    ]
+                },
+                {
+                    "type": "title",
+                    "value": "Editor de Slides"
+                },
+                {
+                    "type": "list",
+                    "value": [
+                        "<b>Seta Esquerda</b> / <b>Seta Cima</b> / <b>PgUp</b> - Vai para o slide anterior",
+                        "<b>Seta Direita</b> / <b>Seta Baixo</b> / <b>PgDn</b> - Vai para o próximo slide",
+                        "<b>Home</b> - Vai para o primeiro slide",
+                        "<b>End</b> - Vai para o último slide",
+                        "<b>Pause</b> / <b>Play</b> / <b>CTRL + P</b> / <b>Barra de Espaço</b> - Pausa a música, ou continua, caso já esteja pausada",
+                        "<b>CTRL + Seta Direita</b> / <b>CTRL + Seta Baixo</b> - Grava o tempo e avança o slide",
+                        "<b>CTRL + Seta Esquerda</b> / <b>CTRL + Seta Cima</b> - Grava retroativo",
+                        "<b>F5</b> / <b>F9</b> - Projeta a música"
+                    ]
+                }
+            ]
+        },
+        "transmitir": {
+            "title": "Transmitir conteúdo pra streaming",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "O programa permite a transmissão de conteúdos para serviços de streaming, como OBS e VMIX, via navegador."
+                },
+                {
+                    "type": "text",
+                    "value": "Para ativar este recurso, acesse o botão de Menu (no canto superior esquerdo), e vá até a opção \"Transmitir\". Defina o IP e Porta (ou clique em \"Usar IP da rede\", para usar o IP de rede). Em seguida, clique em \"Iniciar Servidor\". Em caso de erro, tente mudar a porta."
+                },
+                {
+                    "type": "text",
+                    "value": "Após iniciado, as letras serão transmitidas via navegador, através do endereço mostrado nesta tela. Copie este endereço, e cole no programa de streaming (inserindo um objeto Navegador)"
+                }
+            ]
+        },
+        "hinario-busca": {
+            "title": "Busca de Hinos",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "Na aba \"Hinário\", utilize o campo de busca pode ser usado de duas maneiras:"
+                },
+                {
+                    "type": "list",
+                    "value": [
+                        "<b>Número do Hino:</b> Ao ser colocado um número, é exibido o hino correspondente ao número digitado. Pressione a tecla \"ENTER\" para executar o hino, ou dê um duplo-clique sobre ele.",
+                        "<b>Palavra:</b> Também pode ser colocar o nome ou parte do nome do hino neste campo. Ao colocar uma palavra neste campo, são listados todos os hinos que contenham essa palavra. Ex.: Ao digitar \"Jesus\", são mostrados os hinos \"Nasce Jesus\", \"Saudai o Nome de Jesus\", \"Jesus é Melhor\", \"O Amor de Jesus\", etc..."
+                    ]
+                },
+                {
+                    "type": "text",
+                    "value": "Para buscar um hino pela letra, utilize a opção \"Localizar Músicas\", dentro do menu \"Coletâneas\".",
+                    "link": "localizar-musicas"
+                },
+                {
+                    "type": "text",
+                    "value": "Abaixo do campo de busca, existem algumas opções que definem a forma como o hino será aberto:"
+                },
+                {
+                    "type": "list",
+                    "value": [
+                        "<b>Slide Cantado:</b> Abre os slides do hino com áudio cantado.",
+                        "<b>Slide Playback:</b> Abre os slides do hino com áudio playback.",
+                        "<b>Slide Sem Áudio:</b> Abre os slides do hino sem áudio. Neste modo, os tempos ficam desativados, devendo o operador mudar de slide manualmente."
+                    ]
+                }
+            ]
+        },
+        "reproduzir-hinos-sequencia": {
+            "title": "Como reproduzir hinos do hinário em sequencia?",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "Na aba \"Hinário\", selecione um hino, e em seguida, pressione o botão \"Em Sequência\". Isso fará com que o hino atual seja executado, e ao término do hino, o próximo hino será executado em seguida."
+                },
+                {
+                    "type": "text",
+                    "value": "<b>Ex.:</b> O hino 51 foi executado. Ao término do mesmo, será executado o hino 52, depois 53, e assim sucessivamente."
+                }
+            ]
+        },
+        "exportar-musicas": {
+            "title": "Exportando Músicas",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "Pressione o botão \"Exportar Música\" parar exportar a música atual no formato do programa (slja). Este arquivo pode ser modificado posteriormente na tela \"Editor de Slides\".",
+                    "link": "editor-de-slides"
+                }
+            ]
+        },
+        "localizar-musicas": {
+            "title": "Localizar Músicas",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "Na tela \"Localizar Músias\", coloque o nome da música a ser buscada. A música será buscada de acordo com os filtros escolhidos."
+                },
+                {
+                    "type": "text",
+                    "value": "<b>Dica:</b> Utilize asterisco (<b>*</b>) para representar qualquer letra ou palavra entre os termos. Por exemplo: Ao buscar por \"<b>Jesus * Melhor</b>\", o programa traz as músicas \"<b><u>Jesus</u> é <u>Melhor</u></b>\" e \"<b><u>Jesus</u> meu <u>Melhor</u> Amigo</b>\"."
+                },
+                {
+                    "type": "text",
+                    "value": "Caso queria buscar por músicas que iniciem em uma determinada letra, basta clicar nas aba correspondente à letra da música."
+                },
+                {
+                    "type": "text",
+                    "value": "Na lista de música, possui alguns ícones de identificação. Um ícone do Youtube indica que é uma coletânea do Youtube, ou seja, o programa irá se conectar à internet para executar a música. O ícone azul com as letras \"PB\" indica que a música possui playback."
+                }
+            ]
+        },
+        "letras": {
+            "title": "Obtendo a letra dos hinos / músicas",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "Pressione o botão \"Letra\" para abrir a janela de letras das músicas."
+                },
+                {
+                    "type": "text",
+                    "value": "Na janela de letra da música, é possível ver as informações do(s) álbum(ns) onde a música está localizada dentro do programa, a letra, e um campo de busca rápida dentro da letra. Ao utilizar este campo de busca, a palavra digitada automaticamente é destacada em vermelho na letra."
+                }
+            ]
+        },
+        "relacao-de-hinos-dos-hinarios-1996-e-2022": {
+            "title": "Relação de Hinos dos Hinários 1996 e 2022",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "EM BREVE"
+                }
+            ]
+        },
+        "hinario-reproducao": {
+            "title": "Reprodução de Hinos",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "No menu, é possível visualizar diversas formas pela qual um hino pode ser aberto:"
+                },
+                {
+                    "type": "list",
+                    "value": [
+                        "<b>Letra:</b> Abre uma janela com a letra da música.",
+                        "<b>Slide - Cantado:</b> Abre os slides do hino com áudio cantado.",
+                        "<b>Slide - Playback:</b> Abre os slides do hino com áudio playback.",
+                        "<b>Slide - Sem Áudio:</b> Abre os slides do hino sem áudio. Neste modo, os tempos ficam desativados, devendo o operador mudar de slide manualmente.",
+                        "<b>Slide - Em Sequência:</b> Abre o hino atual, e ao término, executa os próximos hinos em sequência, automaticamente.",
+                        "<b>Arquivo de Áudio - Cantado:</b> Abre o arquivo mp3 da música cantada.",
+                        "<b>Arquivo de Áudio - Playback:</b> Abre o arquivo mp3 do playback da música."
+                    ]
+                }
+            ]
+        },
+        "coletaneas-online": {
+            "title": "Coletâneas On-line",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "A aba Coletâneas On-line permite a execução de vídeos direto do Youtube. Para executar vídeos nesta seção, é necessário conexão com a internet."
+                },
+                {
+                    "type": "text",
+                    "value": "Em vídeos on-line, há uma seleção de alguns canais para execução de vídeos on-line. Os botões de Atualizar, permitem atualizar os canais, playlists ou vídeos, no caso de haver novos conteúdos."
+                },
+                {
+                    "type": "text",
+                    "value": "É possível cadastrar vídeos on-line personalizados, acessando o botão \"Vídeos Personalizados\"."
+                }
+            ]
+        },
+        "coletaneas-personalizadas": {
+            "title": "Coletâneas Personalizadas",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "O programa permite a inserção de atalhos para arquivos personalizados. Para adicionar arquivos personalizados, acesse a aba \"Coletâneas Personalizadas\"."
+                },
+                {
+                    "type": "title",
+                    "value": "Adicionando Arquivo / Álbum"
+                },
+                {
+                    "type": "text",
+                    "value": "Copie o arquivo ou o diretório (CTRL+C), e cole nesta tela (CTRL+V). Ou, clique no botão \"Adicionar\" para adicionar uma nova coletânea / arquivo. Ao clicar neste botão, um painel de adição será aberto no lado esquerdo da tela, podendo opcionalmente, escolher uma imagem como capa da coletânea. Para criar uma playlist, basta colocar o diretório do álbum, ao invés do caminho do arquivo."
+                },
+                {
+                    "type": "title",
+                    "value": "Excluindo Álbum"
+                },
+                {
+                    "type": "text",
+                    "value": "Clique com o botão direito sobre a coletânea que deseja alterar, em seguida, utilize a opção \"Excluir\"."
+                },
+                {
+                    "type": "text",
+                    "value": "<b>Obs.:</b> Esta opção exclui somente o link da coletânea do Menu. Não exclui o arquivo da respectiva coletânea."
+                },
+                {
+                    "type": "text",
+                    "value": "O botão \"Excluir\" é apenas informativo. Ao clicar sobre ele, um alerta será dado informando a maneira correta de se excluir uma coletânea. Para excluir todas as coletâneas ao mesmo tempo, clique sobre a seta ao lado do botão \"Excluir\", em seguida, selecione a opção \"Excluir Todas\". Todas as coletâneas serão removidas."
+                },
+                {
+                    "type": "text",
+                    "value": "<b>Obs.:</b> Esta opção exclui somente os links das coletâneas do Menu. Não exclui os arquivos das respectivas coletâneas."
+                }
+            ]
+        },
+        "playlist": {
+            "title": "Playlist das Coletâneas",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "Ao clicar sobre uma coletânea nas abas \"JA/Min. Música\", ou \"Coletâneas Diversas\", será aberta uma lista com as músicas que compõem a coletãnea. Basta clicar sobre uma música para abrir o slide."
+                },
+                {
+                    "type": "text",
+                    "value": "Nesta tela, é possível projetar a lista de músicas para o público (botão \"Projetar Menu\"), e também, reproduzir todas as músicas em sequência (botão \"Reproduzir Todas\")."
+                },
+                {
+                    "type": "text",
+                    "value": "Na frente do nome de cada música, existem botões de ação, que abrem a música de uma forma de diferente, como mostrado a seguir (em ordem):"
+                },
+                {
+                    "type": "list",
+                    "value": [
+                        "Abre os slides com áudio cantado.",
+                        "Abre os slides com áudio playback.",
+                        "Abre os slides sem áudio. Neste modo, os tempos ficam desativados, devendo o operador mudar de slide manualmente.",
+                        "Abre o arquivo mp3 da música cantada.",
+                        "Abre o arquivo mp3 da música playback.",
+                        "Abre uma janela com a letra da música."
+                    ]
+                }
+            ]
+        },
+        "busca-biblica": {
+            "title": "Buscando Passagens Bíblicas",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "Acesse a aba \"Busca Bíblica\" para fazer a busca de passagens bíblicas. Utilize os filtros de busca para definir os parâmetros da busca de passagens."
+                },
+                {
+                    "type": "text",
+                    "value": "<b>Dica:</b> Utilize asterisco (<b>*</b>) para representar qualquer letra ou palavra entre os termos. Por exemplo: Ao buscar por \"Deus*terra\", o programa traz todas as passagens bíblicas que tenham as palavras Deus e terra, como, por exemplo: \"<b>No princípio criou <u>Deus</u> os céus e a <u>terra</u>.</b>\"."
+                }
+            ]
+        },
+        "exibir-varios-versos-biblicos": {
+            "title": "Como exibir mais de um verso bíblico na tela?",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "Para exibir mais de um verso bíblico, coloque os versos desejados no campo de busca do versículo, conforme exemplo:"
+                },
+                {
+                    "type": "list",
+                    "value": [
+                        "\"<b>1-3</b>\"- Versos de 1 a 3",
+                        "\"<b>1,3</b>\"- Versos 1 e 3",
+                        "\"<b>1-3,5</b>\"- Versos 1 a 3, e 5"
+                    ]
+                },
+                {
+                    "type": "text",
+                    "value": "Após colocar os versos desejados, pressione ENTER."
+                }
+            ]
+        },
+        "passagem-biblica": {
+            "title": "Exibindo Passagens Bíblicas",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "Selecione o livro, capítulo e versículo para abrir a passagem bíblica. Utilize a lista de versões, na barra de ferramentas superior, para mudar a versão bíblica."
+                },
+                {
+                    "type": "text",
+                    "value": "É possível mostrar mais de um verso bíblico ao mesmo tempo, ou até mesmo, versos intercalados.",
+                    "link": "exibir-varios-versos-biblicos"
+                }
+            ]
+        },
+        "formatacao": {
+            "title": "Formatação de conteúdo",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "Clique no botão \"Formatar\" para formatar o conteúdo da tela. Irá abrir um painel lateral, permitindo modificar fonte, cor, tamanho, imagem de fundo e disposição."
+                },
+                {
+                    "type": "text",
+                    "value": "Para restaurar a formação, basta clicar no botão \"Restaurar\"."
+                }
+            ]
+        },
+        "projetando-tela": {
+            "title": "Projetando em Outro Monitor",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "Clique no botão Área Expandida, para projetar o conteúdo da tela para outro monitor (o monitor secundário pode ser definido no menu geral > Opções). Caso não seja detectado o segundo monitor, o conteúdo é aberto no monitor principal."
+                },
+                {
+                    "type": "text",
+                    "value": "Após projetar a tela, o ícone será alterado, indicando que o conteúdo já se encontra projetado. Pressione novamente o botão para recolher o conteúdo expandido, ou, pressione a tecla \"ESC\"."
+                },
+                {
+                    "type": "text",
+                    "value": "Para alterar o monitor em que a tela será expandida, clique sobre a seta localizada no botão de \"Área Expandida\". Será aberto um menu para escolha do monitor."
+                },
+                {
+                    "type": "text",
+                    "value": "<b>Obs.:</b> Esta opção fica registrada no programa, de modo que, ao clicar no botão de \"Área Expandida\" posteriormente, será aberto o monitor selecionado na última vez."
+                },
+                {
+                    "type": "text",
+                    "value": "A escolha de tela para projeção de conteúdos também pode ser definida no menu Opções."
+                }
+            ]
+        },
+        "como-colocar-provai-e-vede": {
+            "title": "Como colocar os vídeos do Provai e Vede no programa?"
+        },
+        "itens-agendados": {
+            "title": "Itens Agendados"
+        },
+        "liturgia": {
+            "title": "Liturgia"
+        },
+        "editor-de-slides": {
+            "title": "Editor de Slides"
+        },
+        "gravando-tempos": {
+            "title": "Gravando intervalos"
+        },
+        "estilos-css": {
+            "title": "Estilos CSS para Letra na Transmissão"
+        },
+        "css-streaming": {
+            "title": "Como formatar a letra transmitida pelo programa no OBS ou VMIX?"
+        },
+        "como-transmitir-streaming": {
+            "title": "Como transmitir a letra da música / bíblia no OBS ou VMIX?"
         }
     },
-    "hymnal": {
-        "title": "Hinário",
-        "icon": "fa fa-music",
-        "items": {
-            "hinario-busca": {
-                "title": "Busca de Hinos",
-                "text": [
-                    {
-                        "type": "text",
-                        "value": "Na aba \"Hinário\", utilize o campo de busca pode ser usado de duas maneiras:"
-                    },
-                    {
-                        "type": "list",
-                        "value": [
-                            "<b>Número do Hino:</b> Ao ser colocado um número, é exibido o hino correspondente ao número digitado. Pressione a tecla \"ENTER\" para executar o hino, ou dê um duplo-clique sobre ele.",
-                            "<b>Palavra:</b> Também pode ser colocar o nome ou parte do nome do hino neste campo. Ao colocar uma palavra neste campo, são listados todos os hinos que contenham essa palavra. Ex.: Ao digitar \"Jesus\", são mostrados os hinos \"Nasce Jesus\", \"Saudai o Nome de Jesus\", \"Jesus é Melhor\", \"O Amor de Jesus\", etc..."
-                        ]
-                    },
-                    {
-                        "type": "text",
-                        "value": "Para buscar um hino pela letra, utilize a opção \"Localizar Músicas\", dentro do menu \"Coletâneas\".",
-                        "link": "localizar-musicas"
-                    },
-                    {
-                        "type": "text",
-                        "value": "Abaixo do campo de busca, existem algumas opções que definem a forma como o hino será aberto:"
-                    },
-                    {
-                        "type": "list",
-                        "value": [
-                            "<b>Slide Cantado:</b> Abre os slides do hino com áudio cantado.",
-                            "<b>Slide Playback:</b> Abre os slides do hino com áudio playback.",
-                            "<b>Slide Sem Áudio:</b> Abre os slides do hino sem áudio. Neste modo, os tempos ficam desativados, devendo o operador mudar de slide manualmente."
-                        ]
-                    }
-                ]
-            },
-            "reproduzir-hinos-sequencia": {
-                "title": "Como reproduzir hinos do hinário em sequencia?",
-                "text": [
-                    {
-                        "type": "text",
-                        "value": "Na aba \"Hinário\", selecione um hino, e em seguida, pressione o botão \"Em Sequência\". Isso fará com que o hino atual seja executado, e ao término do hino, o próximo hino será executado em seguida."
-                    },
-                    {
-                        "type": "text",
-                        "value": "<b>Ex.:</b> O hino 51 foi executado. Ao término do mesmo, será executado o hino 52, depois 53, e assim sucessivamente."
-                    }
-                ]
-            },
-            "exportar-musicas": {
-                "title": "Exportando Músicas",
-                "text": [
-                    {
-                        "type": "text",
-                        "value": "Pressione o botão \"Exportar Música\" parar exportar a música atual no formato do programa (slja). Este arquivo pode ser modificado posteriormente na tela \"Editor de Slides\".",
-                        "link": "editor-de-slides"
-                    }
-                ]
-            },
-            "localizar-musicas": {
-                "title": "Localizar Músicas",
-                "text": [
-                    {
-                        "type": "text",
-                        "value": "Na tela \"Localizar Músias\", coloque o nome da música a ser buscada. A música será buscada de acordo com os filtros escolhidos."
-                    },
-                    {
-                        "type": "text",
-                        "value": "<b>Dica:</b> Utilize asterisco (<b>*</b>) para representar qualquer letra ou palavra entre os termos. Por exemplo: Ao buscar por \"<b>Jesus * Melhor</b>\", o programa traz as músicas \"<b><u>Jesus</u> é <u>Melhor</u></b>\" e \"<b><u>Jesus</u> meu <u>Melhor</u> Amigo</b>\"."
-                    },
-                    {
-                        "type": "text",
-                        "value": "Caso queria buscar por músicas que iniciem em uma determinada letra, basta clicar nas aba correspondente à letra da música."
-                    },
-                    {
-                        "type": "text",
-                        "value": "Na lista de música, possui alguns ícones de identificação. Um ícone do Youtube indica que é uma coletânea do Youtube, ou seja, o programa irá se conectar à internet para executar a música. O ícone azul com as letras \"PB\" indica que a música possui playback."
-                    }
-                ]
-            },
-            "letras": {
-                "title": "Obtendo a letra dos hinos / músicas",
-                "text": [
-                    {
-                        "type": "text",
-                        "value": "Pressione o botão \"Letra\" para abrir a janela de letras das músicas."
-                    },
-                    {
-                        "type": "text",
-                        "value": "Na janela de letra da música, é possível ver as informações do(s) álbum(ns) onde a música está localizada dentro do programa, a letra, e um campo de busca rápida dentro da letra. Ao utilizar este campo de busca, a palavra digitada automaticamente é destacada em vermelho na letra."
-                    }
-                ]
-            },
-            "relacao-de-hinos-dos-hinarios-1996-e-2022": {
-                "title": "Relação de Hinos dos Hinários 1996 e 2022",
-                "text": [
-                    {
-                        "type": "text",
-                        "value": "EM BREVE"
-                    }
-                ]
-            },
-            "hinario-reproducao": {
-                "title": "Reprodução de Hinos",
-                "text": [
-                    {
-                        "type": "text",
-                        "value": "No menu, é possível visualizar diversas formas pela qual um hino pode ser aberto:"
-                    },
-                    {
-                        "type": "list",
-                        "value": [
-                            "<b>Letra:</b> Abre uma janela com a letra da música.",
-                            "<b>Slide - Cantado:</b> Abre os slides do hino com áudio cantado.",
-                            "<b>Slide - Playback:</b> Abre os slides do hino com áudio playback.",
-                            "<b>Slide - Sem Áudio:</b> Abre os slides do hino sem áudio. Neste modo, os tempos ficam desativados, devendo o operador mudar de slide manualmente.",
-                            "<b>Slide - Em Sequência:</b> Abre o hino atual, e ao término, executa os próximos hinos em sequência, automaticamente.",
-                            "<b>Arquivo de Áudio - Cantado:</b> Abre o arquivo mp3 da música cantada.",
-                            "<b>Arquivo de Áudio - Playback:</b> Abre o arquivo mp3 do playback da música."
-                        ]
-                    }
-                ]
-            }
-        }
-    },
-    "collections": {
-        "title": "Coletâneas",
-        "icon": "fa fa-music",
-        "items": {
-            "coletaneas-online": {
-                "title": "Coletâneas On-line"
-            },
-            "coletaneas-personalizadas": {
-                "title": "Coletâneas Personalizadas"
-            },
-            "exportar-musicas": "#",
-            "localizar-musicas": "#",
-            "letras": "#",
-            "playlist": {
-                "title": "Playlist das Coletâneas"
-            }
-        }
-    },
-    "bible": {
-        "title": "Bíblia",
-        "icon": "fa fa-book",
-        "items": {
-            "busca-biblica": {
-                "title": "Buscando Passagens Bíblicas"
-            },
-            "exibir-varios-versos": {
-                "title": "Como exibir mais de um verso bíblico na tela?"
-            },
-            "passagem-biblica": {
-                "title": "Exibindo Passagens Bíblicas"
-            },
-            "formatacao": {
-                "title": "Formatação de conteúdo"
-            },
-            "projetando-tela": {
-                "title": "Projetando em Outro Monitor"
-            }
-        }
-    },
-    "utilities": {
-        "title": "Utilitários",
-        "icon": "fa fa-puzzle-piece",
-        "items": {
-            "como-colocar-provai-e-vede": {
-                "title": "Como colocar os vídeos do Provai e Vede no programa?"
-            },
-            "formatacao": {
-                "title": "Formatação de conteúdo"
-            },
-            "itens-agendados": {
-                "title": "Itens Agendados"
-            },
-            "liturgia": {
-                "title": "Liturgia"
-            },
-            "projetando-tela": {
-                "title": "Projetando em Outro Monitor"
-            }
-        }
-    },
-    "slide_editor": {
-        "title": "Editor de Slides",
-        "icon": "fa fa-play",
-        "items": {
-            "editor-de-slides": {
-                "title": "Editor de Slides"
-            },
-            "gravando-tempos": {
-                "title": "Gravando intervalos"
-            }
-        }
-    },
-    "transmission": {
-        "title": "Transmissão",
-        "icon": "fa fa-television",
-        "items": {
-            "estilos-css": {
-                "title": "Estilos CSS para Letra na Transmissão"
-            }
-        }
-    },
-    "faq": {
-        "title": "Perguntas Frequentes",
-        "icon": "fa fa-list",
-        "items": {
-            "como-colocar-provai-e-vede": "#",
-            "exibir-varios-versos": "#",
-            "css-streaming": {
-                "title": "Como formatar a letra transmitida pelo programa no OBS ou VMIX?"
-            },
-            "reproduzir-hinos-sequencia": "#",
-            "como-transmitir-streaming": {
-                "title": "Como transmitir a letra da música / bíblia no OBS ou VMIX?"
-            }
+    "categories": {
+        "general": {
+            "title": "Geral",
+            "icon": "fa fa-cubes",
+            "items": [
+                "teclas-atalho",
+                "transmitir"
+            ]
+        },
+        "hymnal": {
+            "title": "Hinário",
+            "icon": "fa fa-music",
+            "items": [
+                "hinario-busca",
+                "reproduzir-hinos-sequencia",
+                "exportar-musicas",
+                "localizar-musicas",
+                "letras",
+                "relacao-de-hinos-dos-hinarios-1996-e-2022",
+                "hinario-reproducao"
+            ]
+        },
+        "collections": {
+            "title": "Coletâneas",
+            "icon": "fa fa-music",
+            "items": [
+                "coletaneas-online",
+                "coletaneas-personalizadas",
+                "exportar-musicas",
+                "localizar-musicas",
+                "letras",
+                "playlist"
+            ]
+        },
+        "bible": {
+            "title": "Bíblia",
+            "icon": "fa fa-book",
+            "items": [
+                "busca-biblica",
+                "exibir-varios-versos-biblicos",
+                "passagem-biblica",
+                "formatacao",
+                "projetando-tela"
+            ]
+        },
+        "utilities": {
+            "title": "Utilitários",
+            "icon": "fa fa-puzzle-piece",
+            "items": [
+                "como-colocar-provai-e-vede",
+                "formatacao",
+                "itens-agendados",
+                "liturgia",
+                "projetando-tela"
+            ]
+        },
+        "slide_editor": {
+            "title": "Editor de Slides",
+            "icon": "fa fa-play",
+            "items": [
+                "editor-de-slides",
+                "gravando-tempos"
+            ]
+        },
+        "transmission": {
+            "title": "Transmissão",
+            "icon": "fa fa-television",
+            "items": [
+                "estilos-css"
+            ]
+        },
+        "faq": {
+            "title": "Perguntas Frequentes",
+            "icon": "fa fa-list",
+            "items": [
+                "como-colocar-provai-e-vede",
+                "exibir-varios-versos-biblicos",
+                "css-streaming",
+                "reproduzir-hinos-sequencia",
+                "como-transmitir-streaming"
+            ]
         }
     }
 }

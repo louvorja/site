@@ -36,19 +36,18 @@ export default {
     },
     help() {
       let help = this.lang === "pt" ? helpPt : helpEs;
-
-      let all = {};
-      Object.keys(help).map((c) => {
-        Object.keys(help[c].items).map((i) => {
-          if (help[c].items[i] == "#") {
-            help[c].items[i] = all[i];
-          } else {
-            all[i] = help[c].items[i];
-          }
-        });
+      let helpUnified = {};
+      Object.keys(help.categories).map((c) => {
+        if (Array.isArray(help.categories[c].items)) {
+          let items = help.categories[c].items;
+          help.categories[c].items = {};
+          items.map((i) => {
+            help.categories[c].items[i] = help.items[i];
+          });
+        }
       });
 
-      return help;
+      return help.categories;
     },
   },
 };
