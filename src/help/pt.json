@@ -172,8 +172,8 @@
             "title": "Relação de Hinos dos Hinários 1996 e 2022",
             "text": [
                 {
-                    "type": "text",
-                    "value": "EM BREVE"
+                    "type": "component",
+                    "value": "HymnalRelation"
                 }
             ]
         },

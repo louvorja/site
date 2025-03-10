@@ -168,15 +168,6 @@
                 }
             ]
         },
-        "relacao-de-hinos-dos-hinarios-1996-e-2022": {
-            "title": "Relación de Himnos de los Hinarios 1996 y 2022",
-            "text": [
-                {
-                    "type": "text",
-                    "value": "PRÓXIMAMENTE"
-                }
-            ]
-        },
         "hinario-reproducao": {
             "title": "Reproducción de Himnos",
             "text": [
@@ -584,7 +575,6 @@
                 "exportar-musicas",
                 "localizar-musicas",
                 "letras",
-                "relacao-de-hinos-dos-hinarios-1996-e-2022",
                 "hinario-reproducao"
             ]
         },
