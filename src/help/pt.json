@@ -367,28 +367,203 @@
             ]
         },
         "como-colocar-provai-e-vede": {
-            "title": "Como colocar os vídeos do Provai e Vede no programa?"
+            "title": "Como colocar os vídeos do Provai e Vede no programa?",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "É possível colocar os vídeos do Provai e Vede através da tela \"Itens Agendados\".",
+                    "link": "itens-agendados"
+                },
+                {
+                    "type": "text",
+                    "value": "Depois de cadastrado, basta colocar na liturgia para fazer parte do cronograma do culto.",
+                    "link": "liturgia"
+                },
+                {
+                    "type": "text",
+                    "value": "O programa não possui de forma nativa os vídeos do Provai e Vede. O usuário deve baixá-los da internet, e colocar no programa de forma manual (como descrito acima)."
+                }
+            ]
         },
         "itens-agendados": {
-            "title": "Itens Agendados"
+            "title": "Itens Agendados",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "Esta tela permite a criação de itens agendados. São aqueles itens que fazem parte da programação, mas o conteúdo muda em cada sábado, como: Provai e Vede, Informativo Mundial das Missões, Momentos de Saúde, entre outros."
+                },
+                {
+                    "type": "text",
+                    "value": "Clique em \"Adicionar Categoria\" para adicionar uma nova categoria. Ao clicar, uma categoria automaticamente será criada, e uma janela para alterar o nome da mesma será exibida."
+                },
+                {
+                    "type": "title",
+                    "value": "Adicionar Itens"
+                },
+                {
+                    "type": "text",
+                    "value": "Para adicionar itens, selecione uma categoria (criada anteriormente). Ao clicar sobre a categoria, uma tela com um calendário se abrirá. Clique duas vezes sobre uma data do calendário, e escolha o arquivo que deverá ser aberto. Este arquivo será armazenado para o dia escolhido."
+                },
+                {
+                    "type": "title",
+                    "value": "Vincular na Liturgia"
+                },
+                {
+                    "type": "text",
+                    "value": "É possível adicionar um item agendado na liturgia. Basta ir na tela de Liturgia, clicar em \"Adicionar Item\", e escolher o tipo de item \"Itens Agendados\". Serão mostrados todos os itens agendados cadastrados nesta tela. Ao escolher o item, pressione o botão \"Adicionar\". Ao clicar sobre um item agendado na liturgia, irá abrir o item cadastrado para o dia atual.",
+                    "link": "liturgia"
+                }
+            ]
         },
         "liturgia": {
-            "title": "Liturgia"
+            "title": "Liturgia",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "Tela para organização da sequência da programação, detalhando as respectivas músicas e arquivos que serão executados."
+                },
+                {
+                    "type": "title",
+                    "value": "Adicionando Itens"
+                },
+                {
+                    "type": "text",
+                    "value": "Pode-se adicionar itens nesta tela, copiando o arquivo/diretório (CTRL+C), e colando nesta tela (CTRL+V)."
+                },
+                {
+                    "type": "text",
+                    "value": "Pode-se também, clicar em \"Adicionar Item\", onde haverá mais opções para inserir itens. Clicando neste botão, irá ser aberta a tela onde deverá ser definido o tipo de item que será inserido:"
+                },
+                {
+                    "type": "list",
+                    "value": [
+                        "<b>Anotação:</b> Não possui nenhum tipo de ação ao clicar sobre ele. É apenas uma anotação na liturgia. Algo que não necessita de ação (como \"Oração\" por exemplo)",
+                        "<b>Arquivo/Diretório:</b> Abre um arquivo ou um diretório ao clicar sobre ele. Pode ser usado para abrir um vídeo, ou uma apresentação em PowerPoint.",
+                        "<b>Categoria:</b> Não possui nenhum tipo de ação. É apenas para separar os grupos de itens.",
+                        "<b>Itens Agendados:</b> Mostra todos os itens cadastrados na tela \"Itens Agendados\". Ao clicar, abre o item agendado para o dia atual.",
+                        "<b>Música:</b> Lista todas as músicas da coletânea. Pode ser configurar para executar uma música da coletânea, ou escolher na hora quando clicar sobre o item. Quando cadastrado, serão exibidas as opções de execução do slide.",
+                        "<b>Site:</b> Permite executar um site ao clicar sobre o item."
+                    ]
+                }
+            ]
         },
         "editor-de-slides": {
-            "title": "Editor de Slides"
+            "title": "Editor de Slides",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "Esta tela permite a criação de slides para rodar dentro do próprio programa."
+                },
+                {
+                    "type": "text",
+                    "value": "Utilize o campo Texto Principal para adicionar o texto ao slide. O campo Texto Auxiliar é um texto menor, de auxílio, que aparece na parte de cima do texto principal."
+                },
+                {
+                    "type": "text",
+                    "value": "Para criar ou excluir slides, utilize a aba \"Slides\" do Editor de Slides. As ações de cada botão estão descritas a seguir:"
+                },
+                {
+                    "type": "list",
+                    "value": [
+                        "<b>Novo Slide:</b> Cria um slide em branco, após o slide atual.",
+                        "<b>Duplicar Slide:</b> Duplica o slide atual e seu conteúdo (texto, formatação, fundo, ...)",
+                        "<b>Excluir Slide:</b> Exclui o slide atual.",
+                        "<b>Dividir Slide:</b> Divide o slide atual, da seguinte forma: (1) Cada linha do texto irá gerar um novo slide. (2) O caractere \"|\" dentro do texto, irá gerar uma quebra de linha dentro do mesmo slide.",
+                        "<b>Mesclar Próx. Slide:</b> Mescla o slide atual ao slide seguinte, mantendo a formatação do slide atual"
+                    ]
+                }
+            ]
         },
         "gravando-tempos": {
-            "title": "Gravando intervalos"
+            "title": "Gravando intervalos",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "Para gravar os intervalos, utilize a aba \"Áudio/Gravação\" do Editor de Slides. As ações de cada botão estão descritas a seguir:"
+                },
+                {
+                    "type": "list",
+                    "value": [
+                        "<b>Reproduzir:</b> Reproduz os slides. É necessário possuir áudio para utilizar esta opção. Ao reproduzir, os botões de gravação são habilitados.",
+                        "<b>Gravar e Avançar:</b> Avança para o próximo slide, e grava no momento atual do áudio.",
+                        "<b>Gravar Início:</b> Grava o início do slide no momento atual do áudio.",
+                        "<b>Gravar Retroativo:</b> Retrocede um segundo para trás e grava o início do slide.",
+                        "<b>Remover Gravações:</b> Remove todos os tempos gravados de todos os slides."
+                    ]
+                }
+            ]
         },
         "estilos-css": {
-            "title": "Estilos CSS para Letra na Transmissão"
+            "title": "Estilos CSS para Letra na Transmissão",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "EM BREVE"
+                }
+            ]
         },
         "css-streaming": {
-            "title": "Como formatar a letra transmitida pelo programa no OBS ou VMIX?"
+            "title": "Como formatar a letra transmitida pelo programa no OBS ou VMIX?",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "Seguem algumas dicas de como manipular o CSS para alterar a fonte, cor ou fundo do conteúdo projetado para streaming. Caso o programa permita a manipulação de CSS, basta colocar os códigos, conforme mostrado abaixo:"
+                },
+                {
+                    "type": "title",
+                    "value": "Posicionar a letra no rodapé"
+                },
+                {
+                    "type": "code",
+                    "value": "table td{vertical-align:bottom !important;}"
+                },
+                {
+                    "type": "text",
+                    "value": "Para alinhar no topo, mude de \"bottom\" para \"top\""
+                },
+                {
+                    "type": "title",
+                    "value": "Mudar o tamanho da fonte"
+                },
+                {
+                    "type": "code",
+                    "value": "*{font-size:50px !important;}"
+                },
+                {
+                    "type": "text",
+                    "value": "Onde \"50px\" é o tamanho. Mude para outro valor se desejar."
+                },
+                {
+                    "type": "title",
+                    "value": "Mudar a cor da fonte"
+                },
+                {
+                    "type": "code",
+                    "value": "*{color:red !important;}"
+                },
+                {
+                    "type": "text",
+                    "value": "Onde \"red\" é a cor da fonte. Mude para outra cor em inglês se desejar. Pode colocar o código hexadecimal da cor tbm (#FFFFFF por exemplo)."
+                },
+                {
+                    "type": "title",
+                    "value": "Mudar a fonte"
+                },
+                {
+                    "type": "code",
+                    "value": "*{font-family:Arial !important;}"
+                }
+            ]
         },
         "como-transmitir-streaming": {
-            "title": "Como transmitir a letra da música / bíblia no OBS ou VMIX?"
+            "title": "Como transmitir a letra da música / bíblia no OBS ou VMIX?",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "É possível transmitir o conteúdo do programa para serviços de streaming.",
+                    "link": "transmitir"
+                }
+            ]
         }
     },
     "categories": {
@@ -459,7 +634,10 @@
             "title": "Transmissão",
             "icon": "fa fa-television",
             "items": [
-                "estilos-css"
+                "estilos-css",
+                "css-streaming",
+                "como-transmitir-streaming",
+                "transmitir"
             ]
         },
         "faq": {

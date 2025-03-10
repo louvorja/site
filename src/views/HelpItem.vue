@@ -20,6 +20,9 @@
                   v-html="item_list"
                 />
               </ul>
+              <div v-else-if="item.type == 'code'" class="m-0 mt-3">
+                <code v-html="item.value" />
+              </div>
               <p v-else class="m-0">
                 <span v-html="item.value" />
                 <router-link

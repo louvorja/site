@@ -1,117 +1,655 @@
 {
-    "general": {
+    "items": {
         "teclas-atalho": {
-            "title": "Teclas de Atajo"
+            "title": "Teclas de Atajo",
+            "text": [
+                {
+                    "type": "title",
+                    "value": "General"
+                },
+                {
+                    "type": "list",
+                    "value": [
+                        "<b>ESC</b> - Cierra la pantalla del segundo monitor / Cierra la música / Cierra la ventana activa",
+                        "<b>CTRL + W</b> - Cierra la pestaña actual",
+                        "<b>CTRL + F</b> - Abre la búsqueda de música",
+                        "<b>F1</b> - Abre la pantalla de ayuda",
+                        "<b>F5</b> / <b>F9</b> - Proyecta la ventana actual (cuando está disponible el recurso) / Proyecta la música del Editor de Diapositivas"
+                    ]
+                },
+                {
+                    "type": "title",
+                    "value": "Biblia / Búsqueda Bíblica"
+                },
+                {
+                    "type": "list",
+                    "value": [
+                        "<b>Flecha Izquierda</b> / <b>Flecha Arriba</b> / <b>PgUp</b> - Va al verso anterior",
+                        "<b>Flecha Derecha</b> / <b>Flecha Abajo</b> / <b>PgDn</b> - Va al siguiente verso"
+                    ]
+                },
+                {
+                    "type": "title",
+                    "value": "Proyección de Música"
+                },
+                {
+                    "type": "list",
+                    "value": [
+                        "<b>Flecha Izquierda</b> / <b>Flecha Arriba</b> / <b>PgUp</b> - Va a la diapositiva anterior",
+                        "<b>Flecha Derecha</b> / <b>Flecha Abajo</b> / <b>PgDn</b> - Va a la siguiente diapositiva",
+                        "<b>Home</b> - Va a la primera diapositiva",
+                        "<b>End</b> - Va a la última diapositiva",
+                        "<b>Pause</b> / <b>Play</b> / <b>CTRL + P</b> / <b>Barra Espaciadora</b> - Pausa la música, o continúa, si ya está pausada"
+                    ]
+                },
+                {
+                    "type": "title",
+                    "value": "Editor de Diapositivas"
+                },
+                {
+                    "type": "list",
+                    "value": [
+                        "<b>Flecha Izquierda</b> / <b>Flecha Arriba</b> / <b>PgUp</b> - Va a la diapositiva anterior",
+                        "<b>Flecha Derecha</b> / <b>Flecha Abajo</b> / <b>PgDn</b> - Va a la siguiente diapositiva",
+                        "<b>Home</b> - Va a la primera diapositiva",
+                        "<b>End</b> - Va a la última diapositiva",
+                        "<b>Pause</b> / <b>Play</b> / <b>CTRL + P</b> / <b>Barra Espaciadora</b> - Pausa la música, o continúa, si ya está pausada",
+                        "<b>CTRL + Flecha Derecha</b> / <b>CTRL + Flecha Abajo</b> - Graba el tiempo y avanza la diapositiva",
+                        "<b>CTRL + Flecha Izquierda</b> / <b>CTRL + Flecha Arriba</b> - Graba retroactivo",
+                        "<b>F5</b> / <b>F9</b> - Proyecta la música"
+                    ]
+                }
+            ]
         },
         "transmitir": {
-            "title": "Transmitir contenido para streaming"
-        }
-    },
-    "hymnal": {
+            "title": "Transmitir contenido para streaming",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "El programa permite la transmisión de contenidos a servicios de streaming, como OBS y VMIX, a través del navegador."
+                },
+                {
+                    "type": "text",
+                    "value": "Para activar esta función, acceda al botón de Menú (en la esquina superior izquierda), y vaya a la opción \"Transmitir\". Defina la IP y el Puerto (o haga clic en \"Usar IP de la red\", para usar la IP de la red). Luego, haga clic en \"Iniciar Servidor\". En caso de error, intente cambiar el puerto."
+                },
+                {
+                    "type": "text",
+                    "value": "Una vez iniciado, las letras se transmitirán a través del navegador, mediante la dirección mostrada en esta pantalla. Copie esta dirección y péguela en el programa de streaming (insertando un objeto Navegador)."
+                }
+            ]
+        },
         "hinario-busca": {
-            "title": "Búsqueda de Himnos"
+            "title": "Búsqueda de Himnos",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "En la pestaña \"Hinario\", el campo de búsqueda puede ser usado de dos maneras:"
+                },
+                {
+                    "type": "list",
+                    "value": [
+                        "<b>Número del Himno:</b> Al ingresar un número, se muestra el himno correspondiente al número digitado. Presione la tecla \"ENTER\" para ejecutar el himno, o haga doble clic sobre él.",
+                        "<b>Palabra:</b> También puede ingresar el nombre o parte del nombre del himno en este campo. Al ingresar una palabra, se listarán todos los himnos que contengan esa palabra. Ej.: Al digitar \"Jesús\", se muestran los himnos \"Nace Jesús\", \"Saludad el Nombre de Jesús\", \"Jesús es Mejor\", \"El Amor de Jesús\", etc..."
+                    ]
+                },
+                {
+                    "type": "text",
+                    "value": "Para buscar un himno por la letra, utilice la opción \"Localizar Músicas\", dentro del menú \"Colecciones\".",
+                    "link": "localizar-musicas"
+                },
+                {
+                    "type": "text",
+                    "value": "Debajo del campo de búsqueda, existen algunas opciones que definen la forma en que el himno será abierto:"
+                },
+                {
+                    "type": "list",
+                    "value": [
+                        "<b>Diapositiva Cantada:</b> Abre las diapositivas del himno con audio cantado.",
+                        "<b>Diapositiva Playback:</b> Abre las diapositivas del himno con audio playback.",
+                        "<b>Diapositiva Sin Audio:</b> Abre las diapositivas del himno sin audio. En este modo, los tiempos quedan desactivados, debiendo el operador cambiar de diapositiva manualmente."
+                    ]
+                }
+            ]
         },
         "reproduzir-hinos-sequencia": {
-            "title": "¿Cómo reproducir himnos del himnario en secuencia?"
+            "title": "¿Cómo reproducir himnos del hinario en secuencia?",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "En la pestaña \"Hinario\", seleccione un himno, y luego, presione el botón \"En Secuencia\". Esto hará que el himno actual se ejecute, y al terminar, el siguiente himno se ejecutará automáticamente."
+                },
+                {
+                    "type": "text",
+                    "value": "<b>Ej.:</b> El himno 51 fue ejecutado. Al término del mismo, se ejecutará el himno 52, luego el 53, y así sucesivamente."
+                }
+            ]
         },
         "exportar-musicas": {
-            "title": "Exportando Canciones"
+            "title": "Exportando Músicas",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "Presione el botón \"Exportar Música\" para exportar la música actual en el formato del programa (slja). Este archivo puede ser modificado posteriormente en la pantalla \"Editor de Diapositivas\".",
+                    "link": "editor-de-slides"
+                }
+            ]
         },
         "localizar-musicas": {
-            "title": "Localizar Canciones"
+            "title": "Localizar Músicas",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "En la pantalla \"Localizar Músicas\", ingrese el nombre de la música a buscar. La música será buscada de acuerdo con los filtros seleccionados."
+                },
+                {
+                    "type": "text",
+                    "value": "<b>Consejo:</b> Utilice asterisco (<b>*</b>) para representar cualquier letra o palabra entre los términos. Por ejemplo: Al buscar por \"<b>Jesús * Mejor</b>\", el programa trae las músicas \"<b><u>Jesús</u> es <u>Mejor</u></b>\" y \"<b><u>Jesús</u> mi <u>Mejor</u> Amigo</b>\"."
+                },
+                {
+                    "type": "text",
+                    "value": "Si desea buscar músicas que comiencen con una letra específica, simplemente haga clic en la pestaña correspondiente a la letra de la música."
+                },
+                {
+                    "type": "text",
+                    "value": "En la lista de músicas, hay algunos íconos de identificación. Un ícono de Youtube indica que es una colección de Youtube, es decir, el programa se conectará a internet para ejecutar la música. El ícono azul con las letras \"PB\" indica que la música tiene playback."
+                }
+            ]
         },
         "letras": {
-            "title": "Obteniendo la letra de los himnos / canciones"
+            "title": "Obteniendo la letra de los himnos / músicas",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "Presione el botón \"Letra\" para abrir la ventana de letras de las músicas."
+                },
+                {
+                    "type": "text",
+                    "value": "En la ventana de letra de la música, es posible ver la información del(los) álbum(es) donde la música está ubicada dentro del programa, la letra, y un campo de búsqueda rápida dentro de la letra. Al utilizar este campo de búsqueda, la palabra digitada se resalta automáticamente en rojo en la letra."
+                }
+            ]
         },
         "relacao-de-hinos-dos-hinarios-1996-e-2022": {
-            "title": "Relación de Himnos de los Himnarios 1996 y 2022"
+            "title": "Relación de Himnos de los Hinarios 1996 y 2022",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "PRÓXIMAMENTE"
+                }
+            ]
         },
         "hinario-reproducao": {
-            "title": "Reproducción de Himnos"
-        }
-    },
-    "collections": {
+            "title": "Reproducción de Himnos",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "En el menú, es posible visualizar diversas formas en las que un himno puede ser abierto:"
+                },
+                {
+                    "type": "list",
+                    "value": [
+                        "<b>Letra:</b> Abre una ventana con la letra de la música.",
+                        "<b>Diapositiva - Cantada:</b> Abre las diapositivas del himno con audio cantado.",
+                        "<b>Diapositiva - Playback:</b> Abre las diapositivas del himno con audio playback.",
+                        "<b>Diapositiva - Sin Audio:</b> Abre las diapositivas del himno sin audio. En este modo, los tiempos quedan desactivados, debiendo el operador cambiar de diapositiva manualmente.",
+                        "<b>Diapositiva - En Secuencia:</b> Abre el himno actual, y al término, ejecuta los siguientes himnos en secuencia, automáticamente.",
+                        "<b>Archivo de Audio - Cantado:</b> Abre el archivo mp3 de la música cantada.",
+                        "<b>Archivo de Audio - Playback:</b> Abre el archivo mp3 del playback de la música."
+                    ]
+                }
+            ]
+        },
         "coletaneas-online": {
-            "title": "Colecciones En Línea"
+            "title": "Colecciones en Línea",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "La pestaña Colecciones en Línea permite la ejecución de videos directamente desde Youtube. Para ejecutar videos en esta sección, es necesaria conexión a internet."
+                },
+                {
+                    "type": "text",
+                    "value": "En videos en línea, hay una selección de algunos canales para la ejecución de videos en línea. Los botones de Actualizar permiten actualizar los canales, listas de reproducción o videos, en caso de haber nuevos contenidos."
+                },
+                {
+                    "type": "text",
+                    "value": "Es posible registrar videos en línea personalizados, accediendo al botón \"Videos Personalizados\"."
+                }
+            ]
         },
         "coletaneas-personalizadas": {
-            "title": "Colecciones Personalizadas"
-        },
-        "exportar-musicas": {
-            "title": "Exportando Canciones"
-        },
-        "localizar-musicas": {
-            "title": "Localizar Canciones"
-        },
-        "letras": {
-            "title": "Obteniendo la letra de los himnos / canciones"
+            "title": "Colecciones Personalizadas",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "El programa permite la inserción de accesos directos para archivos personalizados. Para agregar archivos personalizados, acceda a la pestaña \"Colecciones Personalizadas\"."
+                },
+                {
+                    "type": "title",
+                    "value": "Agregando Archivo / Álbum"
+                },
+                {
+                    "type": "text",
+                    "value": "Copie el archivo o el directorio (CTRL+C), y péguelo en esta pantalla (CTRL+V). O, haga clic en el botón \"Agregar\" para agregar una nueva colección / archivo. Al hacer clic en este botón, un panel de adición se abrirá en el lado izquierdo de la pantalla, pudiendo opcionalmente, elegir una imagen como portada de la colección. Para crear una lista de reproducción, simplemente coloque el directorio del álbum, en lugar de la ruta del archivo."
+                },
+                {
+                    "type": "title",
+                    "value": "Eliminando Álbum"
+                },
+                {
+                    "type": "text",
+                    "value": "Haga clic con el botón derecho sobre la colección que desea modificar, luego, utilice la opción \"Eliminar\"."
+                },
+                {
+                    "type": "text",
+                    "value": "<b>Nota:</b> Esta opción elimina solo el enlace de la colección del Menú. No elimina el archivo de la respectiva colección."
+                },
+                {
+                    "type": "text",
+                    "value": "El botón \"Eliminar\" es solo informativo. Al hacer clic sobre él, se mostrará una alerta informando la manera correcta de eliminar una colección. Para eliminar todas las colecciones al mismo tiempo, haga clic sobre la flecha al lado del botón \"Eliminar\", luego, seleccione la opción \"Eliminar Todas\". Todas las colecciones serán removidas."
+                },
+                {
+                    "type": "text",
+                    "value": "<b>Nota:</b> Esta opción elimina solo los enlaces de las colecciones del Menú. No elimina los archivos de las respectivas colecciones."
+                }
+            ]
         },
         "playlist": {
-            "title": "Lista de Reproducción de las Colecciones"
-        }
-    },
-    "bible": {
-        "busca-biblica": {
-            "title": "Buscando Pasajes Bíblicos"
+            "title": "Lista de Reproducción de las Colecciones",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "Al hacer clic sobre una colección en las pestañas \"JA/Min. Música\", o \"Colecciones Diversas\", se abrirá una lista con las músicas que componen la colección. Simplemente haga clic sobre una música para abrir la diapositiva."
+                },
+                {
+                    "type": "text",
+                    "value": "En esta pantalla, es posible proyectar la lista de músicas para el público (botón \"Proyectar Menú\"), y también, reproducir todas las músicas en secuencia (botón \"Reproducir Todas\")."
+                },
+                {
+                    "type": "text",
+                    "value": "Frente al nombre de cada música, hay botones de acción, que abren la música de una forma diferente, como se muestra a continuación (en orden):"
+                },
+                {
+                    "type": "list",
+                    "value": [
+                        "Abre las diapositivas con audio cantado.",
+                        "Abre las diapositivas con audio playback.",
+                        "Abre las diapositivas sin audio. En este modo, los tiempos quedan desactivados, debiendo el operador cambiar de diapositiva manualmente.",
+                        "Abre el archivo mp3 de la música cantada.",
+                        "Abre el archivo mp3 de la música playback.",
+                        "Abre una ventana con la letra de la música."
+                    ]
+                }
+            ]
         },
-        "exibir-varios-versos": {
-            "title": "¿Cómo exhibir más de un verso bíblico en la pantalla?"
+        "busca-biblica": {
+            "title": "Buscando Pasajes Bíblicos",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "Acceda a la pestaña \"Búsqueda Bíblica\" para buscar pasajes bíblicos. Utilice los filtros de búsqueda para definir los parámetros de la búsqueda de pasajes."
+                },
+                {
+                    "type": "text",
+                    "value": "<b>Consejo:</b> Utilice asterisco (<b>*</b>) para representar cualquier letra o palabra entre los términos. Por ejemplo: Al buscar por \"Dios*tierra\", el programa trae todas las pasajes bíblicos que tengan las palabras Dios y tierra, como, por ejemplo: \"<b>En el principio creó <u>Dios</u> los cielos y la <u>tierra</u>.</b>\"."
+                }
+            ]
+        },
+        "exibir-varios-versos-biblicos": {
+            "title": "¿Cómo mostrar más de un verso bíblico en la pantalla?",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "Para mostrar más de un verso bíblico, ingrese los versos deseados en el campo de búsqueda del versículo, como en el ejemplo:"
+                },
+                {
+                    "type": "list",
+                    "value": [
+                        "\"<b>1-3</b>\"- Versos de 1 a 3",
+                        "\"<b>1,3</b>\"- Versos 1 y 3",
+                        "\"<b>1-3,5</b>\"- Versos 1 a 3, y 5"
+                    ]
+                },
+                {
+                    "type": "text",
+                    "value": "Después de ingresar los versos deseados, presione ENTER."
+                }
+            ]
         },
         "passagem-biblica": {
-            "title": "Exhibiendo Pasajes Bíblicos"
+            "title": "Mostrando Pasajes Bíblicos",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "Seleccione el libro, capítulo y versículo para abrir el pasaje bíblico. Utilice la lista de versiones, en la barra de herramientas superior, para cambiar la versión bíblica."
+                },
+                {
+                    "type": "text",
+                    "value": "Es posible mostrar más de un verso bíblico al mismo tiempo, o incluso, versos intercalados.",
+                    "link": "exibir-varios-versos-biblicos"
+                }
+            ]
         },
         "formatacao": {
-            "title": "Formato de contenido"
+            "title": "Formateo de contenido",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "Haga clic en el botón \"Formatear\" para formatear el contenido de la pantalla. Se abrirá un panel lateral, permitiendo modificar fuente, color, tamaño, imagen de fondo y disposición."
+                },
+                {
+                    "type": "text",
+                    "value": "Para restaurar el formateo, simplemente haga clic en el botón \"Restaurar\"."
+                }
+            ]
         },
         "projetando-tela": {
-            "title": "Proyectando en Otro Monitor"
-        }
-    },
-    "utilities": {
-        "como-colocar-provai-e-vede": {
-            "title": "¿Cómo colocar los videos del Provai e Vede en el programa?"
+            "title": "Proyectando en Otro Monitor",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "Haga clic en el botón Área Expandida, para proyectar el contenido de la pantalla a otro monitor (el monitor secundario puede ser definido en el menú general > Opciones). Si no se detecta el segundo monitor, el contenido se abre en el monitor principal."
+                },
+                {
+                    "type": "text",
+                    "value": "Después de proyectar la pantalla, el ícono cambiará, indicando que el contenido ya está proyectado. Presione nuevamente el botón para recoger el contenido expandido, o presione la tecla \"ESC\"."
+                },
+                {
+                    "type": "text",
+                    "value": "Para cambiar el monitor en el que la pantalla será expandida, haga clic sobre la flecha ubicada en el botón de \"Área Expandida\". Se abrirá un menú para elegir el monitor."
+                },
+                {
+                    "type": "text",
+                    "value": "<b>Nota:</b> Esta opción queda registrada en el programa, de modo que, al hacer clic en el botón de \"Área Expandida\" posteriormente, se abrirá el monitor seleccionado la última vez."
+                },
+                {
+                    "type": "text",
+                    "value": "La elección de pantalla para proyección de contenidos también puede ser definida en el menú Opciones."
+                }
+            ]
         },
-        "formatacao": {
-            "title": "Formato de contenido"
+        "como-colocar-provai-e-vede": {
+            "title": "¿Cómo colocar los videos de Provai y Vede en el programa?",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "Es posible colocar los videos de Provai y Vede a través de la pantalla \"Elementos Agendados\".",
+                    "link": "itens-agendados"
+                },
+                {
+                    "type": "text",
+                    "value": "Después de registrarlos, simplemente colóquelos en la liturgia para que formen parte del cronograma del culto.",
+                    "link": "liturgia"
+                },
+                {
+                    "type": "text",
+                    "value": "El programa no tiene de forma nativa los videos de Provai y Vede. El usuario debe descargarlos de internet, y colocarlos en el programa de forma manual (como se describió anteriormente)."
+                }
+            ]
         },
         "itens-agendados": {
-            "title": "Ítems Programados"
+            "title": "Elementos Agendados",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "Esta pantalla permite la creación de elementos agendados. Son aquellos elementos que forman parte de la programación, pero el contenido cambia cada sábado, como: Provai y Vede, Informativo Mundial de las Misiones, Momentos de Salud, entre otros."
+                },
+                {
+                    "type": "text",
+                    "value": "Haga clic en \"Agregar Categoría\" para agregar una nueva categoría. Al hacer clic, una categoría se creará automáticamente, y se mostrará una ventana para cambiar el nombre de la misma."
+                },
+                {
+                    "type": "title",
+                    "value": "Agregar Elementos"
+                },
+                {
+                    "type": "text",
+                    "value": "Para agregar elementos, seleccione una categoría (creada anteriormente). Al hacer clic sobre la categoría, se abrirá una pantalla con un calendario. Haga doble clic sobre una fecha del calendario, y elija el archivo que deberá ser abierto. Este archivo se almacenará para el día elegido."
+                },
+                {
+                    "type": "title",
+                    "value": "Vincular en la Liturgia"
+                },
+                {
+                    "type": "text",
+                    "value": "Es posible agregar un elemento agendado en la liturgia. Simplemente vaya a la pantalla de Liturgia, haga clic en \"Agregar Elemento\", y elija el tipo de elemento \"Elementos Agendados\". Se mostrarán todos los elementos agendados registrados en esta pantalla. Al elegir el elemento, presione el botón \"Agregar\". Al hacer clic sobre un elemento agendado en la liturgia, se abrirá el elemento registrado para el día actual.",
+                    "link": "liturgia"
+                }
+            ]
         },
         "liturgia": {
-            "title": "Liturgia"
+            "title": "Liturgia",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "Pantalla para organizar la secuencia de la programación, detallando las respectivas músicas y archivos que serán ejecutados."
+                },
+                {
+                    "type": "title",
+                    "value": "Agregando Elementos"
+                },
+                {
+                    "type": "text",
+                    "value": "Puede agregar elementos en esta pantalla, copiando el archivo/directorio (CTRL+C), y pegándolo en esta pantalla (CTRL+V)."
+                },
+                {
+                    "type": "text",
+                    "value": "También puede hacer clic en \"Agregar Elemento\", donde habrá más opciones para insertar elementos. Al hacer clic en este botón, se abrirá la pantalla donde deberá definir el tipo de elemento que será insertado:"
+                },
+                {
+                    "type": "list",
+                    "value": [
+                        "<b>Anotación:</b> No tiene ningún tipo de acción al hacer clic sobre él. Es solo una anotación en la liturgia. Algo que no necesita acción (como \"Oración\" por ejemplo)",
+                        "<b>Archivo/Directorio:</b> Abre un archivo o un directorio al hacer clic sobre él. Puede ser usado para abrir un video, o una presentación en PowerPoint.",
+                        "<b>Categoría:</b> No tiene ningún tipo de acción. Es solo para separar los grupos de elementos.",
+                        "<b>Elementos Agendados:</b> Muestra todos los elementos registrados en la pantalla \"Elementos Agendados\". Al hacer clic, abre el elemento agendado para el día actual.",
+                        "<b>Música:</b> Lista todas las músicas de la colección. Puede configurar para ejecutar una música de la colección, o elegir en el momento al hacer clic sobre el elemento. Cuando se registra, se mostrarán las opciones de ejecución de la diapositiva.",
+                        "<b>Sitio:</b> Permite ejecutar un sitio al hacer clic sobre el elemento."
+                    ]
+                }
+            ]
         },
-        "projetando-tela": {
-            "title": "Proyectando en Otro Monitor"
-        }
-    },
-    "slide_editor": {
         "editor-de-slides": {
-            "title": "Editor de Diapositivas"
+            "title": "Editor de Diapositivas",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "Esta pantalla permite la creación de diapositivas para ejecutar dentro del propio programa."
+                },
+                {
+                    "type": "text",
+                    "value": "Utilice el campo Texto Principal para agregar el texto a la diapositiva. El campo Texto Auxiliar es un texto más pequeño, de ayuda, que aparece en la parte superior del texto principal."
+                },
+                {
+                    "type": "text",
+                    "value": "Para crear o eliminar diapositivas, utilice la pestaña \"Diapositivas\" del Editor de Diapositivas. Las acciones de cada botón se describen a continuación:"
+                },
+                {
+                    "type": "list",
+                    "value": [
+                        "<b>Nueva Diapositiva:</b> Crea una diapositiva en blanco, después de la diapositiva actual.",
+                        "<b>Duplicar Diapositiva:</b> Duplica la diapositiva actual y su contenido (texto, formateo, fondo, ...)",
+                        "<b>Eliminar Diapositiva:</b> Elimina la diapositiva actual.",
+                        "<b>Dividir Diapositiva:</b> Divide la diapositiva actual, de la siguiente forma: (1) Cada línea del texto generará una nueva diapositiva. (2) El carácter \"|\" dentro del texto, generará un salto de línea dentro de la misma diapositiva.",
+                        "<b>Fusionar Siguiente Diapositiva:</b> Fusiona la diapositiva actual con la siguiente, manteniendo el formateo de la diapositiva actual"
+                    ]
+                }
+            ]
         },
         "gravando-tempos": {
-            "title": "Grabando Intervalos"
-        }
-    },
-    "transmission": {
-        "estilos-css": {
-            "title": "Estilos CSS para Letra en la Transmisión"
-        }
-    },
-    "faq": {
-        "como-colocar-provai-e-vede": {
-            "title": "¿Cómo colocar los videos del Provai e Vede en el programa?"
+            "title": "Grabando intervalos",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "Para grabar los intervalos, utilice la pestaña \"Audio/Grabación\" del Editor de Diapositivas. Las acciones de cada botón se describen a continuación:"
+                },
+                {
+                    "type": "list",
+                    "value": [
+                        "<b>Reproducir:</b> Reproduce las diapositivas. Es necesario tener audio para utilizar esta opción. Al reproducir, los botones de grabación se habilitan.",
+                        "<b>Grabar y Avanzar:</b> Avanza a la siguiente diapositiva, y graba en el momento actual del audio.",
+                        "<b>Grabar Inicio:</b> Graba el inicio de la diapositiva en el momento actual del audio.",
+                        "<b>Grabar Retroactivo:</b> Retrocede un segundo hacia atrás y graba el inicio de la diapositiva.",
+                        "<b>Eliminar Grabaciones:</b> Elimina todos los tiempos grabados de todas las diapositivas."
+                    ]
+                }
+            ]
         },
-        "exibir-varios-versos": {
-            "title": "¿Cómo exhibir más de un verso bíblico en la pantalla?"
+        "estilos-css": {
+            "title": "Estilos CSS para Letra en la Transmisión",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "PRÓXIMAMENTE"
+                }
+            ]
         },
         "css-streaming": {
-            "title": "¿Cómo formatear la letra transmitida por el programa en OBS o VMIX?"
-        },
-        "reproduzir-hinos-sequencia": {
-            "title": "¿Cómo reproducir himnos del himnario en secuencia?"
+            "title": "¿Cómo formatear la letra transmitida por el programa en OBS o VMIX?",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "Aquí hay algunos consejos sobre cómo manipular el CSS para cambiar la fuente, color o fondo del contenido proyectado para streaming. Si el programa permite la manipulación de CSS, simplemente coloque los códigos, como se muestra a continuación:"
+                },
+                {
+                    "type": "title",
+                    "value": "Posicionar la letra en el pie de página"
+                },
+                {
+                    "type": "code",
+                    "value": "table td{vertical-align:bottom !important;}"
+                },
+                {
+                    "type": "text",
+                    "value": "Para alinear en la parte superior, cambie de \"bottom\" a \"top\""
+                },
+                {
+                    "type": "title",
+                    "value": "Cambiar el tamaño de la fuente"
+                },
+                {
+                    "type": "code",
+                    "value": "*{font-size:50px !important;}"
+                },
+                {
+                    "type": "text",
+                    "value": "Donde \"50px\" es el tamaño. Cambie a otro valor si lo desea."
+                },
+                {
+                    "type": "title",
+                    "value": "Cambiar el color de la fuente"
+                },
+                {
+                    "type": "code",
+                    "value": "*{color:red !important;}"
+                },
+                {
+                    "type": "text",
+                    "value": "Donde \"red\" es el color de la fuente. Cambie a otro color en inglés si lo desea. También puede colocar el código hexadecimal del color (#FFFFFF por ejemplo)."
+                },
+                {
+                    "type": "title",
+                    "value": "Cambiar la fuente"
+                },
+                {
+                    "type": "code",
+                    "value": "*{font-family:Arial !important;}"
+                }
+            ]
         },
         "como-transmitir-streaming": {
-            "title": "¿Cómo transmitir la letra de la canción / biblia en OBS o VMIX?"
+            "title": "¿Cómo transmitir la letra de la música / biblia en OBS o VMIX?",
+            "text": [
+                {
+                    "type": "text",
+                    "value": "Es posible transmitir el contenido del programa a servicios de streaming.",
+                    "link": "transmitir"
+                }
+            ]
+        }
+    },
+    "categories": {
+        "general": {
+            "title": "General",
+            "icon": "fa fa-cubes",
+            "items": [
+                "teclas-atalho",
+                "transmitir"
+            ]
+        },
+        "hymnal": {
+            "title": "Hinario",
+            "icon": "fa fa-music",
+            "items": [
+                "hinario-busca",
+                "reproduzir-hinos-sequencia",
+                "exportar-musicas",
+                "localizar-musicas",
+                "letras",
+                "relacao-de-hinos-dos-hinarios-1996-e-2022",
+                "hinario-reproducao"
+            ]
+        },
+        "collections": {
+            "title": "Colecciones",
+            "icon": "fa fa-music",
+            "items": [
+                "coletaneas-online",
+                "coletaneas-personalizadas",
+                "exportar-musicas",
+                "localizar-musicas",
+                "letras",
+                "playlist"
+            ]
+        },
+        "bible": {
+            "title": "Biblia",
+            "icon": "fa fa-book",
+            "items": [
+                "busca-biblica",
+                "exibir-varios-versos-biblicos",
+                "passagem-biblica",
+                "formatacao",
+                "projetando-tela"
+            ]
+        },
+        "utilities": {
+            "title": "Utilidades",
+            "icon": "fa fa-puzzle-piece",
+            "items": [
+                "como-colocar-provai-e-vede",
+                "formatacao",
+                "itens-agendados",
+                "liturgia",
+                "projetando-tela"
+            ]
+        },
+        "slide_editor": {
+            "title": "Editor de Diapositivas",
+            "icon": "fa fa-play",
+            "items": [
+                "editor-de-slides",
+                "gravando-tempos"
+            ]
+        },
+        "transmission": {
+            "title": "Transmisión",
+            "icon": "fa fa-television",
+            "items": [
+                "estilos-css",
+                "css-streaming",
+                "como-transmitir-streaming",
+                "transmitir"
+            ]
+        },
+        "faq": {
+            "title": "Preguntas Frecuentes",
+            "icon": "fa fa-list",
+            "items": [
+                "como-colocar-provai-e-vede",
+                "exibir-varios-versos-biblicos",
+                "css-streaming",
+                "reproduzir-hinos-sequencia",
+                "como-transmitir-streaming"
+            ]
         }
     }
 }
