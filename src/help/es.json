@@ -497,8 +497,8 @@
             "title": "Estilos CSS para Letra en la Transmisión",
             "text": [
                 {
-                    "type": "text",
-                    "value": "PRÓXIMAMENTE"
+                    "type": "component",
+                    "value": "TemplatesCSS"
                 }
             ]
         },

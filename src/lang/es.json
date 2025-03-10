@@ -154,7 +154,9 @@
         "title": "Ayuda del Programa",
         "related": "Temas Relacionados",
         "link_back": "Todos los elementos",
-        "link_more": "Saber más"
+        "link_more": "Saber más",
+        "lyric_css": "OH DIOS DE AMOR",
+        "download_font": "Descargar fuente"
     },
     "faq": {
         "title": "Preguntas Frecuentes"

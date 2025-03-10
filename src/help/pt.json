@@ -497,8 +497,8 @@
             "title": "Estilos CSS para Letra na Transmissão",
             "text": [
                 {
-                    "type": "text",
-                    "value": "EM BREVE"
+                    "type": "component",
+                    "value": "TemplatesCSS"
                 }
             ]
         },

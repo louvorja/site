@@ -23,6 +23,11 @@
               <div v-else-if="item.type == 'code'" class="m-0 mt-3">
                 <code v-html="item.value" />
               </div>
+              <component
+                v-else-if="item.type == 'component'"
+                :is="resolveComponent(item.value)"
+                class="m-0 mt-3"
+              />
               <p v-else class="m-0">
                 <span v-html="item.value" />
                 <router-link
@@ -72,6 +77,7 @@
 </template>
 
 <script>
+import { defineAsyncComponent } from "vue";
 import NotFoundComponent from "@/components/NotFound.vue";
 
 import helpPt from "../help/pt.json";
@@ -124,6 +130,13 @@ export default {
     },
     slug() {
       return this.$route.params.slug;
+    },
+  },
+  methods: {
+    resolveComponent(name) {
+      return defineAsyncComponent(() =>
+        import(`@/components/help/${name}.vue`)
+      );
     },
   },
 };
