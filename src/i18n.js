@@ -13,10 +13,11 @@ const loadLocaleMessages = async () => {
 
 export const createI18nInstance = async () => {
   const messages = await loadLocaleMessages();
+  const lang = localStorage.getItem("lang") || "pt";
 
   return createI18n({
     legacy: false, // Usando a API Composition
-    locale: "pt", // Idioma padrão
+    locale: lang, // Idioma padrão
     fallbackLocale: "pt", // Idioma de fallback
     messages, // Carregar as mensagens
   });

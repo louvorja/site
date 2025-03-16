@@ -33,6 +33,16 @@ export default {
     Carousel,
   },
   mounted() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const lang = urlParams.get("lang");
+    if (lang) {
+      this.$i18n.locale = lang;
+      const url = new URL(window.location.href);
+      url.searchParams.delete("lang");
+      window.history.replaceState({}, "", url.toString());
+      localStorage.setItem("lang", lang);
+    }
+
     $(".loader").fadeOut();
     $("#preloder").delay(400).fadeOut("slow");
 
