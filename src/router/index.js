@@ -8,6 +8,7 @@ import Dev from "@/views/Dev.vue";
 import Help from "@/views/Help.vue";
 import HelpItem from "@/views/HelpItem.vue";
 import FAQ from "@/views/FAQ.vue";
+import Version from "@/views/Version.vue";
 import NotFound from "@/views/NotFound.vue";
 
 const routes = [
@@ -51,6 +52,11 @@ const routes = [
     path: "/faq",
     name: "faq",
     component: FAQ,
+  },
+  {
+    path: "/versao",
+    name: "version",
+    component: Version,
   },
   {
     path: "/dev",
