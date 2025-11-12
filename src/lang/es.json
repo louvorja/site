@@ -13,7 +13,8 @@
     "footer": {
         "texts": [
             "Software LoorJA",
-            "Versión del Programa"
+            "Versión del Programa",
+            "Versión de la Base de Datos"
         ],
         "partners": {
             "title": "Associados",

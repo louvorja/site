@@ -5,6 +5,10 @@
         <span>{{ $t("footer.texts[1]") }}:</span>
         <h2>{{ version ?? "..." }}</h2>
       </div>
+      <div class="section-title">
+        <span>{{ $t("footer.texts[2]") }}:</span>
+        <h2>{{ db_version ?? "..." }}</h2>
+      </div>
     </div>
   </section>
 </template>
@@ -17,6 +21,7 @@ export default {
   data() {
     return {
       version: null,
+      db_version: null,
     };
   },
   computed: {
@@ -33,6 +38,7 @@ export default {
     setVersion: function () {
       const field = this.lang + "_version";
       this.version = this.params[field] ?? "";
+      this.db_version = this.params["db_version"] ?? "";
     },
   },
   async mounted() {

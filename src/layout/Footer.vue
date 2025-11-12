@@ -90,6 +90,8 @@
             {{ $t("footer.texts[0]") }}
             <br /><b>{{ $t("footer.texts[1]") }}:</b>
             {{ version ?? "..." }}
+            <br /><b>{{ $t("footer.texts[2]") }}:</b>
+            {{ db_version ?? "..." }}
           </div>
           <div class="social-links">
             <a
@@ -126,6 +128,7 @@ export default {
     return {
       params: {},
       version: null,
+      db_version: null,
     };
   },
   computed: {
@@ -142,6 +145,7 @@ export default {
     setVersion: function () {
       const field = this.lang + "_version";
       this.version = this.params[field] ?? "";
+      this.db_version = this.params["db_version"] ?? "";
     },
   },
   async mounted() {

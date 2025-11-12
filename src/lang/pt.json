@@ -13,7 +13,8 @@
     "footer": {
         "texts": [
             "Software LouvorJA",
-            "Versão do Programa"
+            "Versão do Programa",
+            "Versão do Banco de Dados"
         ],
         "partners": {
             "title": "Parceiros",
