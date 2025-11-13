@@ -72,6 +72,14 @@ const routes = [
     },
   },
   {
+    path: "/drive_es",
+    name: "es_drive",
+    beforeEnter(to, from, next) {
+      window.location.href = import.meta.env.VITE_ES_DRIVE_URL;
+      next(false);
+    },
+  },
+  {
     path: "/whatsapp",
     name: "whatsapp",
     beforeEnter(to, from, next) {

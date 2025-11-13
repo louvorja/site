@@ -28,7 +28,15 @@
                   </li>
                   <li>
                     <a
+                      v-if="lang === 'pt'"
                       :href="$router.resolve({ name: 'drive' }).href"
+                      target="_blank"
+                    >
+                      {{ $t("footer.links.list.drive") }}
+                    </a>
+                    <a
+                      v-else
+                      :href="$router.resolve({ name: 'es_drive' }).href"
                       target="_blank"
                     >
                       {{ $t("footer.links.list.drive") }}
