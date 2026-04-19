@@ -112,6 +112,14 @@ const routes = [
     },
   },
   {
+    path: "/instagram",
+    name: "instagram",
+    beforeEnter(to, from, next) {
+      window.location.href = import.meta.env.VITE_INSTAGRAM_URL;
+      next(false);
+    },
+  },
+  {
     path: "/:pathMatch(.*)*",
     name: "not-found",
     component: NotFound,

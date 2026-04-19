@@ -103,6 +103,12 @@
           </div>
           <div class="social-links">
             <a
+              :href="$router.resolve({ name: 'instagram' }).href"
+              target="_blank"
+            >
+              <i class="fa fa-instagram"></i>
+            </a>
+            <a
               :href="$router.resolve({ name: 'facebook' }).href"
               target="_blank"
             >

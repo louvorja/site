@@ -26,7 +26,7 @@ export default ({ mode }) => {
       },
     },
     server: {
-      port: 5552, // Porta do servidor de desenvolvimento
+      port: 5003,
     },
   });
 };
