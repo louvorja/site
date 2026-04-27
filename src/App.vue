@@ -11,6 +11,7 @@
   </div>
 
   <Header />
+  <Popup />
 
   <router-view />
 
@@ -22,15 +23,14 @@
 <script>
 import Header from "@/layout/Header.vue";
 import Footer from "@/layout/Footer.vue";
-
-import Carousel from "@/components/Carousel.vue";
+import Popup from "@/layout/Popup.vue";
 
 export default {
   name: "AppPage",
   components: {
     Header,
     Footer,
-    Carousel,
+    Popup,
   },
   mounted() {
     const urlParams = new URLSearchParams(window.location.search);

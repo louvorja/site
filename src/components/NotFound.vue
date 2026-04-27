@@ -11,12 +11,6 @@
 <script>
 export default {
   name: "NotFoundComponent",
-  data: () => ({
-    carouselConfig: {
-      itemsToShow: 1,
-      wrapAround: true,
-    },
-  }),
   computed: {
     lang() {
       return this.$i18n.locale;

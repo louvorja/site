@@ -35,13 +35,8 @@
 </template>
 
 <script>
-import Carousel from "@/components/Carousel.vue";
-
 export default {
   name: "DownloadPage",
-  components: {
-    Carousel,
-  },
   computed: {
     lang() {
       return this.$i18n.locale;
