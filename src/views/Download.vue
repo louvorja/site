@@ -21,7 +21,8 @@
                 :key="index"
                 class="mb-3 req-item"
               >
-                <i class="fa fa-check text-success mr-3"></i> <span v-html="req"></span>
+                <i class="fa fa-check text-success mr-3"></i>
+                <span v-html="req"></span>
               </li>
             </ul>
           </div>
@@ -85,6 +86,7 @@
             </a>
 
             <!-- Other Options / Community Multiplatform -->
+            <!--
             <router-link
               :to="{ name: 'community' }"
               class="dl-card dl-community"
@@ -100,6 +102,7 @@
                 <i class="fa fa-arrow-right"></i>
               </div>
             </router-link>
+            -->
           </div>
         </div>
       </div>
