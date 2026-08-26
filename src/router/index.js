@@ -4,6 +4,8 @@ import About from "@/views/About.vue";
 import Download from "@/views/Download.vue";
 import Contact from "@/views/Contact.vue";
 import Donation from "@/views/Donation.vue";
+import Community from "@/views/Community.vue";
+import CommunityDetails from "@/views/CommunityDetails.vue";
 import Dev from "@/views/Dev.vue";
 import Help from "@/views/Help.vue";
 import HelpItem from "@/views/HelpItem.vue";
@@ -27,6 +29,19 @@ const routes = [
     name: "download",
     component: Download,
   },
+  /*
+  {
+    path: "/comunidade",
+    name: "community",
+    component: Community,
+  },
+  {
+    path: "/comunidade/:slug",
+    name: "community-details",
+    component: CommunityDetails,
+    props: true,
+  },
+  */
   {
     path: "/contato",
     name: "contact",

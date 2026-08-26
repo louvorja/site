@@ -1,5 +1,5 @@
 <template>
-  <header class="header-section clearfix">
+  <header class="header-section">
     <router-link to="/" class="site-logo">
       <div class="d-flex align-items-center">
         <img src="@/assets/imgs/logo.svg" alt="" />
@@ -9,55 +9,60 @@
         </div>
       </div>
     </router-link>
-    <ul class="main-menu">
+    <button class="mobile-menu-btn" @click="isMobileMenuOpen = !isMobileMenuOpen" :class="{ open: isMobileMenuOpen }">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="main-menu" :class="{ 'mobile-open': isMobileMenuOpen }">
       <li>
-        <router-link :to="{ name: 'home' }">{{ $t("menu.home") }}</router-link>
+        <router-link :to="{ name: 'home' }" @click="isMobileMenuOpen = false">{{ $t("menu.home") }}</router-link>
       </li>
       <li>
-        <router-link :to="{ name: 'about' }">
+        <router-link :to="{ name: 'about' }" @click="isMobileMenuOpen = false">
           {{ $t("menu.about") }}
         </router-link>
       </li>
       <li>
-        <router-link :to="{ name: 'download' }">
+        <router-link :to="{ name: 'download' }" @click="isMobileMenuOpen = false">
           {{ $t("menu.download") }}
         </router-link>
       </li>
+      <!--
       <li>
-        <router-link :to="{ name: 'contact' }">
+        <router-link
+          :to="{ name: 'community' }"
+          :class="{ 'router-link-active': $route.path.startsWith('/comunidade') }"
+          @click="isMobileMenuOpen = false"
+        >
+          {{ $t("menu.community") }}
+        </router-link>
+      </li>
+      -->
+      <li>
+        <router-link
+          :to="{ name: 'help' }"
+          :class="{ 'router-link-active': $route.path.startsWith('/ajuda') || $route.name === 'faq' }"
+          @click="isMobileMenuOpen = false"
+        >
+          {{ $t("menu.help") }}
+        </router-link>
+      </li>
+      <li>
+        <router-link :to="{ name: 'contact' }" @click="isMobileMenuOpen = false">
           {{ $t("menu.contact") }}
         </router-link>
       </li>
       <li>
-        <router-link :to="{ name: 'donation' }">
+        <router-link :to="{ name: 'donation' }" @click="isMobileMenuOpen = false">
           {{ $t("menu.donation") }}
         </router-link>
       </li>
-      <li>
-        <a href="#">
-          <img
-            v-if="flag === 'br'"
-            style="height: 21px"
-            src="@/assets/flags/br.svg"
-          />
-          <img
-            v-else-if="flag === 'es'"
-            style="height: 21px"
-            src="@/assets/flags/es.svg"
-          />
-        </a>
-        <ul class="sub-menu" style="width: 60px">
-          <li>
-            <a href="#" @click="changeLocale('pt')">
-              <img style="height: 21px" src="@/assets/flags/br.svg" />
-            </a>
-          </li>
-          <li>
-            <a href="#" @click="changeLocale('es')">
-              <img style="height: 21px" src="@/assets/flags/es.svg" />
-            </a>
-          </li>
-        </ul>
+      <li class="lang-switch">
+        <div class="lang-toggle">
+          <span @click="changeLocale('pt')" :class="{ active: $i18n.locale === 'pt' }">PT</span>
+          <span @click="changeLocale('es')" :class="{ active: $i18n.locale === 'es' }">ES</span>
+        </div>
       </li>
     </ul>
   </header>
@@ -66,6 +71,11 @@
 <script>
 export default {
   name: "HeaderLayout",
+  data() {
+    return {
+      isMobileMenuOpen: false
+    }
+  },
   computed: {
     flag() {
       const flags = {
@@ -79,18 +89,8 @@ export default {
     changeLocale(lang) {
       this.$i18n.locale = lang;
       localStorage.setItem("lang", lang);
+      this.isMobileMenuOpen = false;
     },
-  },
-  mounted() {
-    $(".main-menu").slicknav({
-      appendTo: ".header-section",
-      allowParentLinks: true,
-      closedSymbol: '<i class="fa fa-angle-right"></i>',
-      openedSymbol: '<i class="fa fa-angle-down"></i>',
-    });
-
-    $(".slicknav_nav").prepend('<li class="header-right-warp"></li>');
-    $(".header-right").clone().prependTo(".slicknav_nav > .header-right-warp");
   },
 };
 </script>

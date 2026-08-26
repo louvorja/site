@@ -3,10 +3,11 @@
   <section class="hero-section">
     <div class="hero-slider">
       <Carousel v-bind="carouselConfig">
-        <Slide v-for="slide in 3" :key="slide">
+        <Slide v-for="slide in [1, 2, 4]" :key="slide">
           <div class="hs-item">
             <div class="container">
-              <div v-if="slide == 1" class="row">
+              <!-- Slide 1: Windows Desktop -->
+              <div v-if="slide == 1" class="row align-items-center">
                 <div class="col-lg-6">
                   <div class="hs-text">
                     <h2>
@@ -30,18 +31,20 @@
                   <div class="hr-img">
                     <img
                       v-if="lang === 'pt'"
-                      src="@/assets/imgs/001-pt.png"
+                      src="@/assets/imgs/001-pt.webp"
                       alt=""
                     />
                     <img
                       v-else-if="lang === 'es'"
-                      src="@/assets/imgs/001-es.png"
+                      src="@/assets/imgs/001-es.webp"
                       alt=""
                     />
                   </div>
                 </div>
               </div>
-              <div v-else-if="slide == 2" class="row">
+
+              <!-- Slide 2: Web App -->
+              <div v-else-if="slide == 2" class="row align-items-center">
                 <div class="col-lg-6">
                   <div class="hs-text">
                     <h2>
@@ -62,27 +65,55 @@
                   <div class="hr-img">
                     <img
                       v-if="lang === 'pt'"
-                      src="@/assets/imgs/002-pt.png"
+                      src="@/assets/imgs/002-pt.webp"
                       alt=""
                     />
                     <img
                       v-else-if="lang === 'es'"
-                      src="@/assets/imgs/002-es.png"
+                      src="@/assets/imgs/002-es.webp"
                       alt=""
                     />
                   </div>
                 </div>
               </div>
-              <div v-else class="row">
+
+              <!-- Slide 3: Multiplataforma / Comunidade -->
+              <div v-else-if="slide == 3" class="row align-items-center">
+                <div class="col-lg-6">
+                  <div class="hs-text">
+                    <h2>
+                      <span>{{ $t("carousel.slide3.title[0]") }}</span>
+                      {{ $t("carousel.slide3.title[1]") }}
+                    </h2>
+                    <p>{{ $t("carousel.slide3.text") }}</p>
+                    <router-link :to="{ name: 'community' }" class="site-btn">
+                      {{ $t("carousel.slide3.button1") }}
+                    </router-link>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="hr-img">
+                    <img
+                      src="@/assets/imgs/photo-community.webp"
+                      alt="Louvor JA Multiplataforma"
+                      class="img-fluid rounded-4 shadow-lg"
+                      style="border-radius: 20px; max-height: 420px; object-fit: cover;"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 4: Doação -->
+              <div v-else class="row align-items-center">
                 <div class="col-lg-12">
                   <div class="hs-text">
                     <h2>
-                      {{ $t("carousel.slide3.title[0]") }}
-                      <span>{{ $t("carousel.slide3.title[1]") }}</span>
+                      {{ $t("carousel.slide4.title[0]") }}
+                      <span>{{ $t("carousel.slide4.title[1]") }}</span>
                     </h2>
-                    <p>{{ $t("carousel.slide3.text") }}</p>
+                    <p>{{ $t("carousel.slide4.text") }}</p>
                     <router-link :to="{ name: 'donation' }" class="site-btn">
-                      {{ $t("carousel.slide3.button1") }}
+                      {{ $t("carousel.slide4.button1") }}
                     </router-link>
                   </div>
                 </div>

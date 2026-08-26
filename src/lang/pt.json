@@ -5,8 +5,10 @@
   },
   "menu": {
     "home": "Início",
-    "about": "O Programa",
+    "about": "Sobre",
     "download": "Download",
+    "community": "Comunidade",
+    "help": "Ajuda",
     "contact": "Contato",
     "donation": "Doação"
   },
@@ -30,6 +32,7 @@
       "title": "Links",
       "list": {
         "app": "Versão Web",
+        "community": "Comunidade",
         "help": "Ajuda",
         "faq": "Perguntas Frequentes",
         "drive": "Drive",
@@ -56,6 +59,14 @@
       "button1": "Acesse Agora"
     },
     "slide3": {
+      "title": [
+        "Multiplataforma",
+        "Desktop: Windows, Linux e Mac"
+      ],
+      "text": "Conheça as novas versões de desktop criadas pela comunidade para levar o Louvor JA nativamente ao Linux, macOS e Windows.",
+      "button1": "Conhecer Versões"
+    },
+    "slide4": {
       "title": [
         "Totalmente",
         "Grátis."
@@ -125,22 +136,86 @@
     }
   },
   "download": {
-    "title": "Download",
+    "title": "Faça o Download",
+    "subtitle": "Transforme a projeção dos seus cultos.",
+    "description": "O Louvor JA é um software robusto para gerenciar músicas, vídeos e letreiros nas programações de sua igreja ou pequeno grupo. Escolha a sua versão abaixo.",
+    "requirements_title": "Requisitos do Sistema:",
+    "requirements": [
+      "<strong>Sistema Operacional:</strong> Windows 7 ou superior",
+      "<strong>Mínimo:</strong> Processador Dual Core, 4 GB de RAM e 25 GB de disco livre",
+      "<strong>Recomendado:</strong> Intel Core i3 (5ª Geração) ou superior, 8 GB de RAM e 25 GB de disco livre",
+      "<strong>Versão Web:</strong> Navegador moderno e conexão à internet"
+    ],
     "button": {
-      "pt": "Português",
-      "es": "Español",
-      "app": "Versão Web"
+      "pt": "Windows (Português)",
+      "es": "Windows (Español)",
+      "app": "Acessar Versão Web",
+      "community": "Outras Opções (Comunidade)",
+      "pt_desc": "Instalador completo do software.",
+      "es_desc": "Instalador completo del software.",
+      "app_desc": "Acesse diretamente do navegador.",
+      "community_desc": "Versões multiplataforma para Windows, Linux e macOS."
     }
   },
+  "community": {
+    "title": "Versões da Comunidade",
+    "subtitle": "Edições multiplataforma do Louvor JA para Desktop (Windows, Linux e Mac).",
+    "description": "Projetos de código aberto desenvolvidos voluntariamente pela comunidade, cada um com foco técnico e codinome musical específico.",
+    "badge_beta": "Versão Beta",
+    "badge_alpha": "Versão Alpha",
+    "btn_repo": "Ver Detalhes & Download"
+  },
+  "community_versions": {
+    "back_btn": "Voltar para Versões da Comunidade",
+    "downloads_title": "Downloads Disponíveis por Sistema",
+    "downloads_subtitle": "Escolha o pacote correspondente ao seu sistema operacional:",
+    "dl_linux_title": "Linux (64-bit)",
+    "dl_linux_desc": "Ubuntu, Debian, Fedora, Arch, Linux Mint, openSUSE, RedHat e derivadas.",
+    "dl_linux_appimage": "Baixar .AppImage",
+    "dl_linux_deb": "Baixar pacote .deb",
+    "dl_linux_rpm": "Baixar pacote .rpm",
+    "dl_mac_title": "macOS",
+    "dl_mac_desc": "Compatível com macOS 11 Big Sur ou superior.",
+    "dl_mac_dmg": "Baixar instalador .dmg",
+    "dl_mac_dmg_intel": "Baixar .dmg (Intel / x86_64)",
+    "dl_mac_dmg_arm": "Baixar .dmg (Apple Silicon / ARM64)",
+    "dl_win_title": "Windows (64-bit)",
+    "dl_win_desc": "Compatível com Windows 10 e Windows 11.",
+    "dl_win_exe": "Baixar instalador .exe",
+    "gallery_title": "Capturas de Tela do Programa",
+    "gallery_hint": "Clique para expandir a imagem",
+    "show_all_releases": "Ver versões anteriores ({count})",
+    "hide_previous_releases": "Ocultar versões anteriores",
+    "features_title": "Principais Recursos",
+    "requirements_title": "Requisitos de Hardware & Sistema",
+    "req_table_comp": "Componente",
+    "req_table_min": "Requisitos Mínimos",
+    "req_table_rec": "Requisitos Recomendados",
+    "req_os_title": "Sistema Operacional",
+    "req_cpu_title": "Processador (CPU)",
+    "req_ram_title": "Memória RAM",
+    "req_gpu_title": "Placa de Vídeo (GPU)",
+    "req_disk_title": "Armazenamento",
+    "req_screens_title": "Monitores / Projeção",
+    "changelog_title": "Histórico de Lançamentos & Atualizações"
+  },
   "contact": {
-    "title": "Contato",
-    "text": [
-      "Caso precise de suporte, pode entrar em nossos grupos do",
-      "ou",
-      "Ou, envie um e-mail para:"
-    ],
-    "whatsapp": "WhatsApp",
-    "telegram": "Telegram"
+    "title": "Entre em Contato",
+    "subtitle": "Estamos prontos para ajudar você.",
+    "description": "Tire dúvidas, envie sugestões, relate problemas ou participe diretamente da nossa comunidade oficial de operadores e voluntários.",
+    "community_title": "Comunidade e Suporte",
+    "email_title": "Suporte por E-mail",
+    "email_desc": "Prefere nos enviar uma mensagem direta? Responderemos o mais breve possível.",
+    "whatsapp_title": "Grupo no WhatsApp",
+    "whatsapp_desc": "Converse e tire dúvidas em tempo real com outros operadores.",
+    "telegram_title": "Canal no Telegram",
+    "telegram_desc": "Acompanhe atualizações, dicas e novidades em primeira mão.",
+    "dev_title": "É Desenvolvedor?",
+    "dev_desc": "Participe do nosso time voluntário de desenvolvedores e ajude a construir o futuro do software.",
+    "btn_whatsapp": "Entrar no WhatsApp",
+    "btn_telegram": "Entrar no Telegram",
+    "btn_dev": "Grupo de Desenvolvedores",
+    "btn_email": "Enviar E-mail"
   },
   "dev": {
     "title": "Desenvolvedor",
@@ -148,40 +223,41 @@
     "link": "Acessar grupo"
   },
   "donation": {
-    "title": "Doação",
-    "text": "O software LouvorJA é gratuíto. Todo o serviço de desenvolvimento é voluntário. No entanto, existem custos para manê-lo funcionando. Caso queira fazer uma contribuição, pode fazer através dos meios abaixo:"
+    "title": "Apoie o Projeto",
+    "subtitle": "Ajude a manter o Louvor JA gratuito, atualizado e no ar.",
+    "description": "O Louvor JA é desenvolvido e mantido por voluntários com o propósito de abençoar ministérios de música em igrejas e grupos. Suas contribuições nos ajudam a manter servidores, banco de dados e novas atualizações constantes.",
+    "pix_title": "Doação via PIX",
+    "pix_subtitle": "Chave E-mail (Brasil)",
+    "pix_desc": "Abra o aplicativo do seu banco, selecione a opção PIX e use a chave abaixo:",
+    "pix_copy": "Copiar Chave PIX",
+    "pix_copied": "Chave Copiada!",
+    "paypal_title": "Doação via PayPal",
+    "paypal_subtitle": "Cartão de Crédito ou Internacional",
+    "paypal_desc": "Contribua com segurança através de sua conta PayPal ou cartão de crédito de qualquer lugar do mundo.",
+    "paypal_btn": "Doar com PayPal"
   },
   "help": {
-    "title": "Ajuda do Programa",
+    "title": "Central de Ajuda",
+    "subtitle": "Aprenda a utilizar todos os recursos do Louvor JA.",
+    "description": "Tutoriais, atalhos, dicas de transmissão e guias passo a passo para auxiliar você e a equipe de áudio e vídeo da sua igreja.",
     "related": "Tópicos Relacionados",
-    "link_back": "Todos os itens",
+    "link_back": "Voltar para todos os tópicos",
     "link_more": "Saiba mais",
+    "articles_count": "tópicos",
     "lyric_css": "Ó DEUS DE AMOR",
     "download_font": "Baixar fonte"
   },
   "faq": {
-    "title": "Perguntas Frequentes"
-  },
-  "chatbot": {
-    "name": "LouvorJ.AI",
-    "status": "Online — Especialista em LouvorJA",
-    "placeholder": "Digite sua mensagem...",
-    "new_conversation": "Nova conversa",
-    "send_file": "Enviar arquivo",
-    "quick_music": "Buscar música",
-    "quick_categories": "Categorias",
-    "quick_hymnal": "Hinário",
-    "quick_shortcuts": "Atalhos",
-    "quick_stream": "Transmitir",
-    "quick_download": "Download",
-    "welcome": "Olá! Sou a <strong>LouvorJ.AI</strong>, sua assistente virtual do LouvorJA. Posso te ajudar com <strong>músicas</strong>, <strong>hinários</strong>, <strong>atalhos</strong>, <strong>transmissão</strong> e mais!",
-    "error": "Ocorreu um erro ao processar sua mensagem. Tente novamente.",
-    "fallback": "Precisa de ajuda? Visite <strong>louvorja.com/ajuda</strong> para tutoriais completos.",
-    "guardrail": "Desculpe, sou a IA LouvorJ.AI e só posso ajudar com dúvidas sobre o LouvorJA.",
-    "close": "Fechar chat",
-    "open": "Abrir chat"
+    "title": "Perguntas Frequentes",
+    "subtitle": "Respostas rápidas para as dúvidas mais comuns.",
+    "description": "Reunimos aqui as principais perguntas sobre o uso, configuração, transmissão e recursos do software Louvor JA. Clique em qualquer pergunta para ler o guia completo.",
+    "help_cta_title": "Não encontrou o que procurava?",
+    "help_cta_desc": "Explore todos os nossos guias passo a passo, atalhos e tutoriais detalhados na Central de Ajuda.",
+    "help_cta_btn": "Ir para a Central de Ajuda"
   },
   "notfound": {
-    "title": "Página não encontrada!"
+    "title": "Página não encontrada!",
+    "desc": "Parece que você se perdeu, ou a página que você está procurando foi movida ou não existe mais.",
+    "back": "Voltar ao Início"
   }
 }
