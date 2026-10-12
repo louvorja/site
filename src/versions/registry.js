@@ -22,7 +22,7 @@ export const registeredVersions = [
     slug: "flute",
     codename: "Flute",
     repo: "louvorja/flute-app",
-    branch: "electron",
+    branch: "main",
     folder: "community",
     color: "#0084c1",
     stage: "Beta",

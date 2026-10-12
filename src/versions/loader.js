@@ -74,13 +74,17 @@ export const REQUIRED_TRANSLATION_FIELDS = [
 
 /**
  * Valida se o objeto de tradução contém todos os campos obrigatórios preenchidos
- * e se o campo 'name' coincide exatamente com o 'codename' registrado no registry.js.
+ * e se o campo 'name' coincide com o 'codename' registrado no registry.js (permitindo também o prefixo "LouvorJA ").
  */
 export function validateTranslationData(data, expectedCodename) {
   if (!data || typeof data !== "object") return false;
 
-  // O campo 'name' tem que ser exatamente o mesmo do 'codename' do registry
-  if (!data.name || data.name.trim() !== (expectedCodename || "").trim()) {
+  // O campo 'name' deve coincidir com o 'codename' (aceitando também variações com prefixo "LouvorJA" / "Louvor JA")
+  const rawName = (data.name || "").trim().toLowerCase();
+  const normalizedDataName = rawName.replace(/^louvor\s*ja\s*/i, "").trim();
+  const normalizedExpected = (expectedCodename || "").trim().toLowerCase().replace(/^louvor\s*ja\s*/i, "").trim();
+
+  if (!rawName || (rawName !== (expectedCodename || "").trim().toLowerCase() && normalizedDataName !== normalizedExpected)) {
     return false;
   }
 
