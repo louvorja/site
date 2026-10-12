@@ -126,6 +126,12 @@
             >
               <i class="fa fa-telegram"></i>
             </a>
+            <a
+              :href="$router.resolve({ name: 'youtube' }).href"
+              target="_blank"
+            >
+              <i class="fa fa-youtube"></i>
+            </a>
           </div>
         </div>
       </div>

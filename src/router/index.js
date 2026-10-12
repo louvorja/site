@@ -139,6 +139,14 @@ const routes = [
     },
   },
   {
+    path: "/youtube",
+    name: "youtube",
+    beforeEnter(to, from, next) {
+      window.location.href = import.meta.env.VITE_YOUTUBE_URL;
+      next(false);
+    },
+  },
+  {
     path: "/:pathMatch(.*)*",
     name: "not-found",
     component: NotFound,
