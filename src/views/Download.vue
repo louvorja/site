@@ -86,7 +86,7 @@
             </a>
 
             <!-- Other Options / Community Multiplatform -->
-            <!--
+
             <router-link
               :to="{ name: 'community' }"
               class="dl-card dl-community"
@@ -102,7 +102,6 @@
                 <i class="fa fa-arrow-right"></i>
               </div>
             </router-link>
-            -->
           </div>
         </div>
       </div>
