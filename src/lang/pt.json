@@ -1,169 +1,108 @@
 {
-    "logo": {
-        "text-normal": "LOUVOR",
-        "text-highlight": "JA"
+  "logo": {
+    "text-normal": "LOUVOR",
+    "text-highlight": "JA"
+  },
+  "menu": {
+    "home": "Início",
+    "about": "Sobre",
+    "download": "Download",
+    "community": "Comunidade",
+    "help": "Ajuda",
+    "contact": "Contato",
+    "donation": "Doação"
+  },
+  "footer": {
+    "texts": [
+      "Software LouvorJA",
+      "Versão do Programa",
+      "Versão do Banco de Dados"
+    ],
+    "partners": {
+      "title": "Parceiros",
+      "list": {
+        "ligaosom": "Blog Liga o Som",
+        "iasdbaixogandu": "IASD Baixo Gandu",
+        "seveninformatica": "Seven Informática",
+        "300degideao": "300 de Gideão",
+        "mdawiki": "MDA Wiki"
+      }
     },
-    "menu": {
-        "home": "Início",
-        "about": "Sobre",
-        "download": "Download",
+    "links": {
+      "title": "Links",
+      "list": {
+        "app": "Versão Web",
         "community": "Comunidade",
         "help": "Ajuda",
-        "contact": "Contato",
-        "donation": "Doação"
+        "faq": "Perguntas Frequentes",
+        "drive": "Drive",
+        "dev": "Colaborar como Desenvolvedor"
+      }
+    }
+  },
+  "carousel": {
+    "slide1": {
+      "title": [
+        "Músicas",
+        "para projeção."
+      ],
+      "text": "Projete músicas para sua igreja, evento ou pequeno grupo. Utilize as músicas do programa, ou crie suas próprias músicas.",
+      "button1": "Baixe Agora",
+      "button2": "Acesse sem baixar"
     },
-    "footer": {
-        "texts": [
-            "Software LouvorJA",
-            "Versão do Programa",
-            "Versão do Banco de Dados"
-        ],
-        "partners": {
-            "title": "Parceiros",
-            "list": {
-                "ligaosom": "Blog Liga o Som",
-                "iasdbaixogandu": "IASD Baixo Gandu",
-                "seveninformatica": "Seven Informática",
-                "300degideao": "300 de Gideão",
-                "mdawiki": "MDA Wiki"
-            }
-        },
-        "links": {
-            "title": "Links",
-            "list": {
-                "app": "Versão Web",
-                "community": "Comunidade",
-                "help": "Ajuda",
-                "faq": "Perguntas Frequentes",
-                "drive": "Drive",
-                "dev": "Colaborar como Desenvolvedor"
-            }
-        }
+    "slide2": {
+      "title": [
+        "Ouça",
+        "diretamente da internet."
+      ],
+      "text": "Não quer baixar o programa? Caso você tenha uma boa conexão com a internet, pode desfrutar da versão web, sem precisar baixar nada.",
+      "button1": "Acesse Agora"
     },
-    "carousel": {
-        "slide1": {
-            "title": [
-                "Músicas",
-                "para projeção."
-            ],
-            "text": "Projete músicas para sua igreja, evento ou pequeno grupo. Utilize as músicas do programa, ou crie suas próprias músicas.",
-            "button1": "Baixe Agora",
-            "button2": "Acesse sem baixar"
-        },
-        "slide2": {
-            "title": [
-                "Ouça",
-                "diretamente da internet."
-            ],
-            "text": "Não quer baixar o programa? Caso você tenha uma boa conexão com a internet, pode desfrutar da versão web, sem precisar baixar nada.",
-            "button1": "Acesse Agora"
-        },
-        "slide3": {
-            "title": [
-                "Multiplataforma",
-                "Desktop: Windows, Linux e Mac"
-            ],
-            "text": "Conheça as novas versões de desktop criadas pela comunidade para levar o Louvor JA nativamente ao Linux, macOS e Windows.",
-            "button1": "Conhecer Versões"
-        },
-        "slide4": {
-            "title": [
-                "Totalmente",
-                "Grátis."
-            ],
-            "text": "A utilização do programa é totalmente grátis. Mas sinta-se a vontade para enviar uma doação para ajudar nos custos de operação.",
-            "button1": "Faça uma Doação"
-        }
+    "slide3": {
+      "title": [
+        "Multiplataforma",
+        "Desktop: Windows, Linux e Mac"
+      ],
+      "text": "Conheça as novas versões de desktop criadas pela comunidade para levar o Louvor JA nativamente ao Linux, macOS e Windows.",
+      "button1": "Conhecer Versões"
     },
-    "home": {
-        "card1": {
-            "title": "Centenas de músicas para seus cultos",
-            "text": "Mais de mil músicas para projetar e cantar. A maioria conta com playbacks. O operador tem total controle sobre os slides. Não quer projetar? Não tem problema. É possível executar somente o áudio da música. O programa ainda conta com projeção em 3 telas: Tela do público, tela do operador e tela de retorno.",
-            "button": "Saiba mais"
-        },
-        "card2": {
-            "title": "Recursos",
-            "col1": {
-                "title": "Bíblia",
-                "text": "Várias versões da bíblia. Encontre de forma fácil e rápida a passagem bíblica e projete. Fundo, cores e letras totalmente customizáveis. Projete versos isolados ou alternados."
-            },
-            "col2": {
-                "title": "Liturgia",
-                "text": " Monte de maneira fácil e prática a programação do culto. Defina os arquivos que serão executados em cada momento, e deixe recados para os operadores sobre a programação."
-            },
-            "col3": {
-                "title": "E muito mais...",
-                "text": "O programa ainda conta com uma gama de recursos, como sorteador, cronômetro de culto, relógio, e ainda, editor de slides, para criar seus próprios slides!"
-            }
-        },
-        "card3": {
-            "title": "Principais usos",
-            "text": "O programa pode ser utilizado em diversos lugares e ocasiões, como igrejas, pequenos grupos, acampamentos, cultos de pôr-do-sol, sociais, entre outros.\nProjete as músicas, faça sorteios, exiba cronômetro, monte sua programação, crie slides e desfrute de tudo o que o programa tem a oferecer!",
-            "photo1": "Igrejas",
-            "photo2": "Eventos",
-            "photo3": "Pequenos Grupos",
-            "photo4": "Acampamentos"
-        }
+    "slide4": {
+      "title": [
+        "Totalmente",
+        "Grátis."
+      ],
+      "text": "A utilização do programa é totalmente grátis. Mas sinta-se a vontade para enviar uma doação para ajudar nos custos de operação.",
+      "button1": "Faça uma Doação"
+    }
+  },
+  "home": {
+    "card1": {
+      "title": "Centenas de músicas para seus cultos",
+      "text": "Mais de mil músicas para projetar e cantar. A maioria conta com playbacks. O operador tem total controle sobre os slides. Não quer projetar? Não tem problema. É possível executar somente o áudio da música. O programa ainda conta com projeção em 3 telas: Tela do público, tela do operador e tela de retorno.",
+      "button": "Saiba mais"
     },
-    "about": {
-        "card1": {
-            "title": "Músicas",
-            "text": "O programa possui músicas do Hinário Adventista, CDs jovens e CDs diversos. A maioria das músicas possui playback. O programa possui também, diversas opções de projeção das músicas, como: cantado, playback e sem áudio, e projeção em 3 telas: operador, retorno e público."
-        },
-        "card2": {
-            "title": "Bíblia",
-            "text": "O programa possui a bíblia em várias versões, para ser projetada para o público, podendo projetar um verso isolado, ou vários versos, em sequência ou intercalados. A bíblia é totalmente customizável, podendo alterar cores, fonte e imagem de fundo. Há também, a possibilidade de buscar versos bíblicos, através da aba \"Busca Bíblica\"."
-        },
-        "card3": {
-            "title": "Vídeos On-line",
-            "text": "O programa dispõe de alguns álbuns de músicas diretamente do Youtube, onde basta clicar para que o vídeo seja executado diretamente para o público. Há também a possibilidade de salvar o link dos vídeos on-line, ou executar diretamente do programa, bastando apenas colar a URL do Youtube, para que seja executado dentro do programa."
-        },
-        "card4": {
-            "title": "Organização dos Cultos",
-            "text": "O programa possui diversas ferramentas para organização dos cultos, como: \"Liturgia\", para organizar e montar a programação dos cultos; \"Itens Agendados\", para cadastrar conteúdos recorrentes específicos para cada dia, e \"Cronômetro de Culto\", para projetar o tempo decorrido e o tempo restante do culto, podendo configurar a duração do culto, ou o horário de término."
-        },
-        "card5": {
-            "title": "Transmissão",
-            "text": "Ferramenta para transmitir as letras das músicas para o navegador, onde é possível incorporar o link da transmissão em programas de streaming, como OBS e VMix, por exemplo. É possível também, transmitir a letra em dispositivos que estejam conectados na mesma rede, como celulares e monitores de retorno."
-        },
-        "card6": {
-            "title": "Editor de Músicas",
-            "text": "Ferramenta para criação de músicas, no mesmo formato do programa. Crie músicas facilmente com esta ferramenta. Configure as imagens, cores, letra e áudio, e grave os intervalos. Depois, basta exportar e estará pronto para ser executado. As músicas criadas podem ser colocadas no programa através do menu \"Coletâneas Personalizadas\""
-        },
-        "card7": {
-            "title": "Utilitários",
-            "text": "Ferramentas diversas de auxílio nas programações, como: sorteador, Cronômetro, temporizador, relógio e painel de anúncios."
-        }
-    },
-    "download": {
-        "title": "Faça o Download",
-        "subtitle": "Transforme a projeção dos seus cultos.",
-        "description": "O Louvor JA é um software robusto para gerenciar músicas, vídeos e letreiros nas programações de sua igreja ou pequeno grupo. Escolha a sua versão abaixo.",
-        "requirements_title": "Requisitos do Sistema:",
-        "requirements": [
-            "<strong>Sistema Operacional:</strong> Windows 7 ou superior",
-            "<strong>Mínimo:</strong> Processador Dual Core, 4 GB de RAM e 25 GB de disco livre",
-            "<strong>Recomendado:</strong> Intel Core i3 (5ª Geração) ou superior, 8 GB de RAM e 25 GB de disco livre",
-            "<strong>Versão Web:</strong> Navegador moderno e conexão à internet"
-        ],
-        "button": {
-            "pt": "Windows (Português)",
-            "es": "Windows (Español)",
-            "app": "Acessar Versão Web",
-            "community": "Outras Opções (Comunidade)",
-            "pt_desc": "Instalador completo do software.",
-            "es_desc": "Instalador completo del software.",
-            "app_desc": "Acesse diretamente do navegador.",
-            "community_desc": "Versões multiplataforma para Windows, Linux e macOS."
-        }
-    },
-    "community": {
-        "title": "Versões da Comunidade",
-        "subtitle": "Edições multiplataforma do Louvor JA para Desktop (Windows, Linux e Mac).",
-        "description": "Projetos de código aberto desenvolvidos voluntariamente pela comunidade, cada um com foco técnico e codinome musical específico.",
-        "badge_beta": "Versão Beta",
-        "badge_alpha": "Versão Alpha",
-        "btn_repo": "Ver Detalhes & Download"
+    "card2": {
+      "title": "Recursos",
+      "col1": {
+        "title": "Bíblia",
+        "text": "Várias versões da bíblia. Encontre de forma fácil e rápida a passagem bíblica e projete. Fundo, cores e letras totalmente customizáveis. Projete versos isolados ou alternados."
+      },
+      "col2": {
+        "title": "Liturgia",
+        "text": " Monte de maneira fácil e prática a programação do culto. Defina os arquivos que serão executados em cada momento, e deixe recados para os operadores sobre a programação."
+      },
+      "col3": {
+        "title": "E muito mais...",
+        "text": "O programa ainda conta com uma gama de recursos, como sorteador, cronômetro de culto, relógio, e ainda, editor de slides, para criar seus próprios slides!"
+      }
+    },    
+    "card3": {
+      "title": "Principais usos",
+      "text": "O programa pode ser utilizado em diversos lugares e ocasiões, como igrejas, pequenos grupos, acampamentos, cultos de pôr-do-sol, sociais, entre outros.\nProjete as músicas, faça sorteios, exiba cronômetro, monte sua programação, crie slides e desfrute de tudo o que o programa tem a oferecer!",
+      "photo1": "Igrejas",
+      "photo2": "Eventos",
+      "photo3": "Pequenos Grupos",
+      "photo4": "Acampamentos"
     },
     "community_versions": {
         "back_btn": "Voltar para Versões da Comunidade",
@@ -201,66 +140,160 @@
         "req_screens_title": "Monitores / Projeção",
         "changelog_title": "Histórico de Lançamentos & Atualizações",
         "prev_release_downloads": "Downloads desta versão:"
+  },
+  "about": {
+    "card1": {
+      "title": "Músicas",
+      "text": "O programa possui músicas do Hinário Adventista, CDs jovens e CDs diversos. A maioria das músicas possui playback. O programa possui também, diversas opções de projeção das músicas, como: cantado, playback e sem áudio, e projeção em 3 telas: operador, retorno e público."
     },
-    "contact": {
-        "title": "Entre em Contato",
-        "subtitle": "Estamos prontos para ajudar você.",
-        "description": "Tire dúvidas, envie sugestões, relate problemas ou participe diretamente da nossa comunidade oficial de operadores e voluntários.",
-        "community_title": "Comunidade e Suporte",
-        "email_title": "Suporte por E-mail",
-        "email_desc": "Prefere nos enviar uma mensagem direta? Responderemos o mais breve possível.",
-        "whatsapp_title": "Grupo no WhatsApp",
-        "whatsapp_desc": "Converse e tire dúvidas em tempo real com outros operadores.",
-        "telegram_title": "Canal no Telegram",
-        "telegram_desc": "Acompanhe atualizações, dicas e novidades em primeira mão.",
-        "dev_title": "É Desenvolvedor?",
-        "dev_desc": "Participe do nosso time voluntário de desenvolvedores e ajude a construir o futuro do software.",
-        "btn_whatsapp": "Entrar no WhatsApp",
-        "btn_telegram": "Entrar no Telegram",
-        "btn_dev": "Grupo de Desenvolvedores",
-        "btn_email": "Enviar E-mail"
+    "card2": {
+      "title": "Bíblia",
+      "text": "O programa possui a bíblia em várias versões, para ser projetada para o público, podendo projetar um verso isolado, ou vários versos, em sequência ou intercalados. A bíblia é totalmente customizável, podendo alterar cores, fonte e imagem de fundo. Há também, a possibilidade de buscar versos bíblicos, através da aba \"Busca Bíblica\"."
     },
-    "dev": {
-        "title": "Desenvolvedor",
-        "text": "Para colaborar, entre no grupo de desenvolvedores:",
-        "link": "Acessar grupo"
+    "card3": {
+      "title": "Vídeos On-line",
+      "text": "O programa dispõe de alguns álbuns de músicas diretamente do Youtube, onde basta clicar para que o vídeo seja executado diretamente para o público. Há também a possibilidade de salvar o link dos vídeos on-line, ou executar diretamente do programa, bastando apenas colar a URL do Youtube, para que seja executado dentro do programa."
     },
-    "donation": {
-        "title": "Apoie o Projeto",
-        "subtitle": "Ajude a manter o Louvor JA gratuito, atualizado e no ar.",
-        "description": "O Louvor JA é desenvolvido e mantido por voluntários com o propósito de abençoar ministérios de música em igrejas e grupos. Suas contribuições nos ajudam a manter servidores, banco de dados e novas atualizações constantes.",
-        "pix_title": "Doação via PIX",
-        "pix_subtitle": "Chave E-mail (Brasil)",
-        "pix_desc": "Abra o aplicativo do seu banco, selecione a opção PIX e use a chave abaixo:",
-        "pix_copy": "Copiar Chave PIX",
-        "pix_copied": "Chave Copiada!",
-        "paypal_title": "Doação via PayPal",
-        "paypal_subtitle": "Cartão de Crédito ou Internacional",
-        "paypal_desc": "Contribua com segurança através de sua conta PayPal ou cartão de crédito de qualquer lugar do mundo.",
-        "paypal_btn": "Doar com PayPal"
+    "card4": {
+      "title": "Organização dos Cultos",
+      "text": "O programa possui diversas ferramentas para organização dos cultos, como: \"Liturgia\", para organizar e montar a programação dos cultos; \"Itens Agendados\", para cadastrar conteúdos recorrentes específicos para cada dia, e \"Cronômetro de Culto\", para projetar o tempo decorrido e o tempo restante do culto, podendo configurar a duração do culto, ou o horário de término."
     },
-    "help": {
-        "title": "Central de Ajuda",
-        "subtitle": "Aprenda a utilizar todos os recursos do Louvor JA.",
-        "description": "Tutoriais, atalhos, dicas de transmissão e guias passo a passo para auxiliar você e a equipe de áudio e vídeo da sua igreja.",
-        "related": "Tópicos Relacionados",
-        "link_back": "Voltar para todos os tópicos",
-        "link_more": "Saiba mais",
-        "articles_count": "tópicos",
-        "lyric_css": "Ó DEUS DE AMOR",
-        "download_font": "Baixar fonte"
+    "card5": {
+      "title": "Transmissão",
+      "text": "Ferramenta para transmitir as letras das músicas para o navegador, onde é possível incorporar o link da transmissão em programas de streaming, como OBS e VMix, por exemplo. É possível também, transmitir a letra em dispositivos que estejam conectados na mesma rede, como celulares e monitores de retorno."
     },
-    "faq": {
-        "title": "Perguntas Frequentes",
-        "subtitle": "Respostas rápidas para as dúvidas mais comuns.",
-        "description": "Reunimos aqui as principais perguntas sobre o uso, configuração, transmissão e recursos do software Louvor JA. Clique em qualquer pergunta para ler o guia completo.",
-        "help_cta_title": "Não encontrou o que procurava?",
-        "help_cta_desc": "Explore todos os nossos guias passo a passo, atalhos e tutoriais detalhados na Central de Ajuda.",
-        "help_cta_btn": "Ir para a Central de Ajuda"
+    "card6": {
+      "title": "Editor de Músicas",
+      "text": "Ferramenta para criação de músicas, no mesmo formato do programa. Crie músicas facilmente com esta ferramenta. Configure as imagens, cores, letra e áudio, e grave os intervalos. Depois, basta exportar e estará pronto para ser executado. As músicas criadas podem ser colocadas no programa através do menu \"Coletâneas Personalizadas\""
     },
-    "notfound": {
-        "title": "Página não encontrada!",
-        "desc": "Parece que você se perdeu, ou a página que você está procurando foi movida ou não existe mais.",
-        "back": "Voltar ao Início"
+    "card7": {
+      "title": "Utilitários",
+      "text": "Ferramentas diversas de auxílio nas programações, como: sorteador, Cronômetro, temporizador, relógio e painel de anúncios."
     }
+  },
+  "download": {
+    "title": "Faça o Download",
+    "subtitle": "Transforme a projeção dos seus cultos.",
+    "description": "O Louvor JA é um software robusto para gerenciar músicas, vídeos e letreiros nas programações de sua igreja ou pequeno grupo. Escolha a sua versão abaixo.",
+    "requirements_title": "Requisitos do Sistema:",
+    "requirements": [
+      "<strong>Sistema Operacional:</strong> Windows 7 ou superior",
+      "<strong>Mínimo:</strong> Processador Dual Core, 4 GB de RAM e 25 GB de disco livre",
+      "<strong>Recomendado:</strong> Intel Core i3 (5ª Geração) ou superior, 8 GB de RAM e 25 GB de disco livre",
+      "<strong>Versão Web:</strong> Navegador moderno e conexão à internet"
+    ],
+    "button": {
+      "pt": "Windows (Português)",
+      "es": "Windows (Español)",
+      "app": "Acessar Versão Web",
+      "community": "Outras Opções (Comunidade)",
+      "pt_desc": "Instalador completo do software.",
+      "es_desc": "Instalador completo del software.",
+      "app_desc": "Acesse diretamente do navegador.",
+      "community_desc": "Versões multiplataforma para Windows, Linux e macOS."
+    }
+  },
+  "community": {
+    "title": "Versões da Comunidade",
+    "subtitle": "Edições multiplataforma do Louvor JA para Desktop (Windows, Linux e Mac).",
+    "description": "Projetos de código aberto desenvolvidos voluntariamente pela comunidade, cada um com foco técnico e codinome musical específico.",
+    "badge_beta": "Versão Beta",
+    "badge_alpha": "Versão Alpha",
+    "btn_repo": "Ver Detalhes & Download"
+  },
+  "community_versions": {
+    "back_btn": "Voltar para Versões da Comunidade",
+    "downloads_title": "Downloads Disponíveis por Sistema",
+    "downloads_subtitle": "Escolha o pacote correspondente ao seu sistema operacional:",
+    "dl_linux_title": "Linux (64-bit)",
+    "dl_linux_desc": "Ubuntu, Debian, Fedora, Arch, Linux Mint, openSUSE, RedHat e derivadas.",
+    "dl_linux_appimage": "Baixar .AppImage",
+    "dl_linux_deb": "Baixar pacote .deb",
+    "dl_linux_rpm": "Baixar pacote .rpm",
+    "dl_mac_title": "macOS",
+    "dl_mac_desc": "Compatível com macOS 11 Big Sur ou superior.",
+    "dl_mac_dmg": "Baixar instalador .dmg",
+    "dl_mac_dmg_intel": "Baixar .dmg (Intel / x86_64)",
+    "dl_mac_dmg_arm": "Baixar .dmg (Apple Silicon / ARM64)",
+    "dl_win_title": "Windows (64-bit)",
+    "dl_win_desc": "Compatível com Windows 10 e Windows 11.",
+    "dl_win_exe": "Baixar instalador .exe",
+    "gallery_title": "Capturas de Tela do Programa",
+    "gallery_hint": "Clique para expandir a imagem",
+    "show_all_releases": "Ver versões anteriores ({count})",
+    "hide_previous_releases": "Ocultar versões anteriores",
+    "features_title": "Principais Recursos",
+    "requirements_title": "Requisitos de Hardware & Sistema",
+    "req_table_comp": "Componente",
+    "req_table_min": "Requisitos Mínimos",
+    "req_table_rec": "Requisitos Recomendados",
+    "req_os_title": "Sistema Operacional",
+    "req_cpu_title": "Processador (CPU)",
+    "req_ram_title": "Memória RAM",
+    "req_gpu_title": "Placa de Vídeo (GPU)",
+    "req_disk_title": "Armazenamento",
+    "req_screens_title": "Monitores / Projeção",
+    "changelog_title": "Histórico de Lançamentos & Atualizações"
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "subtitle": "Estamos prontos para ajudar você.",
+    "description": "Tire dúvidas, envie sugestões, relate problemas ou participe diretamente da nossa comunidade oficial de operadores e voluntários.",
+    "community_title": "Comunidade e Suporte",
+    "email_title": "Suporte por E-mail",
+    "email_desc": "Prefere nos enviar uma mensagem direta? Responderemos o mais breve possível.",
+    "whatsapp_title": "Grupo no WhatsApp",
+    "whatsapp_desc": "Converse e tire dúvidas em tempo real com outros operadores.",
+    "telegram_title": "Canal no Telegram",
+    "telegram_desc": "Acompanhe atualizações, dicas e novidades em primeira mão.",
+    "dev_title": "É Desenvolvedor?",
+    "dev_desc": "Participe do nosso time voluntário de desenvolvedores e ajude a construir o futuro do software.",
+    "btn_whatsapp": "Entrar no WhatsApp",
+    "btn_telegram": "Entrar no Telegram",
+    "btn_dev": "Grupo de Desenvolvedores",
+    "btn_email": "Enviar E-mail"
+  },
+  "dev": {
+    "title": "Desenvolvedor",
+    "text": "Para colaborar, entre no grupo de desenvolvedores:",
+    "link": "Acessar grupo"
+  },
+  "donation": {
+    "title": "Apoie o Projeto",
+    "subtitle": "Ajude a manter o Louvor JA gratuito, atualizado e no ar.",
+    "description": "O Louvor JA é desenvolvido e mantido por voluntários com o propósito de abençoar ministérios de música em igrejas e grupos. Suas contribuições nos ajudam a manter servidores, banco de dados e novas atualizações constantes.",
+    "pix_title": "Doação via PIX",
+    "pix_subtitle": "Chave E-mail (Brasil)",
+    "pix_desc": "Abra o aplicativo do seu banco, selecione a opção PIX e use a chave abaixo:",
+    "pix_copy": "Copiar Chave PIX",
+    "pix_copied": "Chave Copiada!",
+    "paypal_title": "Doação via PayPal",
+    "paypal_subtitle": "Cartão de Crédito ou Internacional",
+    "paypal_desc": "Contribua com segurança através de sua conta PayPal ou cartão de crédito de qualquer lugar do mundo.",
+    "paypal_btn": "Doar com PayPal"
+  },
+  "help": {
+    "title": "Central de Ajuda",
+    "subtitle": "Aprenda a utilizar todos os recursos do Louvor JA.",
+    "description": "Tutoriais, atalhos, dicas de transmissão e guias passo a passo para auxiliar você e a equipe de áudio e vídeo da sua igreja.",
+    "related": "Tópicos Relacionados",
+    "link_back": "Voltar para todos os tópicos",
+    "link_more": "Saiba mais",
+    "articles_count": "tópicos",
+    "lyric_css": "Ó DEUS DE AMOR",
+    "download_font": "Baixar fonte"
+  },
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "subtitle": "Respostas rápidas para as dúvidas mais comuns.",
+    "description": "Reunimos aqui as principais perguntas sobre o uso, configuração, transmissão e recursos do software Louvor JA. Clique em qualquer pergunta para ler o guia completo.",
+    "help_cta_title": "Não encontrou o que procurava?",
+    "help_cta_desc": "Explore todos os nossos guias passo a passo, atalhos e tutoriais detalhados na Central de Ajuda.",
+    "help_cta_btn": "Ir para a Central de Ajuda"
+  },
+  "notfound": {
+    "title": "Página não encontrada!",
+    "desc": "Parece que você se perdeu, ou a página que você está procurando foi movida ou não existe mais.",
+    "back": "Voltar ao Início"
+  }
 }

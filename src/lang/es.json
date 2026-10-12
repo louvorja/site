@@ -1,170 +1,109 @@
 {
-    "logo": {
-        "text-normal": "LOOR",
-        "text-highlight": "JA"
+  "logo": {
+    "text-normal": "LOOR",
+    "text-highlight": "JA"
+  },
+  "menu": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "download": "Descarga",
+    "community": "Comunidad",
+    "help": "Ayuda",
+    "contact": "Contacto",
+    "donation": "Donación"
+  },
+  "footer": {
+    "texts": [
+      "Software LoorJA",
+      "Versión del Programa",
+      "Versión de la Base de Datos"
+    ],
+    "partners": {
+      "title": "Socios",
+      "list": {
+        "ligaosom": "Blog Liga o Sonido",
+        "iasdbaixogandu": "IASD Baixo Gandu",
+        "seveninformatica": "Seven Informática",
+        "300degideao": "300 de Gedeón",
+        "mdawiki": "MDA Wiki"
+      }
     },
-    "menu": {
-        "home": "Inicio",
-        "about": "Acerca de",
-        "download": "Descarga",
+    "links": {
+      "title": "Enlaces",
+      "list": {
+        "app": "Versión Web",
         "community": "Comunidad",
         "help": "Ayuda",
-        "contact": "Contacto",
-        "donation": "Donación"
+        "faq": "Preguntas Frecuentes",
+        "drive": "Drive",
+        "dev": "Colaborar como Desarrollador"
+      }
+    }
+  },
+  "carousel": {
+    "slide1": {
+      "title": [
+        "Canciones",
+        "para proyección."
+      ],
+      "text": "Proyecte canciones para su iglesia, evento o grupo pequeño. Utilice las canciones del programa o cree sus propias canciones.",
+      "button1": "Descárguelo Ahora",
+      "button2": "Acceda sin descargar"
     },
-    "footer": {
-        "texts": [
-            "Software LoorJA",
-            "Versión del Programa",
-            "Versión de la Base de Datos"
-        ],
-        "partners": {
-            "title": "Socios",
-            "list": {
-                "ligaosom": "Blog Liga o Sonido",
-                "iasdbaixogandu": "IASD Baixo Gandu",
-                "seveninformatica": "Seven Informática",
-                "300degideao": "300 de Gedeón",
-                "mdawiki": "MDA Wiki"
-            }
-        },
-        "links": {
-            "title": "Enlaces",
-            "list": {
-                "app": "Versión Web",
-                "community": "Comunidad",
-                "help": "Ayuda",
-                "faq": "Preguntas Frecuentes",
-                "drive": "Drive",
-                "dev": "Colaborar como Desarrollador"
-            }
-        }
+    "slide2": {
+      "title": [
+        "Escuche",
+        "directamente de internet."
+      ],
+      "text": "¿No quiere descargar el programa? Si tiene una buena conexión a internet, puede disfrutar de la versión web sin necesidad de descargar nada.",
+      "button1": "Acceda Ahora"
     },
-    "carousel": {
-        "slide1": {
-            "title": [
-                "Canciones",
-                "para proyección."
-            ],
-            "text": "Proyecte canciones para su iglesia, evento o grupo pequeño. Utilice las canciones del programa o cree sus propias canciones.",
-            "button1": "Descárguelo Ahora",
-            "button2": "Acceda sin descargar"
-        },
-        "slide2": {
-            "title": [
-                "Escuche",
-                "directamente de internet."
-            ],
-            "text": "¿No quiere descargar el programa? Si tiene una buena conexión a internet, puede disfrutar de la versión web sin necesidad de descargar nada.",
-            "button1": "Acceda Ahora"
-        },
-        "slide3": {
-            "title": [
-                "Multiplataforma",
-                "Desktop: Windows, Linux y Mac"
-            ],
-            "text": "Conozca las nuevas versiones de escritorio creadas por la comunidad para llevar Loor JA de forma nativa a Linux, macOS y Windows.",
-            "button1": "Conocer Versiones"
-        },
-        "slide4": {
-            "title": [
-                "Totalmente",
-                "Gratis."
-            ],
-            "text": "El uso del programa es totalmente gratis. Pero siéntase libre de enviar una donación para ayudar con los costos operativos.",
-            "button1": "Haga una Donación"
-        }
+    "slide3": {
+      "title": [
+        "Multiplataforma",
+        "Desktop: Windows, Linux y Mac"
+      ],
+      "text": "Conozca las nuevas versiones de escritorio creadas por la comunidad para llevar Loor JA de forma nativa a Linux, macOS y Windows.",
+      "button1": "Conocer Versiones"
     },
-    "home": {
-        "card1": {
-            "title": "Cientos de canciones para sus cultos",
-            "text": "Más de mil canciones para proyectar y cantar. La mayoría cuenta con playbacks. El operador tiene control total sobre las diapositivas. ¿No quiere proyectar? No hay problema. Es posible reproducir solo el audio. El programa también cuenta con proyección en 3 pantallas: pantalla del público, pantalla del operador y pantalla de retorno.",
-            "button": "Conozca más"
-        },
-        "card2": {
-            "title": "Recursos",
-            "col1": {
-                "title": "Biblia",
-                "text": "Varias versiones de la biblia. Encuentre de forma fácil y rápida el pasaje bíblico y proyéctelo. Fondo, colores y fuentes totalmente personalizables. Proyecte versículos individuales o alternados."
-            },
-            "col2": {
-                "title": "Liturgia",
-                "text": "Organice de manera fácil y práctica la programación del culto. Defina los archivos que se ejecutarán en cada momento y deje notas para los operadores sobre la programación."
-            },
-            "col3": {
-                "title": "Y mucho más...",
-                "text": "El programa cuenta además con una amplia gama de recursos, como sorteador, cronómetro de culto, reloj y también un editor de diapositivas para crear sus propias presentaciones."
-            }
-        },
-        "card3": {
-            "title": "Usos principales",
-            "text": "El programa puede utilizarse en diversos lugares y ocasiones, como iglesias, grupos pequeños, campamentos, cultos de puesta de sol, reuniones sociales, entre otros.\n¡Proyecte canciones, realice sorteos, muestre cronómetros, prepare su programación, cree diapositivas y disfrute de todo lo que el programa tiene para ofrecer!",
-            "photo1": "Iglesias",
-            "photo2": "Eventos",
-            "photo3": "Grupos Pequeños",
-            "photo4": "Campamentos"
-        }
+    "slide4": {
+      "title": [
+        "Totalmente",
+        "Gratis."
+      ],
+      "text": "El uso del programa es totalmente gratis. Pero siéntase libre de enviar una donación para ayudar con los costos operativos.",
+      "button1": "Haga una Donación"
+    }
+  },
+  "home": {
+    "card1": {
+      "title": "Cientos de canciones para sus cultos",
+      "text": "Más de mil canciones para proyectar y cantar. La mayoría cuenta con playbacks. El operador tiene control total sobre las diapositivas. ¿No quiere proyectar? No hay problema. Es posible reproducir solo el audio. El programa también cuenta con proyección en 3 pantallas: pantalla del público, pantalla del operador y pantalla de retorno.",
+      "button": "Conozca más"
     },
-    "about": {
-        "card1": {
-            "title": "Canciones",
-            "text": "El programa cuenta con canciones del Himnario Adventista, CDs jóvenes y álbumes diversos. La mayoría de las canciones tiene playback. También ofrece diversas opciones de proyección: cantado, playback y sin audio, además de proyección en 3 pantallas: operador, retorno y público."
-        },
-        "card2": {
-            "title": "Biblia",
-            "text": "El programa incluye la biblia en varias versiones para ser proyectada al público, permitiendo proyectar versículos aislados o en secuencia. La biblia es totalmente personalizable, pudiendo cambiar colores, fuentes e imagen de fondo. También es posible buscar versículos a través de la pestaña \"Búsqueda Bíblica\"."
-        },
-        "card3": {
-            "title": "Videos Online",
-            "text": "El programa dispone de álbumes de música directamente desde YouTube, donde basta un clic para reproducir el video directamente al público. También es posible guardar enlaces de videos online o ejecutarlos directamente pegando la URL de YouTube."
-        },
-        "card4": {
-            "title": "Organización de los Cultos",
-            "text": "El programa posee diversas herramientas para la organización de los cultos, como: \"Liturgia\", para armar la programación; \"Elementos Programados\", para registrar contenidos recurrentes de cada día; y \"Cronómetro de Culto\", para proyectar el tiempo transcurrido y restante."
-        },
-        "card5": {
-            "title": "Transmisión",
-            "text": "Herramienta para transmitir las letras de las canciones al navegador, permitiendo incorporar el enlace en programas de streaming como OBS y vMix. También es posible transmitir la letra a dispositivos conectados en la misma red, como teléfonos y monitores de retorno."
-        },
-        "card6": {
-            "title": "Editor de Canciones",
-            "text": "Herramienta para la creación de canciones en el mismo formato del programa. Configure imágenes, colores, letra y audio, y grabe los tiempos. Luego solo exporte y estará listo. Las canciones creadas pueden agregarse mediante el menú \"Colecciones Personalizadas\"."
-        },
-        "card7": {
-            "title": "Utilidades",
-            "text": "Herramientas diversas de apoyo en las reuniones, como: sorteador, cronómetro, temporizador, reloj y panel de anuncios."
-        }
-    },
-    "download": {
-        "title": "Descargue el Programa",
-        "subtitle": "Transforme la proyección de sus cultos.",
-        "description": "Loor JA es un software robusto para administrar canciones, videos y presentaciones en las reuniones de su iglesia o grupo pequeño. Elija su versión a continuación.",
-        "requirements_title": "Requisitos del Sistema:",
-        "requirements": [
-            "<strong>Sistema Operativo:</strong> Windows 7 o superior",
-            "<strong>Mínimo:</strong> Procesador Dual Core, 4 GB de RAM y 25 GB de disco libre",
-            "<strong>Recomendado:</strong> Intel Core i3 (5ª Generación) o superior, 8 GB de RAM y 25 GB de disco libre",
-            "<strong>Versión Web:</strong> Navegador moderno y conexión a internet"
-        ],
-        "button": {
-            "pt": "Windows (Portugués)",
-            "es": "Windows (Español)",
-            "app": "Acceder Versión Web",
-            "community": "Otras Opciones (Comunidad)",
-            "pt_desc": "Instalador completo del software.",
-            "es_desc": "Instalador completo del software.",
-            "app_desc": "Accede directamente desde el navegador.",
-            "community_desc": "Versiones multiplataforma para Windows, Linux y macOS."
-        }
-    },
-    "community": {
-        "title": "Versiones de la Comunidad",
-        "subtitle": "Ediciones multiplataforma de Loor JA para Desktop (Windows, Linux y Mac).",
-        "description": "Proyectos de código abierto desarrollados voluntariamente por la comunidad, cada uno con enfoque técnico y nombre en clave musical específico.",
-        "badge_beta": "Versión Beta",
-        "badge_alpha": "Versión Alpha",
-        "btn_repo": "Ver Detalles y Descarga"
-    },
+    "card2": {
+      "title": "Recursos",
+      "col1": {
+        "title": "Biblia",
+        "text": "Varias versiones de la biblia. Encuentre de forma fácil y rápida el pasaje bíblico y proyéctelo. Fondo, colores y fuentes totalmente personalizables. Proyecte versículos individuales o alternados."
+      },
+      "col2": {
+        "title": "Liturgia",
+        "text": "Organice de manera fácil y práctica la programación del culto. Defina los archivos que se ejecutarán en cada momento y deje notas para los operadores sobre la programación."
+      },
+      "col3": {
+        "title": "Y mucho más...",
+        "text": "El programa cuenta además con una amplia gama de recursos, como sorteador, cronómetro de culto, reloj y también un editor de diapositivas para crear sus propias presentaciones."
+      }
+    },    
+    "card3": {
+      "title": "Usos principales",
+      "text": "El programa puede utilizarse en diversos lugares y ocasiones, como iglesias, grupos pequeños, campamentos, cultos de puesta de sol, reuniones sociales, entre otros.\n¡Proyecte canciones, realice sorteos, muestre cronómetros, prepare su programación, cree diapositivas y disfrute de todo lo que el programa tiene para ofrecer!",
+      "photo1": "Iglesias",
+      "photo2": "Eventos",
+      "photo3": "Grupos Pequeños",
+      "photo4": "Campamentos"
+    }
     "community_versions": {
         "back_btn": "Volver a Versiones de la Comunidad",
         "downloads_title": "Descargas Disponibles por Sistema",
@@ -202,66 +141,161 @@
         "req_screens_title": "Monitores / Proyección",
         "changelog_title": "Historial de Lanzamientos y Actualizaciones",
         "prev_release_downloads": "Descargas de esta versión:"
+  },
+  "about": {
+    "card1": {
+      "title": "Canciones",
+      "text": "El programa cuenta con canciones del Himnario Adventista, CDs jóvenes y álbumes diversos. La mayoría de las canciones tiene playback. También ofrece diversas opciones de proyección: cantado, playback y sin audio, además de proyección en 3 pantallas: operador, retorno y público."
     },
-    "contact": {
-        "title": "Ponte en Contacto",
-        "subtitle": "Estamos listos para ayudarte a ti.",
-        "description": "Haz preguntas, envía sugerencias, informa problemas o participa directamente en nuestra comunidad oficial de operadores y voluntarios.",
-        "community_title": "Comunidad y Soporte",
-        "email_title": "Soporte por Correo",
-        "email_desc": "¿Prefieres enviarnos un mensaje directo? Responderemos lo antes posible.",
-        "whatsapp_title": "Grupo de WhatsApp",
-        "whatsapp_desc": "Chatea y resuelve dudas en tiempo real con otros operadores.",
-        "telegram_title": "Canal de Telegram",
-        "telegram_desc": "Sigue actualizaciones, consejos y novedades de primera mano.",
-        "dev_title": "¿Eres Desarrollador?",
-        "dev_desc": "Únete a nuestro equipo voluntario de desarrolladores y ayuda a construir el futuro del software.",
-        "btn_whatsapp": "Unirse a WhatsApp",
-        "btn_telegram": "Unirse a Telegram",
-        "btn_dev": "Grupo de Desarrolladores",
-        "btn_email": "Enviar Correo"
+    "card2": {
+      "title": "Biblia",
+      "text": "El programa incluye la biblia en varias versiones para ser proyectada al público, permitiendo proyectar versículos aislados o en secuencia. La biblia es totalmente personalizable, pudiendo cambiar colores, fuentes e imagen de fondo. También es posible buscar versículos a través de la pestaña \"Búsqueda Bíblica\"."
     },
-    "dev": {
-        "title": "Desarrollador",
-        "text": "Para colaborar, únete al grupo de desarrolladores:",
-        "link": "Acceder al grupo"
+    "card3": {
+      "title": "Videos Online",
+      "text": "El programa dispone de álbumes de música directamente desde YouTube, donde basta un clic para reproducir el video directamente al público. También es posible guardar enlaces de videos online o ejecutarlos directamente pegando la URL de YouTube."
     },
-    "donation": {
-        "title": "Apoye el Proyecto",
-        "subtitle": "Ayude a mantener Loor JA gratuito, actualizado y en línea.",
-        "description": "Loor JA es desarrollado y mantenido por voluntarios con el propósito de bendecir ministerios de música en iglesias y grupos. Sus contribuciones nos ayudan a mantener servidores, bases de datos y nuevas actualizaciones constantes.",
-        "pix_title": "Donación vía PIX",
-        "pix_subtitle": "Clave Correo (Brasil)",
-        "pix_desc": "Abra la aplicación de su banco, seleccione la opción PIX y use la clave a continuación:",
-        "pix_copy": "Copiar Clave PIX",
-        "pix_copied": "¡Clave Copiada!",
-        "paypal_title": "Donación vía PayPal",
-        "paypal_subtitle": "Tarjeta de Crédito o Internacional",
-        "paypal_desc": "Contribuya de forma segura a través de su cuenta PayPal o tarjeta de crédito desde cualquier parte del mundo.",
-        "paypal_btn": "Donar con PayPal"
+    "card4": {
+      "title": "Organización de los Cultos",
+      "text": "El programa posee diversas herramientas para la organización de los cultos, como: \"Liturgia\", para armar la programación; \"Elementos Programados\", para registrar contenidos recurrentes de cada día; y \"Cronómetro de Culto\", para proyectar el tiempo transcurrido y restante."
     },
-    "help": {
-        "title": "Centro de Ayuda",
-        "subtitle": "Aprenda a utilizar todos los recursos de Loor JA.",
-        "description": "Tutoriales, atajos, consejos de transmisión y guías paso a paso para ayudarle a usted y al equipo de audio y video de su iglesia.",
-        "related": "Temas Relacionados",
-        "link_back": "Volver a todos los temas",
-        "link_more": "Conozca más",
-        "articles_count": "temas",
-        "lyric_css": "OH DIOS DE AMOR",
-        "download_font": "Descargar fuente"
+    "card5": {
+      "title": "Transmisión",
+      "text": "Herramienta para transmitir las letras de las canciones al navegador, permitiendo incorporar el enlace en programas de streaming como OBS y vMix. También es posible transmitir la letra a dispositivos conectados en la misma red, como teléfonos y monitores de retorno."
     },
-    "faq": {
-        "title": "Preguntas Frecuentes",
-        "subtitle": "Respuestas rápidas a las dudas más comunes.",
-        "description": "Reunimos aquí las principales preguntas sobre el uso, configuración, transmisión y recursos del software Loor JA. Haga clic en cualquier pregunta para leer la guía completa.",
-        "help_cta_title": "¿No encontró lo que buscaba?",
-        "help_cta_desc": "Explore todas nuestras guías paso a paso, atajos y tutoriales detallados en el Centro de Ayuda.",
-        "help_cta_btn": "Ir al Centro de Ayuda"
+    "card6": {
+      "title": "Editor de Canciones",
+      "text": "Herramienta para la creación de canciones en el mismo formato del programa. Configure imágenes, colores, letra y audio, y grabe los tiempos. Luego solo exporte y estará listo. Las canciones creadas pueden agregarse mediante el menú \"Colecciones Personalizadas\"."
     },
-    "notfound": {
-        "title": "¡Página no encontrada!",
-        "desc": "Parece que te perdiste, o la página que buscas fue movida o ya no existe.",
-        "back": "Volver al Inicio"
+    "card7": {
+      "title": "Utilidades",
+      "text": "Herramientas diversas de apoyo en las reuniones, como: sorteador, cronómetro, temporizador, reloj y panel de anuncios."
     }
+  },
+  "download": {
+    "title": "Descargue el Programa",
+    "subtitle": "Transforme la proyección de sus cultos.",
+    "description": "Loor JA es un software robusto para administrar canciones, videos y presentaciones en las reuniones de su iglesia o grupo pequeño. Elija su versión a continuación.",
+    "requirements_title": "Requisitos del Sistema:",
+    "requirements": [
+      "<strong>Sistema Operativo:</strong> Windows 7 o superior",
+      "<strong>Mínimo:</strong> Procesador Dual Core, 4 GB de RAM y 25 GB de disco libre",
+      "<strong>Recomendado:</strong> Intel Core i3 (5ª Generación) o superior, 8 GB de RAM y 25 GB de disco libre",
+      "<strong>Versión Web:</strong> Navegador moderno y conexión a internet"
+    ],
+    "button": {
+      "pt": "Windows (Portugués)",
+      "es": "Windows (Español)",
+      "app": "Acceder Versión Web",
+      "community": "Otras Opciones (Comunidad)",
+      "pt_desc": "Instalador completo del software.",
+      "es_desc": "Instalador completo del software.",
+      "app_desc": "Accede directamente desde el navegador.",
+      "community_desc": "Versiones multiplataforma para Windows, Linux y macOS."
+    }
+  },
+  "community": {
+    "title": "Versiones de la Comunidad",
+    "subtitle": "Ediciones multiplataforma de Loor JA para Desktop (Windows, Linux y Mac).",
+    "description": "Proyectos de código abierto desarrollados voluntariamente por la comunidad, cada uno con enfoque técnico y nombre en clave musical específico.",
+    "badge_beta": "Versión Beta",
+    "badge_alpha": "Versión Alpha",
+    "btn_repo": "Ver Detalles y Descarga"
+  },
+  "community_versions": {
+    "back_btn": "Volver a Versiones de la Comunidad",
+    "downloads_title": "Descargas Disponibles por Sistema",
+    "downloads_subtitle": "Elija el paquete correspondiente a su sistema operativo:",
+    "dl_linux_title": "Linux (64-bit)",
+    "dl_linux_desc": "Ubuntu, Debian, Fedora, Arch, Linux Mint, openSUSE, RedHat y derivados.",
+    "dl_linux_appimage": "Descargar .AppImage",
+    "dl_linux_deb": "Descargar paquete .deb",
+    "dl_linux_rpm": "Descargar paquete .rpm",
+    "dl_mac_title": "macOS",
+    "dl_mac_desc": "Compatible con macOS 11 Big Sur o superior.",
+    "dl_mac_dmg": "Descargar instalador .dmg",
+    "dl_mac_dmg_intel": "Descargar .dmg (Intel / x86_64)",
+    "dl_mac_dmg_arm": "Descargar .dmg (Apple Silicon / ARM64)",
+    "dl_win_title": "Windows (64-bit)",
+    "dl_win_desc": "Compatible con Windows 10 y Windows 11.",
+    "dl_win_exe": "Descargar instalador .exe",
+    "dl_win_portable": "Descargar Versión Portátil (.zip)",
+    "gallery_title": "Capturas de Pantalla del Programa",
+    "gallery_hint": "Haz clic para ampliar la imagen",
+    "show_all_releases": "Ver versiones anteriores ({count})",
+    "hide_previous_releases": "Ocultar versiones anteriores",
+    "features_title": "Principales Recursos",
+    "requirements_title": "Requisitos de Hardware y Sistema",
+    "req_table_comp": "Componente",
+    "req_table_min": "Requisitos Mínimos",
+    "req_table_rec": "Requisitos Recomendados",
+    "req_os_title": "Sistema Operativo",
+    "req_cpu_title": "Procesador (CPU)",
+    "req_ram_title": "Memoria RAM",
+    "req_gpu_title": "Tarjeta de Video (GPU)",
+    "req_disk_title": "Almacenamiento",
+    "req_screens_title": "Monitores / Proyección",
+    "changelog_title": "Historial de Lanzamientos y Actualizaciones"
+  },
+  "contact": {
+    "title": "Ponte en Contacto",
+    "subtitle": "Estamos listos para ayudarte a ti.",
+    "description": "Haz preguntas, envía sugerencias, informa problemas o participa directamente en nuestra comunidad oficial de operadores y voluntarios.",
+    "community_title": "Comunidad y Soporte",
+    "email_title": "Soporte por Correo",
+    "email_desc": "¿Prefieres enviarnos un mensaje directo? Responderemos lo antes posible.",
+    "whatsapp_title": "Grupo de WhatsApp",
+    "whatsapp_desc": "Chatea y resuelve dudas en tiempo real con otros operadores.",
+    "telegram_title": "Canal de Telegram",
+    "telegram_desc": "Sigue actualizaciones, consejos y novedades de primera mano.",
+    "dev_title": "¿Eres Desarrollador?",
+    "dev_desc": "Únete a nuestro equipo voluntario de desarrolladores y ayuda a construir el futuro del software.",
+    "btn_whatsapp": "Unirse a WhatsApp",
+    "btn_telegram": "Unirse a Telegram",
+    "btn_dev": "Grupo de Desarrolladores",
+    "btn_email": "Enviar Correo"
+  },
+  "dev": {
+    "title": "Desarrollador",
+    "text": "Para colaborar, únete al grupo de desarrolladores:",
+    "link": "Acceder al grupo"
+  },
+  "donation": {
+    "title": "Apoye el Proyecto",
+    "subtitle": "Ayude a mantener Loor JA gratuito, actualizado y en línea.",
+    "description": "Loor JA es desarrollado y mantenido por voluntarios con el propósito de bendecir ministerios de música en iglesias y grupos. Sus contribuciones nos ayudan a mantener servidores, bases de datos y nuevas actualizaciones constantes.",
+    "pix_title": "Donación vía PIX",
+    "pix_subtitle": "Clave Correo (Brasil)",
+    "pix_desc": "Abra la aplicación de su banco, seleccione la opción PIX y use la clave a continuación:",
+    "pix_copy": "Copiar Clave PIX",
+    "pix_copied": "¡Clave Copiada!",
+    "paypal_title": "Donación vía PayPal",
+    "paypal_subtitle": "Tarjeta de Crédito o Internacional",
+    "paypal_desc": "Contribuya de forma segura a través de su cuenta PayPal o tarjeta de crédito desde cualquier parte del mundo.",
+    "paypal_btn": "Donar con PayPal"
+  },
+  "help": {
+    "title": "Centro de Ayuda",
+    "subtitle": "Aprenda a utilizar todos los recursos de Loor JA.",
+    "description": "Tutoriales, atajos, consejos de transmisión y guías paso a paso para ayudarle a usted y al equipo de audio y video de su iglesia.",
+    "related": "Temas Relacionados",
+    "link_back": "Volver a todos los temas",
+    "link_more": "Conozca más",
+    "articles_count": "temas",
+    "lyric_css": "OH DIOS DE AMOR",
+    "download_font": "Descargar fuente"
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "subtitle": "Respuestas rápidas a las dudas más comunes.",
+    "description": "Reunimos aquí las principales preguntas sobre el uso, configuración, transmisión y recursos del software Loor JA. Haga clic en cualquier pregunta para leer la guía completa.",
+    "help_cta_title": "¿No encontró lo que buscaba?",
+    "help_cta_desc": "Explore todas nuestras guías paso a paso, atajos y tutoriales detallados en el Centro de Ayuda.",
+    "help_cta_btn": "Ir al Centro de Ayuda"
+  },
+  "notfound": {
+    "title": "¡Página no encontrada!",
+    "desc": "Parece que te perdiste, o la página que buscas fue movida o ya no existe.",
+    "back": "Volver al Inicio"
+  }
 }
