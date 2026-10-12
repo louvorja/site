@@ -95,7 +95,7 @@
         "title": "E muito mais...",
         "text": "O programa ainda conta com uma gama de recursos, como sorteador, cronômetro de culto, relógio, e ainda, editor de slides, para criar seus próprios slides!"
       }
-    },
+    },    
     "card3": {
       "title": "Principais usos",
       "text": "O programa pode ser utilizado em diversos lugares e ocasiões, como igrejas, pequenos grupos, acampamentos, cultos de pôr-do-sol, sociais, entre outros.\nProjete as músicas, faça sorteios, exiba cronômetro, monte sua programação, crie slides e desfrute de tudo o que o programa tem a oferecer!",
@@ -103,6 +103,43 @@
       "photo2": "Eventos",
       "photo3": "Pequenos Grupos",
       "photo4": "Acampamentos"
+    },
+    "community_versions": {
+        "back_btn": "Voltar para Versões da Comunidade",
+        "downloads_title": "Downloads Disponíveis por Sistema",
+        "downloads_subtitle": "Escolha o pacote correspondente ao seu sistema operacional:",
+        "dl_linux_title": "Linux (64-bit)",
+        "dl_linux_desc": "Ubuntu, Debian, Fedora, Arch, Linux Mint, openSUSE, RedHat e derivadas.",
+        "dl_linux_appimage": "Baixar .AppImage",
+        "dl_linux_deb": "Baixar pacote .deb",
+        "dl_linux_rpm": "Baixar pacote .rpm",
+        "dl_mac_title": "macOS",
+        "dl_mac_desc": "Compatível com macOS 11 Big Sur ou superior.",
+        "dl_mac_dmg": "Baixar instalador .dmg",
+        "dl_mac_dmg_intel": "Baixar .dmg (Intel)",
+        "dl_mac_dmg_arm": "Baixar .dmg (ARM)",
+        "dl_win_title": "Windows (64-bit)",
+        "dl_win_desc": "Compatível com Windows 10 e Windows 11.",
+        "dl_win_exe": "Baixar instalador .exe",
+        "dl_recommended": "Recomendado",
+        "dl_recommended_badge": "Seu Sistema",
+        "gallery_title": "Capturas de Tela do Programa",
+        "gallery_hint": "Clique para expandir a imagem",
+        "show_all_releases": "Ver versões anteriores ({count})",
+        "hide_previous_releases": "Ocultar versões anteriores",
+        "features_title": "Principais Recursos",
+        "requirements_title": "Requisitos de Hardware & Sistema",
+        "req_table_comp": "Componente",
+        "req_table_min": "Requisitos Mínimos",
+        "req_table_rec": "Requisitos Recomendados",
+        "req_os_title": "Sistema Operacional",
+        "req_cpu_title": "Processador (CPU)",
+        "req_ram_title": "Memória RAM",
+        "req_gpu_title": "Placa de Vídeo (GPU)",
+        "req_disk_title": "Armazenamento",
+        "req_screens_title": "Monitores / Projeção",
+        "changelog_title": "Histórico de Lançamentos & Atualizações",
+        "prev_release_downloads": "Downloads desta versão:"
     }
   },
   "about": {

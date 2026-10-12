@@ -1,5 +1,5 @@
 <template>
-  <section class="community-details-page spad set-bg">
+  <section class="community-details-page spad set-bg" :style="versionData?.themeStyles">
     <div class="container text-white">
       <!-- Back Navigation -->
       <div class="row mb-4">
@@ -33,9 +33,7 @@
                 <span
                   class="codename-badge"
                   :style="{
-                    color: versionData.color,
-                    backgroundColor: hexToRgba(versionData.color, 0.15),
-                    borderColor: hexToRgba(versionData.color, 0.35),
+                    ...getBadgeStyle(versionData.color),
                     fontSize: '14px',
                     padding: '4px 14px'
                   }"
@@ -116,9 +114,23 @@
           <div
             v-for="(platform, index) in currentDownloads"
             :key="index"
-            class="col-lg-4 col-md-6 mb-4"
+            class="col-xl-4 col-md-6 mb-4"
           >
-            <div class="comm-card justify-content-between p-4 h-100">
+            <div
+              :class="[
+                'comm-card justify-content-between p-4 h-100',
+                { 'comm-card--recommended': isPlatformRecommended(platform) }
+              ]"
+            >
+              <!-- Badge flutuando no canto superior direito sobre a linha do card -->
+              <span
+                v-if="isPlatformRecommended(platform)"
+                class="comm-card-rec-ribbon"
+                :title="$t('community_versions.dl_recommended_for_you') || 'Recomendado para o seu sistema'"
+              >
+                <i class="fa fa-star"></i> {{ $t("community_versions.dl_recommended") || "Recomendado" }}
+              </span>
+
               <div>
                 <div class="d-flex align-items-center justify-content-between mb-3">
                   <div class="d-flex align-items-center gap-2" style="display: flex; gap: 10px; align-items: center;">
@@ -135,11 +147,26 @@
                   :key="lIdx"
                   :href="link.url || 'https://github.com/louvorja'"
                   target="_blank"
-                  class="btn-all-topics"
+                  :class="[
+                    'btn-download-action',
+                    { 'btn-download-action--recommended': isLinkRecommended(platform, link) }
+                  ]"
+                  :title="link.label"
                 >
-                  <i :class="link.icon || 'fa fa-download'"></i>
-                  <span>{{ link.label }}</span>
-                  <span v-if="link.size" class="badge badge-dark ml-auto" style="background: rgba(255,255,255,0.1);">{{ link.size }}</span>
+                  <div class="dl-btn-left">
+                    <i :class="link.icon || 'fa fa-download'"></i>
+                    <span :title="link.label">{{ link.label }}</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-2" style="display: flex; align-items: center; gap: 6px; margin-left: auto; flex-shrink: 0;">
+                    <span
+                      v-if="isLinkRecommended(platform, link)"
+                      class="dl-btn-recommended-tag"
+                      :title="$t('community_versions.dl_recommended') || 'Recomendado'"
+                    >
+                      <i class="fa fa-star"></i>
+                    </span>
+                    <span v-if="link.size" class="dl-btn-badge">{{ link.size }}</span>
+                  </div>
                 </a>
               </div>
             </div>
@@ -264,24 +291,13 @@
                   </div>
                   <h4 class="m-0 text-white font-weight-bold">{{ $t("community_versions.changelog_title") }}</h4>
                 </div>
-
-                <a
-                  v-if="versionData.repo"
-                  :href="`https://github.com/${versionData.repo}/releases`"
-                  target="_blank"
-                  class="comm-release-github-btn"
-                >
-                  <i class="fa fa-github"></i>
-                  <span>Ver todas no GitHub</span>
-                  <i class="fa fa-external-link ml-1" style="font-size: 11px;"></i>
-                </a>
               </div>
 
               <!-- Dynamic GitHub Releases -->
               <div v-if="versionData.releases && versionData.releases.length > 0">
                 <!-- Visible Releases (Initially only the latest release) -->
                 <div
-                  v-for="rel in visibleReleases"
+                  v-for="(rel, rIdx) in visibleReleases"
                   :key="rel.id"
                   class="comm-changelog-item"
                 >
@@ -297,16 +313,31 @@
                   <!-- Formatted Release Markdown Body -->
                   <div class="comm-release-body" v-html="formatReleaseBody(rel.body)"></div>
 
-                  <div class="mt-3">
-                    <a
-                      :href="rel.html_url"
-                      target="_blank"
-                      class="comm-release-github-btn"
-                    >
-                      <i class="fa fa-github"></i>
-                      <span>Ver release no GitHub</span>
-                      <i class="fa fa-external-link ml-1" style="font-size: 10px;"></i>
-                    </a>
+                  <!-- Compact Downloads (Apenas nas versões anteriores à atual) -->
+                  <div
+                    v-if="rIdx > 0 && getReleaseDownloads(rel).length > 0"
+                    class="comm-prev-release-dls mt-3 pt-3"
+                  >
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                      <i class="fa fa-download text-warning" style="font-size: 12px;"></i>
+                      <span class="text-muted-custom font-weight-bold" style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em;">
+                        {{ $t("community_versions.prev_release_downloads") || "Downloads desta versão:" }}
+                      </span>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2" style="display: flex; flex-wrap: wrap; gap: 8px;">
+                      <a
+                        v-for="(dl, dIdx) in getReleaseDownloads(rel)"
+                        :key="dIdx"
+                        :href="dl.url"
+                        target="_blank"
+                        class="comm-prev-dl-btn"
+                        :title="dl.name"
+                      >
+                        <i :class="dl.icon"></i>
+                        <span>{{ dl.label }}</span>
+                        <span v-if="dl.size" class="comm-prev-dl-size">{{ dl.size }}</span>
+                      </a>
+                    </div>
                   </div>
                 </div>
 
@@ -438,8 +469,10 @@ import {
   registeredVersions,
   loadCommunityVersion,
   getVersionDownloads,
+  detectUserPlatform,
   injectRemoteTranslations,
   hexToRgba,
+  getBadgeStyle,
 } from "@/versions";
 
 export default {
@@ -457,6 +490,7 @@ export default {
       lightboxOpen: false,
       lightboxIndex: 0,
       showAllReleases: false,
+      userPlatform: { os: null, arch: null },
     };
   },
   computed: {
@@ -484,6 +518,7 @@ export default {
     },
   },
   async mounted() {
+    this.userPlatform = detectUserPlatform();
     window.addEventListener("keydown", this.handleKeyDown);
     await this.fetchVersionDetails();
   },
@@ -492,15 +527,110 @@ export default {
   },
   methods: {
     hexToRgba,
+    getBadgeStyle,
+    isPlatformRecommended(platform) {
+      if (!this.userPlatform || !this.userPlatform.os) return false;
+      return platform.key === this.userPlatform.os;
+    },
+    isLinkRecommended(platform, link) {
+      if (!this.isPlatformRecommended(platform)) return false;
+
+      // Windows: .exe é o recomendado padrão
+      if (platform.key === "windows") {
+        return link.ext === "exe";
+      }
+
+      // macOS: Se Apple Silicon (ARM) detectado, recomenda ARM; se Intel, recomenda Intel
+      if (platform.key === "mac") {
+        if (this.userPlatform.arch === "arm") {
+          return link.isArm === true;
+        } else if (this.userPlatform.arch === "intel") {
+          return link.isArm === false;
+        }
+        return link.isArm === true;
+      }
+
+      // Linux: .AppImage é o formato universal recomendado
+      if (platform.key === "linux") {
+        return link.ext === "appimage";
+      }
+
+      return false;
+    },
+    getReleaseDownloads(rel) {
+      if (!rel || !Array.isArray(rel.assets)) return [];
+      const ignoredExts = [
+        ".blockmap",
+        ".yml",
+        ".yaml",
+        ".sha256",
+        ".sha512",
+        ".md5",
+        ".json",
+        ".txt",
+        ".asc",
+      ];
+      let assets = rel.assets.filter((a) => {
+        const n = (a.name || "").toLowerCase();
+        return !ignoredExts.some((ext) => n.endsWith(ext));
+      });
+
+      const hasDmg = assets.some((a) => (a.name || "").toLowerCase().endsWith(".dmg"));
+      if (hasDmg) {
+        assets = assets.filter((a) => !(a.name || "").toLowerCase().endsWith("-mac.zip"));
+      }
+
+      return assets.map((a) => {
+        const n = (a.name || "").toLowerCase();
+        let icon = "fa fa-download";
+        let label = a.name;
+        const isArm = n.includes("arm64") || n.includes("aarch64") || n.includes("-arm");
+
+        if (n.endsWith(".exe")) {
+          icon = "fa fa-windows";
+          label = ".exe";
+        } else if (n.endsWith(".msi")) {
+          icon = "fa fa-windows";
+          label = ".msi";
+        } else if (n.endsWith(".dmg")) {
+          icon = "fa fa-apple";
+          label = isArm ? ".dmg (ARM)" : ".dmg (Intel)";
+        } else if (n.endsWith(".pkg")) {
+          icon = "fa fa-apple";
+          label = isArm ? ".pkg (ARM)" : ".pkg (Intel)";
+        } else if (n.endsWith(".appimage")) {
+          icon = "fa fa-linux";
+          label = ".AppImage";
+        } else if (n.endsWith(".deb")) {
+          icon = "fa fa-linux";
+          label = ".deb";
+        } else if (n.endsWith(".rpm")) {
+          icon = "fa fa-linux";
+          label = ".rpm";
+        } else if (n.endsWith(".tar.gz") || n.endsWith(".tar.xz")) {
+          icon = "fa fa-linux";
+          label = ".tar.gz";
+        } else if (n.endsWith(".zip")) {
+          icon = "fa fa-file-archive-o";
+          label = ".zip";
+        }
+
+        const sizeMb = a.size ? (a.size / (1024 * 1024)).toFixed(0) + " MB" : "";
+        return {
+          url: a.browser_download_url,
+          name: a.name,
+          label,
+          icon,
+          size: sizeMb,
+        };
+      });
+    },
     async fetchVersionDetails() {
       this.loading = true;
       const targetSlug = (this.slug || "flute").toLowerCase();
-      const config =
-        registeredVersions.find((v) => v.slug === targetSlug) ||
-        registeredVersions[0];
 
       try {
-        const data = await loadCommunityVersion(config);
+        const data = await loadCommunityVersion(targetSlug);
         this.versionData = data;
         if (data) {
           injectRemoteTranslations(this.$i18n, [data]);

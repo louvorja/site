@@ -100,7 +100,7 @@ ol {
 }
 
 .text-logo span {
-    color: #0F172A;
+    color: #0F172A !important;
     font-weight: 800;
     background: #FBBF24;
     padding: 2px 7px;
@@ -437,9 +437,11 @@ Hero section
 
 .hs-item h2 {
     color: #fff;
-    font-size: 70px;
+    font-size: clamp(30px, 5.5vw, 68px);
     margin-bottom: 25px;
-    line-height: 0.95;
+    line-height: 1.05;
+    overflow-wrap: break-word;
+    word-break: normal;
 }
 
 .hs-item h2 span {
@@ -464,6 +466,7 @@ Hero section
 
 .hs-item .hs-text {
     max-width: 480px;
+    width: 100%;
 }
 
 .hr-img {
@@ -569,22 +572,37 @@ Concept section
 
 .concept-item {
     text-align: center;
-    padding-top: 35px;
-    height: calc(100% - 30px);
+    padding-top: 30px;
     margin-bottom: 30px;
-}
-
-.concept-item:hover img {
-    transform: scale(1.05);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .concept-item img {
-    border-radius: 24px;
-    margin-bottom: 15px;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 10;
     object-fit: cover;
-    height: calc(100% - 30px);
+    object-position: center;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.concept-item:hover img {
+	transform: translateY(-4px) scale(1.02);
+	box-shadow: 0 16px 35px rgba(0, 0, 0, 0.45);
+	border-color: rgba(251, 191, 36, 0.3);
+}
+
+.concept-item h5 {
+	color: #ffffff;
+	font-size: 17px;
+	font-weight: 600;
+	margin-top: 4px;
 }
 
 /* --------------------
@@ -1896,7 +1914,7 @@ Responsive
     }
 
     .header-section {
-        padding: 0;
+        padding: 0 15px;
     }
 
     .player-box {
@@ -2006,6 +2024,10 @@ Download Page Redesign (Phase 5)
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+}
+
+.download-cards .dl-card:last-child {
+    margin-bottom: 0;
 }
 
 .dl-card:hover {
@@ -2124,31 +2146,22 @@ Community Page & Codename Badges
     letter-spacing: 0.06em;
     padding: 2px 8px;
     border-radius: 6px;
-    background: rgba(255, 255, 255, 0.06);
-    color: #cbd5e1;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: var(--ver-color-15, rgba(255, 255, 255, 0.06));
+    color: var(--ver-color, #cbd5e1);
+    border: 1px solid var(--ver-color-35, rgba(255, 255, 255, 0.12));
     display: inline-flex;
     align-items: center;
     gap: 5px;
     transition: all 0.3s ease;
 }
 
-.codename-badge.codename-violin {
-    background: rgba(245, 166, 17, 0.15);
-    color: #F5A611;
-    border-color: rgba(245, 166, 17, 0.35);
+.comm-version-card {
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.codename-badge.codename-piano {
-    background: rgba(224, 139, 91, 0.15);
-    color: #E08B5B;
-    border-color: rgba(224, 139, 91, 0.35);
-}
-
-.codename-badge.codename-flute {
-    background: rgba(0, 132, 193, 0.15);
-    color: #0084C1;
-    border-color: rgba(0, 132, 193, 0.35);
+.comm-version-card:hover {
+    border-color: var(--ver-color-35, rgba(251, 191, 36, 0.35));
+    box-shadow: 0 12px 30px rgba(var(--ver-color-rgb, 251, 191, 36), 0.18);
 }
 
 .platform-pill {
@@ -2193,6 +2206,142 @@ Community Details Page Redesign
     background: rgba(255, 255, 255, 0.06);
     border-color: rgba(251, 191, 36, 0.25);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* Card de Download Recomendado para o SO do Usuário */
+.comm-card--recommended {
+    border-color: rgba(251, 191, 36, 0.45) !important;
+    background: radial-gradient(circle at top right, rgba(251, 191, 36, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 25px rgba(251, 191, 36, 0.12) !important;
+    position: relative;
+}
+
+.comm-card--recommended:hover {
+    border-color: rgba(251, 191, 36, 0.65) !important;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 0 0 35px rgba(251, 191, 36, 0.22) !important;
+}
+
+/* Badge de Destaque Recomendado flutuando no canto superior direito sobre a linha do Card */
+.comm-card-rec-ribbon {
+    position: absolute;
+    top: 0;
+    right: 24px;
+    transform: translateY(-50%);
+    background: #FBBF24;
+    color: #0f172a;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    box-shadow: 0 4px 14px rgba(251, 191, 36, 0.45);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Botões de Download com ícone e texto alinhados à esquerda e badge de tamanho à direita */
+.btn-download-action {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100%;
+    padding: 12px 18px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.06);
+    color: #cbd5e1;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.btn-download-action:hover {
+    background: rgba(251, 191, 36, 0.15);
+    color: #FBBF24;
+    border-color: rgba(251, 191, 36, 0.3);
+    text-decoration: none;
+}
+
+.btn-download-action .dl-btn-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    flex: 1 1 auto;
+    overflow: hidden;
+    text-align: left;
+}
+
+.btn-download-action .dl-btn-left i {
+    width: 16px;
+    text-align: center;
+    flex-shrink: 0;
+    font-size: 14px;
+}
+
+.btn-download-action .dl-btn-left span {
+    font-size: 13.5px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.btn-download-action .dl-btn-badge {
+    margin-left: 12px;
+    flex-shrink: 0;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    padding: 3px 8px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #94a3b8;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-download-action:hover .dl-btn-badge {
+    background: rgba(251, 191, 36, 0.15);
+    color: #FBBF24;
+    border-color: rgba(251, 191, 36, 0.25);
+}
+
+/* Botão de Download Especificamente Recomendado */
+.btn-download-action--recommended {
+    background: rgba(251, 191, 36, 0.1) !important;
+    border-color: rgba(251, 191, 36, 0.45) !important;
+    color: #FBBF24 !important;
+}
+
+.btn-download-action--recommended:hover {
+    background: rgba(251, 191, 36, 0.22) !important;
+    border-color: #FBBF24 !important;
+    box-shadow: 0 0 16px rgba(251, 191, 36, 0.25) !important;
+}
+
+.btn-download-action--recommended .dl-btn-badge {
+    background: rgba(251, 191, 36, 0.2) !important;
+    color: #FBBF24 !important;
+    border-color: rgba(251, 191, 36, 0.35) !important;
+}
+
+.dl-btn-recommended-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #0f172a;
+    background: #FBBF24;
+    padding: 2px 5px;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(251, 191, 36, 0.3);
+    flex-shrink: 0;
 }
 
 .comm-req-list {
@@ -2341,23 +2490,51 @@ Community Details Page Redesign
     color: #f8fafc;
 }
 
-.comm-release-github-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 12.5px;
-    color: #94a3b8;
-    padding: 4px 10px;
-    border-radius: 6px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.2s ease;
+/* Downloads compactos para versões anteriores no changelog */
+.comm-prev-release-dls {
+    border-top: 1px dashed rgba(255, 255, 255, 0.08);
 }
 
-.comm-release-github-btn:hover {
+.comm-prev-dl-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    font-size: 12.5px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.comm-prev-dl-btn:hover {
+    background: rgba(251, 191, 36, 0.12);
+    border-color: rgba(251, 191, 36, 0.35);
     color: #FBBF24;
-    background: rgba(251, 191, 36, 0.1);
-    border-color: rgba(251, 191, 36, 0.3);
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+.comm-prev-dl-btn i {
+    font-size: 13px;
+    color: #94a3b8;
+    transition: color 0.2s ease;
+}
+
+.comm-prev-dl-btn:hover i {
+    color: #FBBF24;
+}
+
+.comm-prev-dl-size {
+    font-size: 11px;
+    color: #94a3b8;
+    background: rgba(255, 255, 255, 0.06);
+    padding: 1px 6px;
+    border-radius: 4px;
+    margin-left: 2px;
 }
 
 .comm-req-table-wrapper {
@@ -2505,91 +2682,96 @@ Community Details Page Redesign
 
 .comm-lightbox-close {
     position: absolute;
-    top: 24px;
-    right: 28px;
-    width: 44px;
-    height: 44px;
+    top: 20px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #fff;
-    font-size: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    color: #cbd5e1;
+    font-size: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
     z-index: 1000000;
 }
 
 .comm-lightbox-close:hover {
-    background: #ef4444;
-    border-color: #ef4444;
-    transform: rotate(90deg) scale(1.1);
+    background: rgba(239, 68, 68, 0.85);
+    border-color: rgba(239, 68, 68, 0.9);
+    color: #ffffff;
 }
 
 .comm-lightbox-nav {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 52px;
-    height: 52px;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #fff;
-    font-size: 22px;
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #cbd5e1;
+    font-size: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.2s ease;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
     z-index: 1000000;
 }
 
 .comm-lightbox-nav.prev {
-    left: 28px;
+    left: 20px;
 }
 
 .comm-lightbox-nav.next {
-    right: 28px;
+    right: 20px;
 }
 
 .comm-lightbox-nav:hover {
     background: #FBBF24;
     color: #0f172a;
     border-color: #FBBF24;
-    transform: translateY(-50%) scale(1.1);
 }
 
 .comm-lightbox-caption {
     color: #94a3b8;
-    font-size: 13.5px;
+    font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.05em;
-    padding: 6px 14px;
+    padding: 4px 12px;
     background: rgba(255, 255, 255, 0.06);
     border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 @media (max-width: 768px) {
     .comm-lightbox-nav {
-        width: 40px;
-        height: 40px;
-        font-size: 16px;
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
     }
 
     .comm-lightbox-nav.prev {
-        left: 10px;
+        left: 8px;
     }
 
     .comm-lightbox-nav.next {
-        right: 10px;
+        right: 8px;
     }
 
     .comm-lightbox-close {
-        top: 14px;
-        right: 14px;
+        top: 12px;
+        right: 12px;
+        width: 32px;
+        height: 32px;
+        font-size: 13px;
     }
 }
 
@@ -3706,13 +3888,13 @@ FAQ Page Redesign
     transform: translateY(-7px) rotate(-45deg);
 }
 
-@media only screen and (max-width: 1160px) {
+@media only screen and (max-width: 1200px) {
     .mobile-menu-btn {
         display: block;
     }
 
     .main-menu {
-        display: flex;
+        display: none;
         position: absolute;
         top: 100%;
         right: 0;
@@ -3726,16 +3908,12 @@ FAQ Page Redesign
         padding: 20px;
         margin-top: 10px;
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-10px);
-        transition: all 0.3s ease;
+        z-index: 999;
     }
 
     .main-menu.mobile-open {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
+        display: flex;
+        animation: mobileMenuFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
     .main-menu li {
@@ -3748,5 +3926,16 @@ FAQ Page Redesign
         display: flex;
         justify-content: center;
         margin-top: 10px;
+    }
+}
+
+@keyframes mobileMenuFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
