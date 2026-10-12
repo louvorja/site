@@ -21,7 +21,7 @@ export const registeredVersions = [
   {
     slug: "flute",
     codename: "Flute",
-    repo: "elvieira/LouvorJA",
+    repo: "louvorja/flute-app",
     branch: "electron",
     folder: "community",
     color: "#0084c1",

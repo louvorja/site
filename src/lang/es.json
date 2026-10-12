@@ -103,7 +103,7 @@
       "photo2": "Eventos",
       "photo3": "Grupos Pequeños",
       "photo4": "Campamentos"
-    }
+    },
     "community_versions": {
         "back_btn": "Volver a Versiones de la Comunidad",
         "downloads_title": "Descargas Disponibles por Sistema",
@@ -141,6 +141,7 @@
         "req_screens_title": "Monitores / Proyección",
         "changelog_title": "Historial de Lanzamientos y Actualizaciones",
         "prev_release_downloads": "Descargas de esta versión:"
+    }
   },
   "about": {
     "card1": {
