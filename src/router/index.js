@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "@/views/Home.vue";
 import About from "@/views/About.vue";
 import Download from "@/views/Download.vue";
+import Live from "@/views/Live.vue";
 import Contact from "@/views/Contact.vue";
 import Donation from "@/views/Donation.vue";
 import Community from "@/views/Community.vue";
@@ -28,6 +29,11 @@ const routes = [
     path: "/download",
     name: "download",
     component: Download,
+  },
+  {
+    path: "/live",
+    name: "live",
+    component: Live,
   },
   {
     path: "/comunidade",

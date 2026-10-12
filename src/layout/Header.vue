@@ -9,14 +9,20 @@
         </div>
       </div>
     </router-link>
-    <button class="mobile-menu-btn" @click="isMobileMenuOpen = !isMobileMenuOpen" :class="{ open: isMobileMenuOpen }">
+    <button
+      class="mobile-menu-btn"
+      @click="isMobileMenuOpen = !isMobileMenuOpen"
+      :class="{ open: isMobileMenuOpen }"
+    >
       <span></span>
       <span></span>
       <span></span>
     </button>
     <ul class="main-menu" :class="{ 'mobile-open': isMobileMenuOpen }">
       <li>
-        <router-link :to="{ name: 'home' }" @click="isMobileMenuOpen = false">{{ $t("menu.home") }}</router-link>
+        <router-link :to="{ name: 'home' }" @click="isMobileMenuOpen = false">{{
+          $t("menu.home")
+        }}</router-link>
       </li>
       <li>
         <router-link :to="{ name: 'about' }" @click="isMobileMenuOpen = false">
@@ -24,14 +30,19 @@
         </router-link>
       </li>
       <li>
-        <router-link :to="{ name: 'download' }" @click="isMobileMenuOpen = false">
+        <router-link
+          :to="{ name: 'download' }"
+          @click="isMobileMenuOpen = false"
+        >
           {{ $t("menu.download") }}
         </router-link>
       </li>
       <li>
         <router-link
           :to="{ name: 'community' }"
-          :class="{ 'router-link-active': $route.path.startsWith('/comunidade') }"
+          :class="{
+            'router-link-active': $route.path.startsWith('/comunidade'),
+          }"
           @click="isMobileMenuOpen = false"
         >
           {{ $t("menu.community") }}
@@ -40,26 +51,43 @@
       <li>
         <router-link
           :to="{ name: 'help' }"
-          :class="{ 'router-link-active': $route.path.startsWith('/ajuda') || $route.name === 'faq' }"
+          :class="{
+            'router-link-active':
+              $route.path.startsWith('/ajuda') || $route.name === 'faq',
+          }"
           @click="isMobileMenuOpen = false"
         >
           {{ $t("menu.help") }}
         </router-link>
       </li>
       <li>
-        <router-link :to="{ name: 'contact' }" @click="isMobileMenuOpen = false">
+        <router-link
+          :to="{ name: 'contact' }"
+          @click="isMobileMenuOpen = false"
+        >
           {{ $t("menu.contact") }}
         </router-link>
       </li>
       <li>
-        <router-link :to="{ name: 'donation' }" @click="isMobileMenuOpen = false">
+        <router-link
+          :to="{ name: 'donation' }"
+          @click="isMobileMenuOpen = false"
+        >
           {{ $t("menu.donation") }}
         </router-link>
       </li>
       <li class="lang-switch">
         <div class="lang-toggle">
-          <span @click="changeLocale('pt')" :class="{ active: $i18n.locale === 'pt' }">PT</span>
-          <span @click="changeLocale('es')" :class="{ active: $i18n.locale === 'es' }">ES</span>
+          <span
+            @click="changeLocale('pt')"
+            :class="{ active: $i18n.locale === 'pt' }"
+            >PT</span
+          >
+          <span
+            @click="changeLocale('es')"
+            :class="{ active: $i18n.locale === 'es' }"
+            >ES</span
+          >
         </div>
       </li>
     </ul>
@@ -71,8 +99,8 @@ export default {
   name: "HeaderLayout",
   data() {
     return {
-      isMobileMenuOpen: false
-    }
+      isMobileMenuOpen: false,
+    };
   },
   computed: {
     flag() {

@@ -32,13 +32,13 @@ export const registeredVersions = [
   {
     slug: "piano",
     codename: "Piano",
-    repo: "pianolouvorja/app",
+    repo: "Piano-Louvor-JA/app",
     branch: "main",
     folder: "community",
     color: "#E08B5B",
     stage: "Beta",
     platforms: ["windows", "linux", "mac"],
-    enabled: false,
+    enabled: true,
   },
   {
     slug: "violin",
@@ -49,7 +49,7 @@ export const registeredVersions = [
     color: "#F5A611",
     stage: "Beta",
     platforms: ["linux", "mac", "windows"],
-    enabled: false,
+    enabled: true,
   },
 ];
 
