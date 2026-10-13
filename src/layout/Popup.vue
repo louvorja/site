@@ -3,28 +3,40 @@
     <div class="popup-box">
       <button class="close-btn" @click="closeModal">×</button>
 
-      <div class="popup-header">
-        <h3>📸 Já conhece nosso Instagram?</h3>
-      </div>
+      <template v-if="isLivePeriod">
+        <img src="@/assets/imgs/live.png" />
+        <div class="popup-content">
+          Acesse a live em:
+          <a href="/live" @click="closeModal" class="text-white">
+            louvorja.com.br/live
+          </a>
+        </div>
+      </template>
 
-      <div class="popup-content">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
-          class="insta-logo"
-        />
+      <template v-else>
+        <div class="popup-header">
+          <h3>📸 Já conhece nosso Instagram?</h3>
+        </div>
 
-        <h3>@louvorja.app</h3>
+        <div class="popup-content">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+            class="insta-logo"
+          />
 
-        <p>Siga nossa página, curta e compartilhe.</p>
+          <h3>@louvorja.app</h3>
 
-        <router-link
-          :to="{ name: 'instagram' }"
-          target="_blank"
-          class="follow-btn"
-        >
-          Seguir no Instagram
-        </router-link>
-      </div>
+          <p>Siga nossa página, curta e compartilhe.</p>
+
+          <router-link
+            :to="{ name: 'instagram' }"
+            target="_blank"
+            class="follow-btn"
+          >
+            Seguir no Instagram
+          </router-link>
+        </div>
+      </template>
     </div>
   </div>
 </template>
@@ -36,9 +48,25 @@ export default {
   data() {
     return {
       showModal: false,
-      storageKey: "instagramPopupLastShown",
-      showAgainAfterDays: 14,
+      now: new Date(),
     };
+  },
+
+  computed: {
+    isLivePeriod() {
+      const endDate = new Date(2026, 10, 23, 23, 59, 59, 999);
+      return this.now <= endDate;
+    },
+
+    storageKey() {
+      return this.isLivePeriod
+        ? "livePopupLastShown"
+        : "instagramPopupLastShown";
+    },
+
+    showAgainAfterDays() {
+      return this.isLivePeriod ? 3 : 14;
+    },
   },
 
   mounted() {
@@ -47,6 +75,8 @@ export default {
 
   methods: {
     checkPopupDisplay() {
+      this.now = new Date();
+
       const lastShown = localStorage.getItem(this.storageKey);
       const now = Date.now();
 
@@ -81,7 +111,7 @@ export default {
 .popup-box {
   width: 420px;
   max-width: 92%;
-  background: #131B2F;
+  background: #131b2f;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 20px;
   overflow: hidden;
@@ -152,7 +182,7 @@ export default {
 }
 
 .popup-content h3 {
-  color: #FBBF24;
+  color: #fbbf24;
   font-size: 20px;
   margin-bottom: 10px;
 }
@@ -165,14 +195,23 @@ export default {
 
 .follow-btn {
   display: inline-block;
-  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
   color: white;
   text-decoration: none;
   padding: 14px 35px;
   border-radius: 999px;
   font-weight: bold;
   font-size: 16px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
   box-shadow: 0 4px 15px rgba(220, 39, 67, 0.4);
 }
 
