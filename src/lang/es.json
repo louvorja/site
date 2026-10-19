@@ -236,7 +236,10 @@
     "req_gpu_title": "Tarjeta de Video (GPU)",
     "req_disk_title": "Almacenamiento",
     "req_screens_title": "Monitores / Proyección",
-    "changelog_title": "Historial de Lanzamientos y Actualizaciones"
+    "changelog_title": "Historial de Lanzamientos y Actualizaciones",
+    "dl_recommended": "Recomendado",
+    "dl_recommended_for_you": "Recomendado para tu sistema",
+    "dl_mac_dmg_universal": "Descargar .dmg (Intel y Apple Silicon)"
   },
   "contact": {
     "title": "Ponte en Contacto",

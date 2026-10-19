@@ -44,6 +44,10 @@ export function getVersionDownloads(versionData, $t) {
     const res = $t ? $t(key) : key;
     return res !== key ? res : null;
   };
+  // Texto que cada app pode sobrescrever no próprio community/<idioma>.json
+  // (ex.: dl_mac_desc, quando o app exige uma versão de macOS diferente).
+  const appText = (key) =>
+    (versionData?.slug && t(`community_versions.${versionData.slug}.${key}`)) || t(`community_versions.${key}`);
 
   const releases = versionData?.releases || [];
   const latestRelease = releases.length > 0 ? releases[0] : null;
@@ -139,14 +143,19 @@ export function getVersionDownloads(versionData, $t) {
 
     // MACOS
     else if (lower.endsWith(".dmg") || lower.endsWith(".pkg")) {
-      const isArm = lower.includes("arm64") || lower.includes("aarch64") || lower.includes("apple");
+      // Universal: um instalador só, que roda nativo em Intel e em Apple Silicon.
+      const isUniversal = lower.includes("universal");
+      const isArm = !isUniversal && (lower.includes("arm64") || lower.includes("aarch64") || lower.includes("apple"));
       const ext = lower.endsWith(".dmg") ? ".dmg" : ".pkg";
       macLinks.push({
-        label: isArm
-          ? (t("community_versions.dl_mac_dmg_arm") || `Baixar ${ext} (ARM)`)
-          : (t("community_versions.dl_mac_dmg_intel") || `Baixar ${ext} (Intel)`),
+        label: isUniversal
+          ? (t("community_versions.dl_mac_dmg_universal") || `Baixar ${ext} (Intel e Apple Silicon)`)
+          : isArm
+            ? (t("community_versions.dl_mac_dmg_arm") || `Baixar ${ext} (ARM)`)
+            : (t("community_versions.dl_mac_dmg_intel") || `Baixar ${ext} (Intel)`),
         ext: ext.replace(".", ""),
         isArm,
+        isUniversal,
         icon: "fa fa-download",
         size,
         url,
@@ -213,7 +222,7 @@ export function getVersionDownloads(versionData, $t) {
       icon: "fa fa-linux",
       title: t("community_versions.dl_linux_title") || "Linux (64-bit)",
       badge: badges.join(" • ") || "x86_64",
-      desc: t("community_versions.dl_linux_desc") || "Ubuntu, Debian, Fedora, Arch, Linux Mint, openSUSE, RedHat e derivadas.",
+      desc: appText("dl_linux_desc") || "Ubuntu, Debian, Fedora, Arch, Linux Mint, openSUSE, RedHat e derivadas.",
       links: linuxLinks,
     });
   }
@@ -227,7 +236,7 @@ export function getVersionDownloads(versionData, $t) {
     // Ordenar: Intel primeiro, Apple Silicon segundo
     filteredMacLinks.sort((a, b) => (a.isArm ? 1 : -1));
 
-    const hasArm = filteredMacLinks.some((l) => l.isArm);
+    const hasArm = filteredMacLinks.some((l) => l.isArm || l.isUniversal);
     const hasIntel = filteredMacLinks.some((l) => !l.isArm);
     let badge = "macOS";
     if (hasArm && hasIntel) badge = "Intel & ARM64";
@@ -239,7 +248,7 @@ export function getVersionDownloads(versionData, $t) {
       icon: "fa fa-apple",
       title: t("community_versions.dl_mac_title") || "macOS",
       badge,
-      desc: t("community_versions.dl_mac_desc") || "Compatível com macOS 11 Big Sur ou superior.",
+      desc: appText("dl_mac_desc") || "Compatível com macOS 11 Big Sur ou superior.",
       links: filteredMacLinks,
     });
   }
@@ -251,7 +260,7 @@ export function getVersionDownloads(versionData, $t) {
       icon: "fa fa-windows",
       title: t("community_versions.dl_win_title") || "Windows (64-bit)",
       badge: "64-bit (x64)",
-      desc: t("community_versions.dl_win_desc") || "Compatível com Windows 10 e Windows 11.",
+      desc: appText("dl_win_desc") || "Compatível com Windows 10 e Windows 11.",
       links: winLinks,
     });
   }
