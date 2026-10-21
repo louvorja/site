@@ -2369,15 +2369,22 @@ Community Details Page Redesign
 }
 
 .comm-changelog-item {
-    padding-bottom: 22px;
+    padding: 24px 26px;
     margin-bottom: 22px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 16px;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.comm-changelog-item:hover {
+    background: rgba(255, 255, 255, 0.035);
+    border-color: rgba(251, 191, 36, 0.22);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
 }
 
 .comm-changelog-item:last-child {
-    padding-bottom: 0;
     margin-bottom: 0;
-    border-bottom: none;
 }
 
 .comm-release-badge {
@@ -2407,30 +2414,43 @@ Community Details Page Redesign
 .comm-release-body {
     color: #cbd5e1;
     font-size: 14px;
-    line-height: 1.65;
+    line-height: 1.68;
 }
 
 .comm-release-heading {
-    color: #FBBF24;
+    color: #f8fafc;
+    font-size: 14.5px;
     font-weight: 700;
-    margin-top: 18px;
-    margin-bottom: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    background: rgba(251, 191, 36, 0.08);
+    border-left: 3px solid #FBBF24;
+    border-radius: 4px 10px 10px 4px;
+    margin-top: 24px;
+    margin-bottom: 14px;
+    letter-spacing: 0.01em;
+}
+
+.comm-release-heading:first-child {
+    margin-top: 6px;
 }
 
 .comm-release-list {
     list-style: none;
     padding-left: 0;
-    margin: 10px 0 16px 0;
+    margin: 10px 0 18px 0;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 13px;
 }
 
 .comm-release-item-li {
     position: relative;
-    padding-left: 20px;
+    padding-left: 22px;
     color: #cbd5e1;
-    line-height: 1.6;
+    line-height: 1.65;
 }
 
 .comm-release-item-li::before {
@@ -2442,52 +2462,67 @@ Community Details Page Redesign
     height: 6px;
     border-radius: 50%;
     background-color: #FBBF24;
-    box-shadow: 0 0 6px rgba(251, 191, 36, 0.5);
+    box-shadow: 0 0 8px rgba(251, 191, 36, 0.55);
 }
 
 .comm-release-sublist {
     list-style: none;
-    padding-left: 14px;
-    margin: 8px 0 4px 0;
+    padding-left: 16px;
+    margin: 10px 0 6px 6px;
+    border-left: 1.5px solid rgba(251, 191, 36, 0.28);
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 9px;
 }
 
 .comm-release-subitem {
     position: relative;
-    padding-left: 18px;
+    padding-left: 14px;
     color: #94a3b8;
     font-size: 13.5px;
     line-height: 1.55;
 }
 
 .comm-release-subitem::before {
-    content: "–";
+    content: "";
     position: absolute;
-    left: 4px;
-    top: 0px;
-    color: #FBBF24;
-    font-weight: bold;
+    left: 0;
+    top: 10px;
+    width: 6px;
+    height: 1.5px;
+    background: rgba(251, 191, 36, 0.7);
+    border-radius: 1px;
 }
 
 .comm-release-p {
     color: #cbd5e1;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    line-height: 1.65;
 }
 
 .comm-inline-code {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(15, 23, 42, 0.75);
     color: #FBBF24;
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-size: 12.5px;
-    font-family: monospace;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2px 7px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    border: 1px solid rgba(251, 191, 36, 0.22);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .comm-release-body strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.comm-release-body em {
+    font-style: italic;
     color: #f8fafc;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1px 5px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* Downloads compactos para versões anteriores no changelog */

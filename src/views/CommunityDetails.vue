@@ -682,12 +682,23 @@ export default {
 
       const formatInline = (str) => {
         let s = escapeHtml(str);
+        // Code inline: `codigo`
         s = s.replace(/`([^`]+)`/g, '<code class="comm-inline-code">$1</code>');
+        // Negrito: **bold** ou __bold__
         s = s.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
-        s = s.replace(/(^|[^\*])\*([^\*]+)\*([^\*]|$)/g, "$1<em>$2</em>$3");
+        s = s.replace(/(^|[^\p{L}\p{N}_])__([^_]+)__(?=[^\p{L}\p{N}_]|$)/gu, "$1<strong>$2</strong>");
+        // Itálico: *italic* ou _italic_
+        s = s.replace(/(^|[^\*])\*([^\*]+)\*(?=[^\*]|$)/g, "$1<em>$2</em>");
+        s = s.replace(/(^|[^\p{L}\p{N}_])_([^_]+)_(?=[^\p{L}\p{N}_]|$)/gu, "$1<em>$2</em>");
+        // Links com texto: [texto](url)
         s = s.replace(
           /\[([^\]]+)\]\((https?:\/\/[^\)]+)\)/g,
           '<a href="$2" target="_blank" rel="noopener" class="text-warning text-decoration-underline">$1</a>'
+        );
+        // Links diretos: https://...
+        s = s.replace(
+          /(^|[\s(])(https?:\/\/[^\s)<>]+)([\s)]|$)/g,
+          '$1<a href="$2" target="_blank" rel="noopener" class="text-warning text-decoration-underline">$2</a>$3'
         );
         return s;
       };
