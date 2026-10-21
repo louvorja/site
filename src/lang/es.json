@@ -177,6 +177,7 @@
     "dl_mac_title": "macOS",
     "dl_mac_desc": "Compatible con macOS 11 Big Sur o superior.",
     "dl_mac_dmg": "Descargar instalador .dmg",
+    "dl_mac_dmg_universal": "Descargar .dmg (Universal: Intel y Apple Silicon)",
     "dl_mac_dmg_intel": "Descargar .dmg (Intel / x86_64)",
     "dl_mac_dmg_arm": "Descargar .dmg (Apple Silicon / ARM64)",
     "dl_win_title": "Windows (64-bit)",

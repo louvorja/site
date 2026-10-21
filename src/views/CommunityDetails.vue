@@ -540,14 +540,17 @@ export default {
         return link.ext === "exe";
       }
 
-      // macOS: Se Apple Silicon (ARM) detectado, recomenda ARM; se Intel, recomenda Intel
+      // macOS: Se pacote Universal, é recomendado para qualquer Mac; se Apple Silicon (ARM), recomenda ARM; se Intel, recomenda Intel
       if (platform.key === "mac") {
+        if (link.isUniversal) {
+          return true;
+        }
         if (this.userPlatform.arch === "arm") {
           return link.isArm === true;
         } else if (this.userPlatform.arch === "intel") {
           return link.isArm === false;
         }
-        return link.isArm === true;
+        return true;
       }
 
       // Linux: .AppImage é o formato universal recomendado
@@ -584,7 +587,8 @@ export default {
         const n = (a.name || "").toLowerCase();
         let icon = "fa fa-download";
         let label = a.name;
-        const isArm = n.includes("arm64") || n.includes("aarch64") || n.includes("-arm");
+        const isUniversal = n.includes("universal");
+        const isArm = !isUniversal && (n.includes("arm64") || n.includes("aarch64") || n.includes("-arm"));
 
         if (n.endsWith(".exe")) {
           icon = "fa fa-windows";
@@ -594,10 +598,10 @@ export default {
           label = ".msi";
         } else if (n.endsWith(".dmg")) {
           icon = "fa fa-apple";
-          label = isArm ? ".dmg (ARM)" : ".dmg (Intel)";
+          label = isUniversal ? ".dmg (Universal: Intel & ARM)" : (isArm ? ".dmg (ARM)" : ".dmg (Intel)");
         } else if (n.endsWith(".pkg")) {
           icon = "fa fa-apple";
-          label = isArm ? ".pkg (ARM)" : ".pkg (Intel)";
+          label = isUniversal ? ".pkg (Universal: Intel & ARM)" : (isArm ? ".pkg (ARM)" : ".pkg (Intel)");
         } else if (n.endsWith(".appimage")) {
           icon = "fa fa-linux";
           label = ".AppImage";

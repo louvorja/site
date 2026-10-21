@@ -139,25 +139,44 @@ export function getVersionDownloads(versionData, $t) {
 
     // MACOS
     else if (lower.endsWith(".dmg") || lower.endsWith(".pkg")) {
-      const isArm = lower.includes("arm64") || lower.includes("aarch64") || lower.includes("apple");
+      const isUniversal = lower.includes("universal");
+      const isArm = !isUniversal && (lower.includes("arm64") || lower.includes("aarch64") || lower.includes("apple"));
       const ext = lower.endsWith(".dmg") ? ".dmg" : ".pkg";
+      let label = "";
+      if (isUniversal) {
+        label = t("community_versions.dl_mac_dmg_universal") || `Baixar ${ext} (Universal: Intel & ARM)`;
+      } else if (isArm) {
+        label = t("community_versions.dl_mac_dmg_arm") || `Baixar ${ext} (ARM)`;
+      } else {
+        label = t("community_versions.dl_mac_dmg_intel") || `Baixar ${ext} (Intel)`;
+      }
+
       macLinks.push({
-        label: isArm
-          ? (t("community_versions.dl_mac_dmg_arm") || `Baixar ${ext} (ARM)`)
-          : (t("community_versions.dl_mac_dmg_intel") || `Baixar ${ext} (Intel)`),
+        label,
         ext: ext.replace(".", ""),
+        isUniversal,
         isArm,
-        icon: "fa fa-download",
+        icon: "fa fa-apple",
         size,
         url,
       });
     } else if (lower.endsWith(".zip") && (lower.includes("mac") || lower.includes("darwin") || lower.includes("osx"))) {
-      const isArm = lower.includes("arm64") || lower.includes("aarch64");
+      const isUniversal = lower.includes("universal");
+      const isArm = !isUniversal && (lower.includes("arm64") || lower.includes("aarch64"));
+      let label = "";
+      if (isUniversal) {
+        label = "Baixar .zip (Universal: Intel & ARM)";
+      } else if (isArm) {
+        label = "Baixar .zip (ARM)";
+      } else {
+        label = "Baixar .zip (Intel)";
+      }
       macLinks.push({
-        label: isArm ? "Baixar .zip (ARM)" : "Baixar .zip (Intel)",
+        label,
         ext: "zip",
+        isUniversal,
         isArm,
-        icon: "fa fa-download",
+        icon: "fa fa-apple",
         size,
         url,
       });
@@ -224,13 +243,18 @@ export function getVersionDownloads(versionData, $t) {
   const filteredMacLinks = hasDmgOrPkg ? macLinks.filter((l) => l.ext !== "zip") : macLinks;
 
   if (filteredMacLinks.length > 0) {
-    // Ordenar: Intel primeiro, Apple Silicon segundo
-    filteredMacLinks.sort((a, b) => (a.isArm ? 1 : -1));
+    // Ordenar: Universal primeiro, depois Intel, depois Apple Silicon
+    filteredMacLinks.sort((a, b) => {
+      if (a.isUniversal && !b.isUniversal) return -1;
+      if (!a.isUniversal && b.isUniversal) return 1;
+      return a.isArm ? 1 : -1;
+    });
 
+    const hasUniversal = filteredMacLinks.some((l) => l.isUniversal);
     const hasArm = filteredMacLinks.some((l) => l.isArm);
-    const hasIntel = filteredMacLinks.some((l) => !l.isArm);
+    const hasIntel = filteredMacLinks.some((l) => !l.isArm && !l.isUniversal);
     let badge = "macOS";
-    if (hasArm && hasIntel) badge = "Intel & ARM64";
+    if (hasUniversal || (hasArm && hasIntel)) badge = "Intel & ARM64";
     else if (hasArm) badge = "Apple Silicon";
     else if (hasIntel) badge = "Intel (x86_64)";
 
