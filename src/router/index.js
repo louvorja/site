@@ -33,7 +33,11 @@ const routes = [
   {
     path: "/live",
     name: "live",
-    component: Live,
+    //component: Live,
+    beforeEnter(to, from, next) {
+      window.location.href = "https://www.youtube.com/live/VKikBUIgDO0";
+      next(false);
+    },
   },
   {
     path: "/comunidade",
