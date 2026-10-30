@@ -54,8 +54,9 @@ export default {
 
   computed: {
     isLivePeriod() {
-      const endDate = new Date(2026, 10, 23, 23, 59, 59, 999);
-      return this.now <= endDate;
+      //const endDate = new Date(2026, 10, 23, 23, 59, 59, 999);
+      //return this.now <= endDate;
+      return false;
     },
 
     storageKey() {
