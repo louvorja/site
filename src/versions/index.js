@@ -1,6 +1,6 @@
 /**
  * Módulo Central de Versões da Comunidade
- * 
+ *
  * Integra o registro configurável (registry.js) com o carregador remoto (loader.js).
  */
 
@@ -25,14 +25,20 @@ export { parseColor, getBadgeStyle };
  */
 export function getRegisteredVersion(slug) {
   if (!slug) return null;
-  return registeredVersions.find((v) => v.slug.toLowerCase() === slug.toLowerCase()) || null;
+  return (
+    registeredVersions.find(
+      (v) => v.slug.toLowerCase() === slug.toLowerCase(),
+    ) || null
+  );
 }
 
 /**
  * Retorna apenas as versões ativas no registry
  */
 export function getActiveVersions() {
-  return registeredVersions.filter((v) => v.enabled !== false && v.repo && v.repo.trim() !== "");
+  return registeredVersions.filter(
+    (v) => v.enabled !== false && v.repo && v.repo.trim() !== "",
+  );
 }
 
 /**
@@ -44,13 +50,20 @@ export function getVersionDownloads(versionData, $t) {
     const res = $t ? $t(key) : key;
     return res !== key ? res : null;
   };
+  // Texto que cada app pode sobrescrever no próprio community/<idioma>.json
+  // (ex.: dl_mac_desc, quando o app exige uma versão de macOS diferente).
+  const appText = (key) =>
+    (versionData?.slug && t(`community_versions.${versionData.slug}.${key}`)) ||
+    t(`community_versions.${key}`);
 
   const releases = versionData?.releases || [];
   const latestRelease = releases.length > 0 ? releases[0] : null;
   const rawAssets = latestRelease?.assets || [];
   const fallbackUrl =
     versionData?.releasesUrl ||
-    (versionData?.repo ? `https://github.com/${versionData.repo}/releases` : "https://github.com/louvorja");
+    (versionData?.repo
+      ? `https://github.com/${versionData.repo}/releases`
+      : "https://github.com/louvorja");
 
   // Extensões e sufixos ignorados (metadados de update, checksums, assinaturas)
   const IGNORED_EXTENSIONS = [
@@ -93,7 +106,9 @@ export function getVersionDownloads(versionData, $t) {
     if (lower.endsWith(".appimage")) {
       const isArm = lower.includes("arm64") || lower.includes("aarch64");
       linuxLinks.push({
-        label: isArm ? "Baixar .AppImage (ARM64)" : (t("community_versions.dl_linux_appimage") || "Baixar .AppImage"),
+        label: isArm
+          ? "Baixar .AppImage (ARM64)"
+          : t("community_versions.dl_linux_appimage") || "Baixar .AppImage",
         ext: "appimage",
         icon: "fa fa-download",
         size,
@@ -102,7 +117,9 @@ export function getVersionDownloads(versionData, $t) {
     } else if (lower.endsWith(".deb")) {
       const isArm = lower.includes("arm64") || lower.includes("aarch64");
       linuxLinks.push({
-        label: isArm ? "Baixar pacote .deb (ARM64)" : (t("community_versions.dl_linux_deb") || "Baixar pacote .deb"),
+        label: isArm
+          ? "Baixar pacote .deb (ARM64)"
+          : t("community_versions.dl_linux_deb") || "Baixar pacote .deb",
         ext: "deb",
         icon: "fa fa-download",
         size,
@@ -111,7 +128,9 @@ export function getVersionDownloads(versionData, $t) {
     } else if (lower.endsWith(".rpm")) {
       const isArm = lower.includes("arm64") || lower.includes("aarch64");
       linuxLinks.push({
-        label: isArm ? "Baixar pacote .rpm (ARM64)" : (t("community_versions.dl_linux_rpm") || "Baixar pacote .rpm"),
+        label: isArm
+          ? "Baixar pacote .rpm (ARM64)"
+          : t("community_versions.dl_linux_rpm") || "Baixar pacote .rpm",
         ext: "rpm",
         icon: "fa fa-download",
         size,
@@ -140,29 +159,52 @@ export function getVersionDownloads(versionData, $t) {
     // MACOS
     else if (lower.endsWith(".dmg") || lower.endsWith(".pkg")) {
       const isUniversal = lower.includes("universal");
-      const isArm = !isUniversal && (lower.includes("arm64") || lower.includes("aarch64") || lower.includes("apple"));
+      // Universal: um instalador só, que roda nativo em Intel e em Apple Silicon.
+      const isUniversal = lower.includes("universal");
+      const isArm =
+        !isUniversal &&
+        !isUniversal &&
+        (lower.includes("arm64") ||
+          lower.includes("aarch64") ||
+          lower.includes("apple"));
       const ext = lower.endsWith(".dmg") ? ".dmg" : ".pkg";
       let label = "";
       if (isUniversal) {
-        label = t("community_versions.dl_mac_dmg_universal") || `Baixar ${ext} (Universal: Intel & ARM)`;
+        label =
+          t("community_versions.dl_mac_dmg_universal") ||
+          `Baixar ${ext} (Universal: Intel & ARM)`;
       } else if (isArm) {
         label = t("community_versions.dl_mac_dmg_arm") || `Baixar ${ext} (ARM)`;
       } else {
-        label = t("community_versions.dl_mac_dmg_intel") || `Baixar ${ext} (Intel)`;
+        label =
+          t("community_versions.dl_mac_dmg_intel") || `Baixar ${ext} (Intel)`;
       }
 
       macLinks.push({
-        label,
+        label: isUniversal
+          ? t("community_versions.dl_mac_dmg_universal") ||
+            `Baixar ${ext} (Intel e Apple Silicon)`
+          : isArm
+            ? t("community_versions.dl_mac_dmg_arm") || `Baixar ${ext} (ARM)`
+            : t("community_versions.dl_mac_dmg_intel") ||
+              `Baixar ${ext} (Intel)`,
         ext: ext.replace(".", ""),
         isUniversal,
         isArm,
+        isUniversal,
         icon: "fa fa-apple",
         size,
         url,
       });
-    } else if (lower.endsWith(".zip") && (lower.includes("mac") || lower.includes("darwin") || lower.includes("osx"))) {
+    } else if (
+      lower.endsWith(".zip") &&
+      (lower.includes("mac") ||
+        lower.includes("darwin") ||
+        lower.includes("osx"))
+    ) {
       const isUniversal = lower.includes("universal");
-      const isArm = !isUniversal && (lower.includes("arm64") || lower.includes("aarch64"));
+      const isArm =
+        !isUniversal && (lower.includes("arm64") || lower.includes("aarch64"));
       let label = "";
       if (isUniversal) {
         label = "Baixar .zip (Universal: Intel & ARM)";
@@ -186,8 +228,12 @@ export function getVersionDownloads(versionData, $t) {
     else if (lower.endsWith(".exe")) {
       const isPortable = lower.includes("portable");
       const isArm = lower.includes("arm64");
-      const is32 = lower.includes("ia32") || lower.includes("x86") || lower.includes("32bit");
-      let label = t("community_versions.dl_win_exe") || "Baixar instalador .exe";
+      const is32 =
+        lower.includes("ia32") ||
+        lower.includes("x86") ||
+        lower.includes("32bit");
+      let label =
+        t("community_versions.dl_win_exe") || "Baixar instalador .exe";
       if (isPortable) label = "Baixar versão portátil .exe";
       else if (isArm) label = "Baixar instalador .exe (ARM64)";
       else if (is32) label = "Baixar instalador .exe (32-bit)";
@@ -207,7 +253,11 @@ export function getVersionDownloads(versionData, $t) {
         size,
         url,
       });
-    } else if (lower.endsWith(".zip") && (lower.includes("win") || (!lower.includes("mac") && !lower.includes("linux")))) {
+    } else if (
+      lower.endsWith(".zip") &&
+      (lower.includes("win") ||
+        (!lower.includes("mac") && !lower.includes("linux")))
+    ) {
       winLinks.push({
         label: "Baixar versão portátil .zip",
         ext: "zip",
@@ -232,7 +282,9 @@ export function getVersionDownloads(versionData, $t) {
       icon: "fa fa-linux",
       title: t("community_versions.dl_linux_title") || "Linux (64-bit)",
       badge: badges.join(" • ") || "x86_64",
-      desc: t("community_versions.dl_linux_desc") || "Ubuntu, Debian, Fedora, Arch, Linux Mint, openSUSE, RedHat e derivadas.",
+      desc:
+        appText("dl_linux_desc") ||
+        "Ubuntu, Debian, Fedora, Arch, Linux Mint, openSUSE, RedHat e derivadas.",
       links: linuxLinks,
     });
   }
@@ -240,7 +292,9 @@ export function getVersionDownloads(versionData, $t) {
   // 4. Montar card do macOS sob demanda (somente se houver pacotes macOS)
   // Se houver .dmg ou .pkg, prioriza os instaladores oficiais e oculta os .zip (usados internamente para auto-update)
   const hasDmgOrPkg = macLinks.some((l) => l.ext === "dmg" || l.ext === "pkg");
-  const filteredMacLinks = hasDmgOrPkg ? macLinks.filter((l) => l.ext !== "zip") : macLinks;
+  const filteredMacLinks = hasDmgOrPkg
+    ? macLinks.filter((l) => l.ext !== "zip")
+    : macLinks;
 
   if (filteredMacLinks.length > 0) {
     // Ordenar: Universal primeiro, depois Intel, depois Apple Silicon
@@ -263,7 +317,9 @@ export function getVersionDownloads(versionData, $t) {
       icon: "fa fa-apple",
       title: t("community_versions.dl_mac_title") || "macOS",
       badge,
-      desc: t("community_versions.dl_mac_desc") || "Compatível com macOS 11 Big Sur ou superior.",
+      desc:
+        appText("dl_mac_desc") ||
+        "Compatível com macOS 11 Big Sur ou superior.",
       links: filteredMacLinks,
     });
   }
@@ -275,7 +331,7 @@ export function getVersionDownloads(versionData, $t) {
       icon: "fa fa-windows",
       title: t("community_versions.dl_win_title") || "Windows (64-bit)",
       badge: "64-bit (x64)",
-      desc: t("community_versions.dl_win_desc") || "Compatível com Windows 10 e Windows 11.",
+      desc: appText("dl_win_desc") || "Compatível com Windows 10 e Windows 11.",
       links: winLinks,
     });
   }
@@ -312,32 +368,46 @@ export function detectUserPlatform() {
   }
 
   const ua = (navigator.userAgent || "").toLowerCase();
-  const platform = (navigator.userAgentData?.platform || navigator.platform || "").toLowerCase();
+  const platform = (
+    navigator.userAgentData?.platform ||
+    navigator.platform ||
+    ""
+  ).toLowerCase();
 
   let os = null;
   let arch = null;
 
   if (platform.includes("win") || ua.includes("windows")) {
     os = "windows";
-    arch = (ua.includes("arm64") || ua.includes("aarch64")) ? "arm" : "x64";
-  } else if (platform.includes("mac") || ua.includes("macintosh") || ua.includes("mac os")) {
+    arch = ua.includes("arm64") || ua.includes("aarch64") ? "arm" : "x64";
+  } else if (
+    platform.includes("mac") ||
+    ua.includes("macintosh") ||
+    ua.includes("mac os")
+  ) {
     os = "mac";
     let isArm = false;
     try {
       const canvas = document.createElement("canvas");
-      const gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+      const gl =
+        canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
       if (gl) {
         const debugInfo = gl.getExtension("WEBGL_debug_renderer_info");
         if (debugInfo) {
-          const renderer = gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL) || "";
+          const renderer =
+            gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL) || "";
           isArm = renderer.includes("Apple");
         }
       }
     } catch {}
     arch = isArm ? "arm" : "intel";
-  } else if (platform.includes("linux") || ua.includes("linux") || ua.includes("x11")) {
+  } else if (
+    platform.includes("linux") ||
+    ua.includes("linux") ||
+    ua.includes("x11")
+  ) {
     os = "linux";
-    arch = (ua.includes("arm64") || ua.includes("aarch64")) ? "arm" : "x64";
+    arch = ua.includes("arm64") || ua.includes("aarch64") ? "arm" : "x64";
   }
 
   return { os, arch };
