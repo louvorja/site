@@ -540,8 +540,9 @@ export default {
         return link.ext === "exe";
       }
 
-      // macOS: Se Apple Silicon (ARM) detectado, recomenda ARM; se Intel, recomenda Intel
+      // macOS: o universal serve qualquer Mac; senão, ARM para Apple Silicon e Intel para Intel
       if (platform.key === "mac") {
+        if (link.isUniversal) return true;
         if (this.userPlatform.arch === "arm") {
           return link.isArm === true;
         } else if (this.userPlatform.arch === "intel") {
