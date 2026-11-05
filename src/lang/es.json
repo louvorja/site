@@ -215,12 +215,16 @@
     "dl_mac_title": "macOS",
     "dl_mac_desc": "Compatible con macOS 11 Big Sur o superior.",
     "dl_mac_dmg": "Descargar instalador .dmg",
+    "dl_mac_dmg_universal": "Descargar .dmg (Universal: Intel y Apple Silicon)",
     "dl_mac_dmg_intel": "Descargar .dmg (Intel / x86_64)",
     "dl_mac_dmg_arm": "Descargar .dmg (Apple Silicon / ARM64)",
     "dl_win_title": "Windows (64-bit)",
     "dl_win_desc": "Compatible con Windows 10 y Windows 11.",
     "dl_win_exe": "Descargar instalador .exe",
     "dl_win_portable": "Descargar Versión Portátil (.zip)",
+    "dl_recommended": "Recomendado",
+    "dl_recommended_badge": "Tu Sistema",
+    "dl_recommended_for_you": "Recomendado para tu sistema",
     "gallery_title": "Capturas de Pantalla del Programa",
     "gallery_hint": "Haz clic para ampliar la imagen",
     "show_all_releases": "Ver versiones anteriores ({count})",
@@ -236,7 +240,8 @@
     "req_gpu_title": "Tarjeta de Video (GPU)",
     "req_disk_title": "Almacenamiento",
     "req_screens_title": "Monitores / Proyección",
-    "changelog_title": "Historial de Lanzamientos y Actualizaciones"
+    "changelog_title": "Historial de Lanzamientos y Actualizaciones",
+    "prev_release_downloads": "Descargas de esta versión:"
   },
   "contact": {
     "title": "Ponte en Contacto",

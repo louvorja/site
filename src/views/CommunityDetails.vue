@@ -540,14 +540,17 @@ export default {
         return link.ext === "exe";
       }
 
-      // macOS: Se Apple Silicon (ARM) detectado, recomenda ARM; se Intel, recomenda Intel
+      // macOS: Se pacote Universal, é recomendado para qualquer Mac; se Apple Silicon (ARM), recomenda ARM; se Intel, recomenda Intel
       if (platform.key === "mac") {
+        if (link.isUniversal) {
+          return true;
+        }
         if (this.userPlatform.arch === "arm") {
           return link.isArm === true;
         } else if (this.userPlatform.arch === "intel") {
           return link.isArm === false;
         }
-        return link.isArm === true;
+        return true;
       }
 
       // Linux: .AppImage é o formato universal recomendado
@@ -584,7 +587,8 @@ export default {
         const n = (a.name || "").toLowerCase();
         let icon = "fa fa-download";
         let label = a.name;
-        const isArm = n.includes("arm64") || n.includes("aarch64") || n.includes("-arm");
+        const isUniversal = n.includes("universal");
+        const isArm = !isUniversal && (n.includes("arm64") || n.includes("aarch64") || n.includes("-arm"));
 
         if (n.endsWith(".exe")) {
           icon = "fa fa-windows";
@@ -594,10 +598,10 @@ export default {
           label = ".msi";
         } else if (n.endsWith(".dmg")) {
           icon = "fa fa-apple";
-          label = isArm ? ".dmg (ARM)" : ".dmg (Intel)";
+          label = isUniversal ? ".dmg (Universal: Intel & ARM)" : (isArm ? ".dmg (ARM)" : ".dmg (Intel)");
         } else if (n.endsWith(".pkg")) {
           icon = "fa fa-apple";
-          label = isArm ? ".pkg (ARM)" : ".pkg (Intel)";
+          label = isUniversal ? ".pkg (Universal: Intel & ARM)" : (isArm ? ".pkg (ARM)" : ".pkg (Intel)");
         } else if (n.endsWith(".appimage")) {
           icon = "fa fa-linux";
           label = ".AppImage";
@@ -678,12 +682,23 @@ export default {
 
       const formatInline = (str) => {
         let s = escapeHtml(str);
+        // Code inline: `codigo`
         s = s.replace(/`([^`]+)`/g, '<code class="comm-inline-code">$1</code>');
+        // Negrito: **bold** ou __bold__
         s = s.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
-        s = s.replace(/(^|[^\*])\*([^\*]+)\*([^\*]|$)/g, "$1<em>$2</em>$3");
+        s = s.replace(/(^|[^\p{L}\p{N}_])__([^_]+)__(?=[^\p{L}\p{N}_]|$)/gu, "$1<strong>$2</strong>");
+        // Itálico: *italic* ou _italic_
+        s = s.replace(/(^|[^\*])\*([^\*]+)\*(?=[^\*]|$)/g, "$1<em>$2</em>");
+        s = s.replace(/(^|[^\p{L}\p{N}_])_([^_]+)_(?=[^\p{L}\p{N}_]|$)/gu, "$1<em>$2</em>");
+        // Links com texto: [texto](url)
         s = s.replace(
           /\[([^\]]+)\]\((https?:\/\/[^\)]+)\)/g,
           '<a href="$2" target="_blank" rel="noopener" class="text-warning text-decoration-underline">$1</a>'
+        );
+        // Links diretos: https://...
+        s = s.replace(
+          /(^|[\s(])(https?:\/\/[^\s)<>]+)([\s)]|$)/g,
+          '$1<a href="$2" target="_blank" rel="noopener" class="text-warning text-decoration-underline">$2</a>$3'
         );
         return s;
       };
