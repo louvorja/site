@@ -158,7 +158,6 @@ export function getVersionDownloads(versionData, $t) {
 
     // MACOS
     else if (lower.endsWith(".dmg") || lower.endsWith(".pkg")) {
-      const isUniversal = lower.includes("universal");
       // Universal: um instalador só, que roda nativo em Intel e em Apple Silicon.
       const isUniversal = lower.includes("universal");
       const isArm =
