@@ -2,6 +2,7 @@ name: deploy
 on:
   push:
     branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -12,6 +13,7 @@ concurrency:
 
 jobs:
   deploy:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:
@@ -39,6 +41,11 @@ jobs:
             cp CNAME dist/CNAME
           fi
           cp dist/index.html dist/404.html
+      - name: Enviar arquivos para o GitHub Pages
+        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
+        with:
+          path: dist
+
       - name: Publicar na branch dist
         working-directory: dist
         env:
@@ -60,3 +67,19 @@ jobs:
           current=$(git ls-remote --heads origin refs/heads/dist)
           expected=${current%%[[:space:]]*}
           git push --force-with-lease="refs/heads/dist:$expected" origin HEAD:refs/heads/dist
+
+  pages:
+    name: Publicar no GitHub Pages
+    needs: deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publicar artefato
+        id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
